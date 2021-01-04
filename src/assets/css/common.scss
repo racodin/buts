@@ -1,0 +1,52 @@
+body {
+  font-family: 'Noto Sans KR' !important;
+  background-color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Rajdhani {
+  font-family: 'Rajdhani';
+}
+
+.wrap {
+  position: relative;
+  // min-width: 1320px;
+  letter-spacing: -0.5px;
+  overflow: hidden;
+}
+
+.width-container {
+  position: relative;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.v-bar {
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 12px;
+    margin-top: -6px;
+    border-left: 1px solid #ececec;
+  }
+}
+
+.text-purple {
+  color: #7e69fe;
+}
+
+@media screen and (max-width: 1320px) {
+  .width-container {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,19 @@
+i[class^='icon'] {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+i.icon-x {
+  background: url("../images/img-input-text-reste-copy.png");
+  width: 19px;
+  height: 19px;
+}
+
+i.icon-tip {
+  background: url("../images/tip.png");
+  width: 15px;
+  height: 14px;
+}
+/*# sourceMappingURL=icons.css.map */

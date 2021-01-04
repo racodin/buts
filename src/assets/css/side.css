@@ -1,0 +1,18 @@
+.side {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: 710px;
+  margin-top: -60px;
+  z-index: 100;
+}
+
+.side a {
+  display: block;
+  margin-top: 10px;
+}
+
+.side a:first-child {
+  margin: 0;
+}
+/*# sourceMappingURL=side.css.map */
