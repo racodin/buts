@@ -1,13 +1,6 @@
 .body {
-  padding: 155px 0 100px 0;
-}
-
-.title {
-  position: relative;
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #333333;
-  line-height: 24px;
+  min-height: 600px;
+  padding: 100px 0 100px 0;
 }
 
 .indicator {
@@ -36,7 +29,7 @@
   position: relative;
   width: calc(100% + 26px);
   margin-left: -13px;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
   font-size: 0;
 }
 

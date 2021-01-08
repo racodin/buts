@@ -232,25 +232,9 @@ a.header-login {
   text-align: center;
 }
 
-.header-profile .percent {
-  position: relative;
-  background: url("../images/img-bar-class.png") no-repeat;
+.header-profile .credit-percent {
   display: block;
-  width: 98px;
-  height: 8px;
   margin: 8px auto 4px auto;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.header-profile .bar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: url("../images/img-bar-1-class.png") no-repeat;
-  display: block;
-  width: 98px;
-  height: 8px;
 }
 
 .header-profile .grade {

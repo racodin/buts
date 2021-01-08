@@ -9,8 +9,26 @@ ul {
   list-style: none;
 }
 
+a:link,
+a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7e69fe;
+}
+
 .Rajdhani {
   font-family: 'Rajdhani';
+}
+
+.text-purple {
+  color: #7e69fe;
+}
+
+.text-red {
+  color: #fb4c16;
 }
 
 .wrap {
@@ -41,8 +59,364 @@ ul {
   }
 }
 
-.text-purple {
-  color: #7e69fe;
+.title {
+  position: relative;
+  margin-top: 58px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 24px;
+}
+
+.title-border {
+  position: relative;
+  padding-bottom: 22px;
+  border-bottom: 2px solid #7e69fe;
+  .title {
+    display: inline-block;
+    margin-bottom: 0;
+    height: 32px;
+  }
+  a {
+    margin-right: 20px;
+    color: #333333;
+  }
+  .button {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.h3 {
+  position: relative;
+  margin-top: 56px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: 240px;
+  height: 70px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  line-height: 68px;
+  border-radius: 5px;
+  background-color: #cecdd4;
+  &:link,
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+  &.round {
+    min-width: auto;
+    padding: 0 20px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 17px;
+  }
+  &.mini {
+    min-width: 50px;
+    height: 32px;
+    font-size: 13px;
+    line-height: 30px;
+  }
+  &.small {
+    min-width: 100px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 48px;
+  }
+  &.large {
+    min-width: 340px;
+    height: 80px;
+    font-size: 20px;
+    line-height: 78px;
+  }
+  &.border {
+    color: #666666;
+    border: solid 1px rgba(209, 208, 208, 0.52);
+    background-color: #f4f4f4;
+    &.button-purple {
+      color: #7e69fe;
+      border: solid 1px #a89cf4;
+      background-color: #ffffff;
+    }
+    &.button-red {
+      color: #fb4c16;
+      border: solid 1px #fb4c16;
+      background-color: #ffffff;
+    }
+  }
+  &.button-purple {
+    background-color: #7e69fe;
+  }
+  &.button-red {
+    background-color: #fb4c16;
+  }
+  &.button-green {
+    background-color: #4bb640;
+  }
+  &.button-blue {
+    background-color: #1697fb;
+  }
+}
+
+.button-center {
+  position: relative;
+  margin-top: 60px;
+  text-align: center;
+}
+
+select {
+  height: 38px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #333;
+  border: solid 1px #dddddd;
+  background-color: white;
+  &:focus {
+    border: solid 1px #7e69fe;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  border: solid 1px #dddddd;
+  background-color: white;
+  outline: none;
+  &:focus {
+    border: solid 1px #7e69fe;
+  }
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+input[type='text'] {
+  width: 100%;
+  height: 38px;
+  font-size: 14px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #333;
+  border: solid 1px #dddddd;
+  background-color: white;
+  outline: none;
+  &:focus {
+    border: solid 1px #a89cf4;
+  }
+  &::placeholder {
+    color: #aaa;
+  }
+  &:disabled {
+    background-color: #ececec;
+  }
+}
+
+.input-check {
+  position: relative;
+  display: inline-block;
+  input[type='checkbox'] {
+    /* 실제 체크박스는 화면에서 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  input[type='checkbox'] + label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  input[type='checkbox'] + label:before {
+    content: '';
+    display: inline-block;
+    width: 18px; /* 체크박스의 너비를 지정 */
+    height: 18px; /* 체크박스의 높이를 지정 */
+    line-height: 18px; /* 세로정렬을 위해 높이값과 일치 */
+    margin: -3px 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #ececec;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+  }
+  input[type='checkbox'] + label:active:before,
+  input[type='checkbox']:checked + label:active:before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  input[type='checkbox']:checked + label:before {
+    /* 체크박스를 체크했을때 */
+    content: '\2714'; /* 체크표시 유니코드 사용 */
+    font-size: 12px;
+    font-weight: 600;
+    color: #7e69fe;
+    line-height: 16px;
+    border-color: #7e69fe;
+  }
+  input[type='radio'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  input[type='radio'] + label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 28px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  input[type='radio'] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  }
+  input[type='radio'] + label:active:before,
+  input[type='radio']:checked + label:active:before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  input[type='radio']:checked + label:before {
+    background: #e9ecee;
+    border-color: #adb8c0;
+  }
+  input[type='radio']:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    background: #99a1a7;
+    border-radius: 100%;
+    background-color: #7e69fe;
+  }
+}
+
+.input-file {
+  position: relative;
+  display: inline-block;
+  height: 32px;
+  label {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  input[type='file'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .file-name {
+    width: calc(100% - 150px);
+    height: 32px;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #999;
+    vertical-align: middle;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.credit-percent {
+  position: relative;
+  background: url('../images/img-bar-class.png') no-repeat;
+  display: inline-block;
+  width: 98px;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.credit-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('../images/img-bar-1-class.png') no-repeat;
+  display: block;
+  width: 98px;
+  height: 8px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.popup-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    background-color: lightblue;
+  }
 }
 
 @media screen and (max-width: 1320px) {

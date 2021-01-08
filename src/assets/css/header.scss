@@ -213,24 +213,9 @@ a.header-login {
     color: #7e69fe;
     text-align: center;
   }
-  .percent {
-    position: relative;
-    background: url('../images/img-bar-class.png') no-repeat;
+  .credit-percent {
     display: block;
-    width: 98px;
-    height: 8px;
     margin: 8px auto 4px auto;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url('../images/img-bar-1-class.png') no-repeat;
-    display: block;
-    width: 98px;
-    height: 8px;
   }
   .grade {
     text-align: center;

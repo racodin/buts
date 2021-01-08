@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buts</title>
+    <!-- 벗츠 사용 css, js  -->
+    <link rel="stylesheet" href="http://3.35.248.255/css/default_shop.css?ver=180820" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/apms.css?ver=180820" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/assets/bs3/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/colorset/Basic/colorset.css" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/colorset/Basic/main_section.css?time=1609484211" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/assets/css/animate.css?time=1609484211" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/assets/css/hover.css?time=1609484211" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/widget/anb-section-4/widget.css" />
+    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/widget/basic-sidebar/widget.css?ver=180820" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/level/basic.css?ver=180820" />
+    <script>
+      // 자바스크립트에서 사용하는 전역변수 선언
+      var g5_url = 'http://3.35.248.255';
+      var g5_bbs_url = 'http://3.35.248.255/bbs';
+      var g5_is_member = '';
+      var g5_is_admin = '';
+      var g5_is_mobile = '';
+      var g5_bo_table = '';
+      var g5_sca = '';
+      var g5_pim = '';
+      var g5_editor = '';
+      var g5_responsive = '1';
+      var g5_cookie_domain = '';
+      var g5_purl = 'https://3.35.248.255/';
+    </script>
+    <script src="http://3.35.248.255/js/jquery-1.11.3.min.js"></script>
+    <script src="http://3.35.248.255/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://3.35.248.255/lang/korean/lang.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/common.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/wrest.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/placeholders.min.js"></script>
+    <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
+    <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
+    <script src="http://3.35.248.255/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+
+    <!-- 벗츠 리뉴얼 css, js  -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/icons.css" />
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+    <link rel="stylesheet" href="../../assets/css/topper.css" />
+    <link rel="stylesheet" href="../../assets/css/header.css" />
+    <link rel="stylesheet" href="../../assets/css/body.css" />
+    <link rel="stylesheet" href="../../assets/css/side.css" />
+    <link rel="stylesheet" href="../../assets/css/footer.css" />
+    <link rel="stylesheet" href="./popup.css" />
+    <script src="../../assets/js/buts.js"></script>
+  </head>
+  <body>
+    <!-- 환불 신청 STEP 1 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">환불</span> 신청</div>
+      <div class="dialog-body">
+        <div class="dialog-step">
+          <span class="active">STEP 1</span>
+          <span>STEP 2</span>
+          <span>STEP 3</span>
+        </div>
+        <div class="dialog-check">
+          <span class="input-check">
+            <input type="checkbox" id="step-check01" />
+            <label for="step-check01">문제 해결을 위하여 파티장에게 문의를 진행 하였나요?</label>
+          </span>
+          <p>파티장 문의 후에도 서비스 이용불가 상태(연락두절 포함)가 <span class="text-purple">24시간 이상 지속 될 경우 환불</span> 가능합니다. 참여하신 서비스의 부분적이고(성인인증, 기기 변경, 기타 설정 변경 등) 직접해결 가능한 문제는 1차 환불 대상은 아니며, 파티장에게 시정 요청을 할 수 있습니다. 단, <span class="text-purple">48시간 내에 조치가 안되서</span> 서비스 사용이 제한 되는 경우 <span class="text-purple">환불</span> 가능합니다.</p>
+        </div>
+        <div class="dialog-check">
+          <span class="input-check">
+            <input type="checkbox" id="step-check01" />
+            <label for="step-check01">파티장의 관리가 가능한 영역에서 문제가 발생 하였나요?</label>
+          </span>
+          <p>파티장의 귀책 사유가 아닌 제공 업체의 일시적인 오류, 네트워크 문제, 참여자의 사용 미숙 및 인지 오인, 단순 변심 등으로 인한 환불은 반려 될 수 있습니다.</p>
+        </div>
+        <div class="dialog-caution">
+          ※ 환불은시정 요청한 날짜 기준으로 진행되며, 초기(4일 내) 환불인 경우 결제하신 수단으로 전액 환불 됩니다.<br />
+          ※ 환불이 진행되는 경우 벗츠에서 환불금액을 보장해 드리며, 해당 금액은 포인트로 환불됩니다.
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button border button-purple">파티장에게 문의</a>
+        <a href="" class="button button-purple">다음</a>
+      </div>
+    </div>
+
+    <!-- 환불 신청 STEP 2 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">환불</span> 신청</div>
+      <div class="dialog-body">
+        <div class="dialog-step">
+          <span>STEP 1</span>
+          <span class="active">STEP 2</span>
+          <span>STEP 3</span>
+        </div>
+        <ul class="dialog-form">
+          <li>
+            <span class="subject">ㆍ 이름</span>
+            <input type="text" placeholder="이름" style="width: 130px" />
+          </li>
+          <li>
+            <span class="subject">ㆍ 요청 날짜</span>
+            <select name="" id="">
+              <option value="">2020년</option>
+            </select>
+            <select name="" id="">
+              <option value="">12월</option>
+            </select>
+            <select name="" id="">
+              <option value="">25일</option>
+            </select>
+          </li>
+          <li>
+            <span class="subject">ㆍ 환불 계좌</span>
+            <select style="width: 120px">
+              <option value="">은행 선택</option>
+            </select>
+            <input type="text" placeholder="계좌번호를 입력해 주세요." style="width: calc(100% - 123px)" />
+          </li>
+          <li>
+            <span class="subject">ㆍ 내용 입력</span>
+            <textarea placeholder="예) 넷플릭스 시청 불가, 파티장에게 조치 요구 하였지만 이틀 동안 조치 없음" style="height: 133px"></textarea>
+          </li>
+        </ul>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button">취소</a>
+        <a href="" class="button button-purple">다음</a>
+      </div>
+    </div>
+
+    <!-- 환불 신청 STEP 3 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">환불</span> 신청</div>
+      <div class="dialog-body">
+        <div class="dialog-step">
+          <span>STEP 1</span>
+          <span>STEP 2</span>
+          <span class="active">STEP 3</span>
+        </div>
+        <h4 style="font-size: 16px; font-weight: 600">환불 예상 포인트</h4>
+        <div class="dialog-refund-point">
+          <span class="Rajdhani text-purple">30,864</span>
+          <img src="../../assets/images/icon-coin-star-middle.png" alt="" />
+        </div>
+        <div class="dialog-caution">
+          - 초기 참여 불량으로 인한 환불로 결제하신 수단으로 결제하신 금액 100% 환불 됩니다.<br />
+          - 최대 48시간 내에(공휴일 제외) 환불 완료 됩니다.
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button">취소</a>
+        <a href="" class="button button-purple">다음</a>
+      </div>
+    </div>
+
+    <!-- 환불 신청 완료 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">환불</span> 신청</div>
+      <div class="dialog-body">
+        <div class="dialog-step">
+          <span>STEP 1</span>
+          <span>STEP 2</span>
+          <span>STEP 3</span>
+        </div>
+        <div class="dialog-finish">
+          <img src="../../assets/images/icon-coin-star-big.png" alt="" />
+          <p><span class="text-purple">환불 신청이 완료</span> 되었습니다</p>
+          <span>환불사유가 불명확하거나 파티장의 귀책사유로 인한 환불이 아닐 경우 반려 될 수 있습니다.</span>
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button button-purple">닫기</a>
+      </div>
+    </div>
+
+    <!-- 반품 신청 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">반품</span> 신청</div>
+      <div class="dialog-body">
+        <div class="dialog-pannel">
+          <div class="dialog-product">
+            <span class="brand"></span>
+            <div>스팀코드 환불 진행</div>
+            <span class="lightgrey">유튜브 가족요금제 인도 계정 참여하실 분</span>
+          </div>
+          <div class="right">
+            <span class="v-bar"><strong style="color: #333">2</strong>개</span>
+            <span><span class="Rajdhani">12,000</span>원</span>
+          </div>
+        </div>
+        <div class="dialog-select">
+          <a href="" class="active">오배송 및 지연</a>
+          <a href="">파손 및 불량</a>
+          <a href="">주문 실수</a>
+          <a href="">단순 변심</a>
+        </div>
+        <ul class="dialog-form">
+          <li>
+            <span class="subject">ㆍ 상세 사유 입력</span>
+            <textarea placeholder="예) 넷플릭스 시청 불가, 파티장에게 조치 요구 하였지만 이틀 동안 조치 없음" style="height: 103px"></textarea>
+            <p style="font-size: 11px; font-weight: 300; color: #999">
+              ※ 반품(환불) 요청을 하시기 전 반드기 판매자에게 반품 가능 여부를 확인해 주세요<br />
+              ※ 디지털코드의 경우 구매 직후 가치가 현저히 떨어지거나 사라질 수 있는 상품으로 , 단순 변심 및 실수에 의한 환불은 제한되며, 불량코드인 경우 판매자 확인을 통해서 환불이 진행됩니다.
+            </p>
+          </li>
+          <li>
+            <span class="subject">ㆍ 첨부 파일</span>
+            <span class="input-file">
+              <label class="button round border button-purple" for="file-upload">파일 선택</label>
+              <input type="file" id="file-upload" onchange="$('.file-name').val(window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop());" />
+              <input class="file-name" value="선택된 파일 없음" disabled="disabled" />
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button border button-purple">판매자에게 문의</a>
+        <a href="" class="button button-purple">확인</a>
+      </div>
+    </div>
+
+    <!-- 반품 신청 완료 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">반품</span> 신청</div>
+      <div class="dialog-body">
+        <div class="dialog-finish" style="padding: 100px 0">
+          <img src="../../assets/images/icon-coin-star-big.png" alt="" />
+          <p><span class="text-purple">반품 신청이 완료</span> 되었습니다</p>
+          <span>반품사유가 불명확하거나 상품의 가치가 현저히 사라진 경우 반품이 제한 될 수 있습니다.</span>
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button button-purple">닫기</a>
+      </div>
+    </div>
+
+    <!-- 반려 내용 확인 -->
+    <div class="dialog">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">반려</span> 내용 확인</div>
+      <div class="dialog-body">
+        <ul class="dialog-reject">
+          <li>
+            <span class="subject">환불(반품)사유</span>
+          </li>
+          <li>
+            <span class="subject">반려사유(파티장)</span>
+          </li>
+          <li>
+            <span class="subject">환불사유(관리자)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button border button-purple">판매자에게 문의</a>
+        <a href="" class="button button-purple">확인</a>
+      </div>
+    </div>
+  </body>
+</html>
