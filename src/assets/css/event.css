@@ -1,0 +1,41 @@
+.event {
+  position: relative;
+  margin-top: 40px;
+  font-size: 0;
+}
+
+.event-boundary {
+  position: relative;
+  overflow: hidden;
+}
+
+.event-list {
+  position: relative;
+  white-space: nowrap;
+}
+
+.event-list .event-row {
+  display: inline-block;
+  width: 50%;
+}
+
+.event-list .event-row img {
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .event {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    margin-top: 0;
+    z-index: 1;
+  }
+  .event .indicator {
+    display: none;
+  }
+  .event-list .event-row {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=event.css.map */

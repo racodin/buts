@@ -397,10 +397,6 @@ input[type='text']:disabled {
   background-color: transparent;
 }
 
-.relative {
-  position: relative;
-}
-
 .Rajdhani {
   font-family: 'Rajdhani';
 }
@@ -441,52 +437,38 @@ input[type='text']:disabled {
   border-left: 1px solid #ececec;
 }
 
-.title {
+.title-wrap {
   position: relative;
-  margin-top: 58px;
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #333333;
-  line-height: 24px;
 }
 
-.title a {
-  font-size: 22px;
-  color: #333333;
-  vertical-align: middle;
+.title-wrap .title-right {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.title .title-sub {
-  display: inline-block;
-  height: 32px;
-  margin-left: 15px;
-  padding: 0 15px;
-  font-size: 15px;
-  line-height: 30px;
-  border-radius: 16px;
-  border: solid 1px #dddddd;
-}
-
-.title-border {
-  position: relative;
-  padding-bottom: 22px;
+.title-wrap.border {
   border-bottom: 2px solid #7e69fe;
 }
 
-.title-border .title {
-  display: inline-block;
-  margin-bottom: 0;
-  height: 32px;
+.title {
+  position: relative;
+  margin-top: 56px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
 }
 
-.title-border a {
-  margin-right: 20px;
+.title .text {
+  display: inline-block;
+  font-size: 22px;
   color: #333333;
 }
 
-.title-border .button {
-  position: relative;
-  top: -2px;
+.title .button {
+  margin-left: 15px;
+  vertical-align: top;
 }
 
 .h3 {
@@ -505,7 +487,6 @@ input[type='text']:disabled {
   height: 70px;
   padding: 0 10px;
   font-size: 18px;
-  font-weight: 300;
   color: white;
   text-align: center;
   line-height: 68px;
@@ -520,7 +501,7 @@ input[type='text']:disabled {
 
 .button.round {
   min-width: auto;
-  padding: 0 20px;
+  padding: 0 16px;
   height: 32px;
   font-size: 14px;
   line-height: 30px;
@@ -530,7 +511,7 @@ input[type='text']:disabled {
 .button.mini {
   min-width: 50px;
   height: 32px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 30px;
 }
 
@@ -550,7 +531,7 @@ input[type='text']:disabled {
 
 .button.border {
   color: #666666;
-  border: solid 1px rgba(209, 208, 208, 0.52);
+  border: solid 1px #dddddd;
   background-color: #f4f4f4;
 }
 
@@ -580,6 +561,10 @@ input[type='text']:disabled {
 
 .button.button-blue {
   background-color: #1697fb;
+}
+
+.button.button-white {
+  background-color: #ffffff;
 }
 
 .button-center {
@@ -674,8 +659,9 @@ input[type='text']:disabled {
   color: #7e69fe;
   word-break: keep-all;
   line-height: 16px;
-  background-color: #f3edfe;
-  border-radius: 4px;
+  border: 1px solid #d5d0f5;
+  background-color: #f4f3fc;
+  border-radius: 2px;
 }
 
 .ttip:hover .ttip-text {
@@ -744,21 +730,20 @@ input[type='text']:disabled {
   .width-container {
     padding: 0 10px;
   }
-  .width-container.main .title {
-    margin-bottom: 0px;
-  }
   .title {
     font-size: 13px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
-  .title a {
+  .title .text {
     font-size: 13px;
   }
-  .title .title-sub {
-    height: 24px;
+  .title .button {
     margin-left: 8px;
+  }
+  .button.mini {
     padding: 0 10px;
+    height: 24px;
     font-size: 11px;
     line-height: 22px;
   }
@@ -1494,6 +1479,7 @@ a.header-login {
 .item-list {
   position: relative;
   width: calc(100% + 26px);
+  margin-top: -13px;
   margin-left: -13px;
   font-size: 0;
 }
@@ -1525,6 +1511,10 @@ a.header-login {
 }
 
 .item-row.disabled .item-type {
+  color: #aaa;
+}
+
+.item-row.disabled .item-member.plus .Rajdhani {
   color: #aaa;
 }
 
@@ -1684,6 +1674,7 @@ a.header-login {
   }
   .item-list {
     width: calc(100% + 10px);
+    margin-top: -5px;
     margin-left: -5px;
   }
   .item-row {

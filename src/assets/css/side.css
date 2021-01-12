@@ -9,6 +9,8 @@
 
 .side a {
   display: block;
+  width: 208px;
+  height: 55px;
   margin-top: 10px;
 }
 

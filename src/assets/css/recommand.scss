@@ -1,0 +1,32 @@
+.recommand-list {
+  position: relative;
+  width: calc(100% + 26px);
+  margin-left: -13px;
+  font-size: 0;
+}
+
+.recommand-thumb {
+  position: relative;
+  display: inline-block;
+  width: calc(25% - 26px);
+  margin: 13px;
+  border-radius: 20px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .recommand-list {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .recommand-thumb {
+    width: calc(50% - 10px);
+    margin: 5px;
+    border-radius: 10px;
+  }
+}

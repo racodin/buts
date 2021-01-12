@@ -276,8 +276,19 @@ input[type='text']:disabled {
   background-color: transparent;
 }
 
-.relative {
-  position: relative;
+.user-select {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.user-select img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 .Rajdhani {
@@ -320,52 +331,38 @@ input[type='text']:disabled {
   border-left: 1px solid #ececec;
 }
 
-.title {
+.title-wrap {
   position: relative;
-  margin-top: 58px;
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #333333;
-  line-height: 24px;
 }
 
-.title a {
-  font-size: 22px;
-  color: #333333;
-  vertical-align: middle;
+.title-wrap .title-right {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.title .title-sub {
-  display: inline-block;
-  height: 32px;
-  margin-left: 15px;
-  padding: 0 15px;
-  font-size: 15px;
-  line-height: 30px;
-  border-radius: 16px;
-  border: solid 1px #dddddd;
-}
-
-.title-border {
-  position: relative;
-  padding-bottom: 22px;
+.title-wrap.border {
   border-bottom: 2px solid #7e69fe;
 }
 
-.title-border .title {
-  display: inline-block;
-  margin-bottom: 0;
-  height: 32px;
+.title {
+  position: relative;
+  margin-top: 56px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
 }
 
-.title-border a {
-  margin-right: 20px;
+.title .text {
+  display: inline-block;
+  font-size: 22px;
   color: #333333;
 }
 
-.title-border .button {
-  position: relative;
-  top: -2px;
+.title .button {
+  margin-left: 15px;
+  vertical-align: top;
 }
 
 .h3 {
@@ -384,7 +381,6 @@ input[type='text']:disabled {
   height: 70px;
   padding: 0 10px;
   font-size: 18px;
-  font-weight: 300;
   color: white;
   text-align: center;
   line-height: 68px;
@@ -399,7 +395,7 @@ input[type='text']:disabled {
 
 .button.round {
   min-width: auto;
-  padding: 0 20px;
+  padding: 0 16px;
   height: 32px;
   font-size: 14px;
   line-height: 30px;
@@ -409,7 +405,7 @@ input[type='text']:disabled {
 .button.mini {
   min-width: 50px;
   height: 32px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 30px;
 }
 
@@ -429,7 +425,7 @@ input[type='text']:disabled {
 
 .button.border {
   color: #666666;
-  border: solid 1px rgba(209, 208, 208, 0.52);
+  border: solid 1px #dddddd;
   background-color: #f4f4f4;
 }
 
@@ -453,6 +449,10 @@ input[type='text']:disabled {
   background-color: #fb4c16;
 }
 
+.button.button-yellow {
+  background-color: #ffc000;
+}
+
 .button.button-green {
   background-color: #4bb640;
 }
@@ -461,10 +461,57 @@ input[type='text']:disabled {
   background-color: #1697fb;
 }
 
-.button-center {
+.button.button-white {
+  background-color: #ffffff;
+}
+
+.button-align {
   position: relative;
   margin-top: 60px;
+}
+
+.button-align .button {
+  vertical-align: top;
+}
+
+.button-align.center {
   text-align: center;
+}
+
+.button-align.left {
+  text-align: left;
+}
+
+.button-align.right {
+  text-align: right;
+}
+
+.indicator {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.indicator a,
+.indicator span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 4px;
+  background-color: #dbdbdb;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.indicator a.on,
+.indicator span.on {
+  width: 18px;
+  background-color: #7e69fe;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 .credit-percent {
@@ -562,19 +609,47 @@ input[type='text']:disabled {
   display: block;
 }
 
-.user-select {
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.search-bar {
+  position: relative;
+  font-size: 0;
 }
 
-.user-select img {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
+.search-bar select,
+.search-bar input,
+.search-bar a {
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid #7e69fe;
+}
+
+.search-bar select {
+  width: 100px;
+  margin-right: 15px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #252525;
+}
+
+.search-bar input {
+  width: 240px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: #aaaaaa;
+}
+
+.search-bar input:focus {
+  border: 0;
+  border-bottom: 1px solid #7e69fe;
+}
+
+.search-bar a {
+  display: inline-block;
+  width: 40px;
+  margin: 0;
+  text-align: right;
+  line-height: 40px;
+  vertical-align: middle;
 }
 
 .popup {
@@ -614,6 +689,11 @@ input[type='text']:disabled {
   background-color: lightblue;
 }
 
+.body {
+  min-height: 600px;
+  padding: 100px 0 100px 0;
+}
+
 @media screen and (max-width: 1320px) {
   .width-container {
     padding: 0 20px;
@@ -621,26 +701,39 @@ input[type='text']:disabled {
 }
 
 @media screen and (max-width: 960px) {
+  .body {
+    padding: 140px 0 0 0;
+  }
   .width-container {
     padding: 0 10px;
   }
-  .width-container.main .title {
-    margin-bottom: 0px;
+  .width-container.main {
+    margin-top: -50px;
+    padding-bottom: 28%;
   }
   .title {
     font-size: 13px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    line-height: 24px;
   }
-  .title a {
+  .title .text {
     font-size: 13px;
   }
-  .title .title-sub {
-    height: 24px;
+  .title .button {
     margin-left: 8px;
+  }
+  .button.round {
     padding: 0 10px;
+    height: 24px;
     font-size: 11px;
     line-height: 22px;
+  }
+  .button.small {
+    min-width: 60px;
+    height: 34px;
+    font-size: 11px;
+    line-height: 32px;
   }
 }
 /*# sourceMappingURL=common.css.map */

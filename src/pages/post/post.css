@@ -5,52 +5,6 @@
   margin-top: 30px;
 }
 
-.post-list-search {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 23px 0;
-  font-size: 0;
-}
-
-.post-list-search select,
-.post-list-search input,
-.post-list-search a {
-  height: 40px;
-  border: 0;
-  border-bottom: 1px solid #7e69fe;
-}
-
-.post-list-search select {
-  width: 100px;
-  margin-right: 15px;
-  font-size: 15px;
-  font-weight: 300;
-  color: #252525;
-}
-
-.post-list-search input {
-  width: 240px;
-  padding: 0;
-  font-size: 15px;
-  font-weight: 300;
-  color: #aaaaaa;
-}
-
-.post-list-search input:focus {
-  border: 0;
-  border-bottom: 1px solid #7e69fe;
-}
-
-.post-list-search a {
-  display: inline-block;
-  width: 40px;
-  margin: 0;
-  text-align: right;
-  line-height: 40px;
-  vertical-align: middle;
-}
-
 .post-buttons-left {
   position: absolute;
   top: 0;

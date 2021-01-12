@@ -35,26 +35,28 @@ $(function () {
       $profile = $('.header-profile'),
       $shade = $('.header-shade');
 
-    $right.on('mouseenter', function (e) {
-      e.preventDefault();
-      if($window.width() > mobileWidth) $profile.css({left: 'auto'}).fadeIn(100); 
-    }).on('mouseleave', function (e) {
-      e.preventDefault();
-      if($window.width() > mobileWidth) $profile.fadeOut(100);
-    });
+    $right
+      .on('mouseenter', function (e) {
+        e.preventDefault();
+        if ($window.width() > mobileWidth) $profile.css({ left: 'auto' }).fadeIn(100);
+      })
+      .on('mouseleave', function (e) {
+        e.preventDefault();
+        if ($window.width() > mobileWidth) $profile.fadeOut(100);
+      });
 
     $hamberger.on('click', function (e) {
       e.preventDefault();
-      $profile.show().css({left: '-250px'}).animate({left: 0}, 300);
+      $profile.show().css({ left: '-250px' }).animate({ left: 0 }, 300);
       $shade.fadeIn(200);
-      $body.css({'overflow': 'hidden'})
+      $body.css({ overflow: 'hidden' });
     });
-    
+
     $shade.on('click', function (e) {
-      $profile.animate({left: '-250px'}, 200, function(){
+      $profile.animate({ left: '-250px' }, 200, function () {
         $profile.hide();
         $shade.fadeOut(100);
-        $body.css({'overflow': ''})
+        $body.css({ overflow: '' });
       });
     });
 
@@ -65,8 +67,7 @@ $(function () {
       removalDelay: 160,
       preloader: false,
     });
-
   };
-  
+
   buts();
 });
