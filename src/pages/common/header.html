@@ -1,103 +1,45 @@
 <!-- header -->
 <div class="header">
-  <div class="sub-menu-bg" style="display: none"></div>
+  <!-- <div class="sub-menu-bg" style="display: none"></div> -->
   <div class="width-container">
     <div class="header-logo">
-      <a href=""><img src="/src/assets/images/small-butslogo.png" alt="" /></a>
+      <a href=""><img src="./assets/css/img/small-butslogo.png" srcset="./assets/css/img/small-butslogo@2x.png 2x, ./assets/css/img/small-butslogo@3x.png x3" alt="" /></a>
     </div>
-    <div class="header-menu">
-      <ul>
-        <li class="menu-li on">
-          <a href="" class="menu-a">영상</a>
-          <div class="sub-menu sub-menu01" style="display: none">
-            <div class="sub-tip">
-              <span class="text-purple">영상</span> 인기 카테고리
-              <a href=""><img src="/src/assets/images/tip.png" alt="" /></a>
-            </div>
-            <ul>
-              <li class="sub-li on"><a href="" class="sub-a">#넷플릭스</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#왓챠</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#티빙</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#웨이브</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#유튜브</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="menu-li">
-          <a href="" class="menu-a">도서ㆍ음악</a>
-          <div class="sub-menu sub-menu01" style="display: none">
-            <div class="sub-tip">
-              <span class="text-purple">영상</span> 인기 카테고리
-              <a href=""><i class="icon-tip"></i></a>
-            </div>
-            <ul>
-              <li class="sub-li on"><a href="" class="sub-a">#넷</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#왓</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#티</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#웨</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#유</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="menu-li">
-          <a href="" class="menu-a">기타</a>
-          <div class="sub-menu sub-menu01" style="display: none">
-            <div class="sub-tip">
-              <span class="text-purple">영상</span> 인기 카테고리
-              <a href=""><i class="icon-tip"></i></a>
-            </div>
-            <ul>
-              <li class="sub-li on"><a href="" class="sub-a">#11</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#22</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#33</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#44</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="menu-li">
-          <a href="" class="menu-a">기프트</a>
-          <div class="sub-menu sub-menu01" style="display: none">
-            <div class="sub-tip">
-              <span class="text-purple">영상</span> 인기 카테고리
-              <a href=""><i class="icon-tip"></i></a>
-            </div>
-            <ul>
-              <li class="sub-li on"><a href="" class="sub-a">#a</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#b</a></li>
-              <li class="sub-li"><a href="" class="sub-a">#c</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <a href="" class="header-hamberger"><span class="line"></span></a>
     <div class="header-right">
       <!-- <a href="" class="header-login">로그인</a> -->
-      <a href="" class="header-user">
-        <img src="/src/assets/images/icon-myimg.png" alt="" />
-        <span class="arrow"><img src="/src/assets/images/mymenu-arrow.png" alt="" /></span>
+      <a href="javascript:;" class="header-user">
+        <span class="picture"><img src="./assets/css/img/icon-myimg.png" alt="" /></span>
+        <span class="arrow"><img src="./assets/css/img/mymenu-arrow.png" alt="" /></span>
       </a>
-      <a href="" class="header-hamberger"><span class="line"></span></a>
+      <div class="header-shade" style="display: none"></div>
       <div class="header-profile" style="display: none">
         <div class="block">
+          <div class="picture mobile"><img src="./assets/css/img/icon-myimg.png" alt="" /></div>
           <div class="name">
             벗츠매니저
-            <a href="" class="header-logout"><img src="/src/assets/images/img-input-text-reste-copy.png" alt="" /></a>
+            <a href="" class="header-logout"><img src="./assets/css/img/img-input-text-reste-copy.png" alt="" /></a>
           </div>
           <div class="credit-percent">
-            <div class="credit-bar" style="right: 50%"></div>
+            <div class="credit-bar credit-3" style="right: 50%"></div>
           </div>
           <div class="grade">
             벗츠 신용 <span class="text-purple">4등급</span>
-            <a href=""><img src="/src/assets/images/tip.png" alt="" /></a>
+            <a href="" class="ttip">
+              <img src="./assets/css/img/tip.png" alt="" />
+              <span class="ttip-text" style="right: -29px; width: 160px">첫 가입시 3등급이며, 벗츠 사용도 및 거래 점수에 따라 등급이 변할 수 있습니다.</span>
+            </a>
           </div>
           <div class="buttons">
             <a href="">파티관리</a>
             <a href="">관리자</a>
           </div>
+        </div>
+        <div class="block">
           <ul class="menu">
             <li>
               <div class="point">
-                <span class="icon"><img src="/src/assets/images/icon-coin-star-big.png" alt="" /></span>
+                <span class="icon"><img src="./assets/css/img/icon-coin-star-big.png" alt="" /></span>
                 <span>버트</span>
                 <span class="right">
                   <span class="price Rajdhani">2,800</span>
@@ -107,7 +49,7 @@
             </li>
             <li>
               <div class="point">
-                <span class="icon"><img src="/src/assets/images/icon-up.png" alt="" /></span>
+                <span class="icon"><img src="./assets/css/img/icon-up.png" alt="" /></span>
                 <span>버트 Up</span>
                 <span class="right">
                   <span class="price Rajdhani">5</span>
@@ -118,7 +60,7 @@
             </li>
             <li>
               <div class="point">
-                <span class="icon"><img src="/src/assets/images/icon-plus.png" alt="" /></span>
+                <span class="icon"><img src="./assets/css/img/icon-plus.png" alt="" /></span>
                 <span>버트 Plus</span>
                 <span class="right">
                   <span class="price Rajdhani">3</span>
@@ -144,5 +86,111 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="header-menu pc">
+    <ul>
+      <li class="menu-li on">
+        <a href="" class="menu-a">영상</a>
+        <div class="sub-menu">
+          <div class="sub-width">
+            <div class="sub-tip">
+              <span class="text-purple">영상</span> 인기 카테고리
+              <a href="" class="ttip">
+                <img src="./assets/css/img/tip.png" alt="" />
+                <span class="ttip-text" style="left: 0; width: 166px"> 많이 생성된 파티방 및 인기 검색어 기준으로 노출됩니다. </span>
+              </a>
+            </div>
+            <ul>
+              <li class="sub-li on"><a href="" class="sub-a">#넷플릭스</a></li>
+              <li class="sub-li"><a href="" class="sub-a">#왓챠</a></li>
+              <li class="sub-li"><a href="" class="sub-a">#티빙</a></li>
+              <li class="sub-li"><a href="" class="sub-a">#웨이브</a></li>
+              <li class="sub-li"><a href="" class="sub-a">#유튜브</a></li>
+            </ul>
+            <div class="sub-search">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3NpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphZmI0MzBlOS0xMjYwLWU0NDQtYmI3OS02YjA5NGRhMzgzMjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjYxNjIxQjY1MzIyMTFFQjhCQTNEQjdGMjA3OUQyOTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjYxNjIxQjU1MzIyMTFFQjhCQTNEQjdGMjA3OUQyOTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Y2FjMjYzZDAtYjg5Ny02YjQzLWI4MDItZjZlZjg4NzdiOGNlIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmFmYjQzMGU5LTEyNjAtZTQ0NC1iYjc5LTZiMDk0ZGEzODMyMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtQoGnYAAAFoSURBVHjarNTNK0RRGMfxM9yFko2XKNmoa2VHXhPFio2UxJSslTS3LGz9AchKSnlbYqJsZGGiSUpZ29l5G+yUoet761HXnXPce42nPjVT5/zmOW+TsG1b+crCuGhDFe5whk0cqZCyfJ+bsIdm3GAXr6jDAEZxjCSewgK9Ni+QxwjSgXGlmMIysujGoy6wREL38SbLTGvGfWIdfajHhqlDL3BCljmN25AtusI8BtFjChyTPTtQ0WoVLzJPG9iBjIpe77hEiymwEjkVr3JypbSB93I14lQtnk2B5+iXqxG1qmWeNnAbDZiMEdiFOVPgoRzKElpDgnoxI3fWNQW6cgW8PTlFCmWBcRVYwAlW5McTvz0972Da5QUsyuSsnGYNOlGOHXnfszIvFezU/+fgvc0hWVZSlt+IB6xhC9cyNi9hBaGWputMhIvu+MJ+hFrq7+UEwrzvbjGBuk6dYgMLOv2PwO/QDwx/CTAAGKtO40+dSq8AAAAASUVORK5CYII="
+                alt=""
+              />
+              <input type="text" placeholder="검색어를 입력해주세요" />
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-li">
+        <a href="" class="menu-a">도서ㆍ음악</a>
+      </li>
+      <li class="menu-li">
+        <a href="" class="menu-a">기타</a>
+      </li>
+      <li class="menu-li">
+        <a href="" class="menu-a">기프트</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header-menu mobile">
+    <ul>
+      <li class="menu-li on">
+        <a href="" class="menu-a">영상</a>
+        <div class="sub-menu sub-menu01">
+          <div class="sub-tip">
+            <span class="text-purple">영상</span> 인기 카테고리
+            <a href=""><img src="./assets/css/img/tip.png" alt="" /></a>
+          </div>
+          <ul>
+            <li class="sub-li on"><a href="" class="sub-a">#넷플릭스</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#왓챠</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#티빙</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#웨이브</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#유튜브</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu-li">
+        <a href="" class="menu-a">도서ㆍ음악</a>
+        <div class="sub-menu sub-menu01" style="display: none">
+          <div class="sub-tip">
+            <span class="text-purple">영상</span> 인기 카테고리
+            <a href=""><i class="icon-tip"></i></a>
+          </div>
+          <ul>
+            <li class="sub-li on"><a href="" class="sub-a">#넷</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#왓</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#티</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#웨</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#유</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu-li">
+        <a href="" class="menu-a">기타</a>
+        <div class="sub-menu sub-menu01" style="display: none">
+          <div class="sub-tip">
+            <span class="text-purple">영상</span> 인기 카테고리
+            <a href=""><i class="icon-tip"></i></a>
+          </div>
+          <ul>
+            <li class="sub-li on"><a href="" class="sub-a">#11</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#22</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#33</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#44</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu-li">
+        <a href="" class="menu-a">기프트</a>
+        <div class="sub-menu sub-menu01" style="display: none">
+          <div class="sub-tip">
+            <span class="text-purple">영상</span> 인기 카테고리
+            <a href=""><i class="icon-tip"></i></a>
+          </div>
+          <ul>
+            <li class="sub-li on"><a href="" class="sub-a">#a</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#b</a></li>
+            <li class="sub-li"><a href="" class="sub-a">#c</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

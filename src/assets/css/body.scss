@@ -3,22 +3,128 @@
   padding: 100px 0 100px 0;
 }
 
+.button.button-register {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+}
+
 .indicator {
   position: absolute;
   bottom: -20px;
   left: 0;
   width: 100%;
   text-align: center;
-  a {
+  a,
+  span {
     display: inline-block;
     width: 5px;
     height: 5px;
     margin: 0 4px;
     background-color: #dbdbdb;
     border-radius: 5px;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
     &.on {
       width: 18px;
       background-color: #7e69fe;
+      -webkit-transition: width 0.5s;
+      transition: width 0.5s;
+    }
+  }
+}
+
+.item-slide {
+  position: relative;
+  &.party {
+    margin-bottom: 20px;
+    .item-list {
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 452px;
+      .item-row {
+        height: 200px;
+        flex: none;
+      }
+    }
+  }
+  &.gift {
+    .item-list {
+      white-space: nowrap;
+    }
+    .item-date {
+      position: absolute;
+      top: 30px;
+      right: 26px;
+      font-size: 12px;
+      color: #999999;
+    }
+    .item-price {
+      .Rajdhani {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.item-boundary {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-navi {
+  position: absolute;
+  top: 50%;
+  display: none;
+  width: 36px;
+  height: 100px;
+  margin-top: -50px;
+  background-color: #fff;
+  border-radius: 4px;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: #bbb;
+  }
+  &.prev {
+    left: -60px;
+    &::before {
+      transform: rotate(-45deg);
+      margin: -7px 0 0 -10px;
+    }
+    &::after {
+      transform: rotate(45deg);
+      margin: 7px 0 0 -10px;
+    }
+  }
+  &.next {
+    right: -60px;
+    &::before {
+      transform: rotate(45deg);
+      margin: -7px 0 0 -10px;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      margin: 7px 0 0 -10px;
+    }
+  }
+  &:hover {
+    background-color: #7e69fe;
+    &::before,
+    &::after {
+      background-color: #fff;
     }
   }
 }
@@ -27,15 +133,13 @@
   position: relative;
   width: calc(100% + 26px);
   margin-left: -13px;
-  margin-bottom: 60px;
   font-size: 0;
 }
 
 .item-row {
   position: relative;
   display: inline-block;
-  width: 300px;
-  height: 200px;
+  width: calc(25% - 26px);
   margin: 13px;
   padding: 22px 30px;
   font-size: 13px;
@@ -44,11 +148,21 @@
   border-radius: 20px;
   border: solid 1px #dddddd;
   background-color: white;
-  &:hover {
+  &:not(.disabled):hover {
     border: 1px solid #a89cf4;
-    cursor: pointer;
     .item-type {
       color: #684adf;
+    }
+  }
+  &.disabled {
+    color: #aaa;
+    .item-type {
+      color: #aaa;
+    }
+    .item-price {
+      .Rajdhani {
+        color: #aaa;
+      }
     }
   }
 }
@@ -71,16 +185,32 @@
 }
 
 .item-member {
-  background: url('../images/icon-butsicon-small-glay.png') no-repeat;
+  position: relative;
+  background: url('./img/icon-butsicon-small-glay.png') no-repeat;
   display: inline-block;
   width: 32px;
   height: 32px;
   margin-left: 9px;
+  border-radius: 5px;
+  vertical-align: top;
   &.on {
-    background: url('../images/icon-butsicon-small.png') no-repeat;
+    background: url('./img/icon-butsicon-small.png') no-repeat;
   }
   &:first-child {
     margin-left: 0;
+  }
+  &.plus {
+    font-size: 14px;
+    text-align: center;
+    background-image: none;
+    border: 1px solid #ececec;
+    .Rajdhani {
+      font-size: 14px;
+      font-weight: 600;
+      color: #7e69fe;
+      line-height: 30px;
+      vertical-align: 1px;
+    }
   }
 }
 
@@ -97,6 +227,14 @@
     font-weight: 700;
     color: #252525;
   }
+}
+
+.item-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .item-thumb {
@@ -116,58 +254,58 @@
 
 .event {
   position: relative;
-  margin-bottom: 55px;
+  margin-top: 40px;
   font-size: 0;
 }
 
-.event-banner {
-  display: inline-block;
+.event-boundary {
+  position: relative;
+  overflow: hidden;
+}
+.event-list {
+  position: relative;
+  white-space: nowrap;
+  .event-row {
+    display: inline-block;
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .recommand-list {
   position: relative;
   width: calc(100% + 26px);
   margin-left: -13px;
-  margin-bottom: 55px;
   font-size: 0;
 }
 
 .recommand-thumb {
   position: relative;
   display: inline-block;
-  width: 300px;
-  height: 168px;
+  width: calc(25% - 26px);
   margin: 13px;
   border-radius: 20px;
   overflow: hidden;
   img {
     width: 100%;
-    height: 100%;
   }
 }
 
-.item-list.gift {
-  .item-date {
-    position: absolute;
-    top: 30px;
-    right: 26px;
-    font-size: 12px;
-    color: #999999;
+@media screen and (max-width: 960px) {
+  .width-container.main {
+    margin-top: -50px;
+    padding-bottom: 28%;
   }
-  .item-price {
-    .Rajdhani {
-      font-size: 30px;
-    }
-  }
-}
-
-@media screen and (max-width: 1320px) {
   .body {
-    padding: 86px 0 100px 0;
+    padding: 140px 0 0 0;
   }
-  .title {
-    font-size: 12px;
-    margin-bottom: 10px;
+  .button.button-register {
+    height: 20px;
+    padding: 0 6px;
+    font-size: 11px;
+    line-height: 18px;
   }
   .item-list {
     width: calc(100% + 10px);
@@ -175,7 +313,6 @@
   }
   .item-row {
     width: calc(50% - 10px);
-    height: 100px;
     margin: 5px;
     padding: 11px 15px;
     font-size: 10px;
@@ -184,34 +321,84 @@
   .item-type {
     font-size: 12px;
   }
-  .item-members {
-    margin: 5px 0;
-  }
-  .item-member {
-    width: 16px;
-    height: 16px;
-    margin-left: 4px;
-    background-size: 16px 16px;
-    &.on {
-      background-size: 16px 16px;
-    }
+  .item-thumb {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
   }
   .item-price {
-    bottom: 8px;
-    right: 13px;
+    bottom: 6px;
+    right: 10px;
     .Rajdhani {
-      font-size: 12px;
+      font-size: 18px !important;
     }
   }
-  .item-thumb {
-    width: 31px;
-    height: 31px;
-    margin-top: 10px;
-    border-radius: 5px;
+  .item-members {
+    margin: 12px 0;
+  }
+  .item-member {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+    background-size: 26px 26px;
+    &.on {
+      background-size: 26px 26px;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &.plus {
+      font-size: 13px;
+      .Rajdhani {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+  }
+  .item-slide {
+    &.party {
+      margin-bottom: 30px;
+      .item-list {
+        height: 272px;
+        .item-row {
+          width: calc(50% - 10px);
+          height: 126px;
+        }
+      }
+    }
+    &.gift {
+      .item-date {
+        top: 11px;
+        right: 10px;
+        font-size: 10px;
+      }
+    }
+  }
+  .event {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    margin-top: 0;
+    z-index: 1;
+    .indicator {
+      display: none;
+    }
+  }
+  .event-list {
+    .event-row {
+      width: 100%;
+    }
+  }
+  .recommand-list {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .recommand-thumb {
     width: calc(50% - 10px);
-    height: 84px;
-    margin-left: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 }

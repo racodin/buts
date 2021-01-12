@@ -3,6 +3,13 @@
   padding: 100px 0 100px 0;
 }
 
+.button.button-register {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+}
+
 .indicator {
   position: absolute;
   bottom: -20px;
@@ -11,33 +18,155 @@
   text-align: center;
 }
 
-.indicator a {
+.indicator a,
+.indicator span {
   display: inline-block;
   width: 5px;
   height: 5px;
   margin: 0 4px;
   background-color: #dbdbdb;
   border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
-.indicator a.on {
+.indicator a.on,
+.indicator span.on {
   width: 18px;
   background-color: #7e69fe;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.item-slide {
+  position: relative;
+}
+
+.item-slide.party {
+  margin-bottom: 20px;
+}
+
+.item-slide.party .item-list {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 452px;
+}
+
+.item-slide.party .item-list .item-row {
+  height: 200px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.item-slide.gift .item-list {
+  white-space: nowrap;
+}
+
+.item-slide.gift .item-date {
+  position: absolute;
+  top: 30px;
+  right: 26px;
+  font-size: 12px;
+  color: #999999;
+}
+
+.item-slide.gift .item-price .Rajdhani {
+  font-size: 30px;
+}
+
+.item-boundary {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-navi {
+  position: absolute;
+  top: 50%;
+  display: none;
+  width: 36px;
+  height: 100px;
+  margin-top: -50px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.slide-navi::before, .slide-navi::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #bbb;
+}
+
+.slide-navi.prev {
+  left: -60px;
+}
+
+.slide-navi.prev::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: -7px 0 0 -10px;
+}
+
+.slide-navi.prev::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 7px 0 0 -10px;
+}
+
+.slide-navi.next {
+  right: -60px;
+}
+
+.slide-navi.next::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -7px 0 0 -10px;
+}
+
+.slide-navi.next::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: 7px 0 0 -10px;
+}
+
+.slide-navi:hover {
+  background-color: #7e69fe;
+}
+
+.slide-navi:hover::before, .slide-navi:hover::after {
+  background-color: #fff;
 }
 
 .item-list {
   position: relative;
   width: calc(100% + 26px);
   margin-left: -13px;
-  margin-bottom: 60px;
   font-size: 0;
 }
 
 .item-row {
   position: relative;
   display: inline-block;
-  width: 300px;
-  height: 200px;
+  width: calc(25% - 26px);
   margin: 13px;
   padding: 22px 30px;
   font-size: 13px;
@@ -48,13 +177,24 @@
   background-color: white;
 }
 
-.item-row:hover {
+.item-row:not(.disabled):hover {
   border: 1px solid #a89cf4;
-  cursor: pointer;
 }
 
-.item-row:hover .item-type {
+.item-row:not(.disabled):hover .item-type {
   color: #684adf;
+}
+
+.item-row.disabled {
+  color: #aaa;
+}
+
+.item-row.disabled .item-type {
+  color: #aaa;
+}
+
+.item-row.disabled .item-price .Rajdhani {
+  color: #aaa;
 }
 
 .item-type {
@@ -75,19 +215,37 @@
 }
 
 .item-member {
-  background: url("../images/icon-butsicon-small-glay.png") no-repeat;
+  position: relative;
+  background: url("./img/icon-butsicon-small-glay.png") no-repeat;
   display: inline-block;
   width: 32px;
   height: 32px;
   margin-left: 9px;
+  border-radius: 5px;
+  vertical-align: top;
 }
 
 .item-member.on {
-  background: url("../images/icon-butsicon-small.png") no-repeat;
+  background: url("./img/icon-butsicon-small.png") no-repeat;
 }
 
 .item-member:first-child {
   margin-left: 0;
+}
+
+.item-member.plus {
+  font-size: 14px;
+  text-align: center;
+  background-image: none;
+  border: 1px solid #ececec;
+}
+
+.item-member.plus .Rajdhani {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7e69fe;
+  line-height: 30px;
+  vertical-align: 1px;
 }
 
 .item-info {
@@ -104,6 +262,14 @@
   font-size: 20px;
   font-weight: 700;
   color: #252525;
+}
+
+.item-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .item-thumb {
@@ -124,27 +290,40 @@
 
 .event {
   position: relative;
-  margin-bottom: 55px;
+  margin-top: 40px;
   font-size: 0;
 }
 
-.event-banner {
+.event-boundary {
+  position: relative;
+  overflow: hidden;
+}
+
+.event-list {
+  position: relative;
+  white-space: nowrap;
+}
+
+.event-list .event-row {
   display: inline-block;
+  width: 50%;
+}
+
+.event-list .event-row img {
+  width: 100%;
 }
 
 .recommand-list {
   position: relative;
   width: calc(100% + 26px);
   margin-left: -13px;
-  margin-bottom: 55px;
   font-size: 0;
 }
 
 .recommand-thumb {
   position: relative;
   display: inline-block;
-  width: 300px;
-  height: 168px;
+  width: calc(25% - 26px);
   margin: 13px;
   border-radius: 20px;
   overflow: hidden;
@@ -152,28 +331,21 @@
 
 .recommand-thumb img {
   width: 100%;
-  height: 100%;
 }
 
-.item-list.gift .item-date {
-  position: absolute;
-  top: 30px;
-  right: 26px;
-  font-size: 12px;
-  color: #999999;
-}
-
-.item-list.gift .item-price .Rajdhani {
-  font-size: 30px;
-}
-
-@media screen and (max-width: 1320px) {
-  .body {
-    padding: 86px 0 100px 0;
+@media screen and (max-width: 960px) {
+  .width-container.main {
+    margin-top: -50px;
+    padding-bottom: 28%;
   }
-  .title {
-    font-size: 12px;
-    margin-bottom: 10px;
+  .body {
+    padding: 140px 0 0 0;
+  }
+  .button.button-register {
+    height: 20px;
+    padding: 0 6px;
+    font-size: 11px;
+    line-height: 18px;
   }
   .item-list {
     width: calc(100% + 10px);
@@ -181,7 +353,6 @@
   }
   .item-row {
     width: calc(50% - 10px);
-    height: 100px;
     margin: 5px;
     padding: 11px 15px;
     font-size: 10px;
@@ -190,35 +361,79 @@
   .item-type {
     font-size: 12px;
   }
-  .item-members {
-    margin: 5px 0;
-  }
-  .item-member {
-    width: 16px;
-    height: 16px;
-    margin-left: 4px;
-    background-size: 16px 16px;
-  }
-  .item-member.on {
-    background-size: 16px 16px;
+  .item-thumb {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
   }
   .item-price {
-    bottom: 8px;
-    right: 13px;
+    bottom: 6px;
+    right: 10px;
   }
   .item-price .Rajdhani {
-    font-size: 12px;
+    font-size: 18px !important;
   }
-  .item-thumb {
-    width: 31px;
-    height: 31px;
-    margin-top: 10px;
-    border-radius: 5px;
+  .item-members {
+    margin: 12px 0;
+  }
+  .item-member {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+    background-size: 26px 26px;
+  }
+  .item-member.on {
+    background-size: 26px 26px;
+  }
+  .item-member:first-child {
+    margin-left: 0;
+  }
+  .item-member.plus {
+    font-size: 13px;
+  }
+  .item-member.plus .Rajdhani {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .item-slide.party {
+    margin-bottom: 30px;
+  }
+  .item-slide.party .item-list {
+    height: 272px;
+  }
+  .item-slide.party .item-list .item-row {
+    width: calc(50% - 10px);
+    height: 126px;
+  }
+  .item-slide.gift .item-date {
+    top: 11px;
+    right: 10px;
+    font-size: 10px;
+  }
+  .event {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    margin-top: 0;
+    z-index: 1;
+  }
+  .event .indicator {
+    display: none;
+  }
+  .event-list .event-row {
+    width: 100%;
+  }
+  .recommand-list {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .recommand-thumb {
     width: calc(50% - 10px);
-    height: 84px;
-    margin-left: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 }
 /*# sourceMappingURL=body.css.map */

@@ -18,13 +18,31 @@
   position: relative;
   display: inline-block;
   padding-top: 40px;
+  z-index: 1;
 }
 
 .header-menu {
   position: absolute;
   top: 0;
-  left: 300px;
+  left: 0;
+  width: 100%;
   font-size: 0;
+}
+
+.header-menu.pc {
+  text-align: center;
+}
+
+.header-menu.pc ul {
+  display: inline-block;
+}
+
+.header-menu.pc .sub-menu {
+  display: none;
+}
+
+.header-menu.mobile {
+  display: none;
 }
 
 .header-menu .menu-li {
@@ -51,14 +69,35 @@
   position: absolute;
   top: 100px;
   left: 0;
-  width: 1280px;
-  height: 250px;
-  padding: 30px 0 30px 200px;
+  width: 100%;
   background-color: white;
+  -webkit-box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.15);
 }
 
-.header-menu .sub-menu01 {
-  left: -300px;
+.header-menu .sub-width {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 0 45px 0;
+  text-align: left;
+}
+
+.header-menu .sub-width ul {
+  padding-left: 200px;
+}
+
+.header-menu .sub-tip {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  font-size: 16px;
+  color: #333333;
+  z-index: 1;
+}
+
+.header-menu .sub-tip .ttip {
+  top: -2px;
 }
 
 .header-menu .sub-li {
@@ -74,7 +113,7 @@
   position: relative;
   display: inline-block;
   height: 38px;
-  margin: 0 5px;
+  margin: 5px;
   padding: 0 20px;
   font-size: 16px;
   text-align: center;
@@ -85,39 +124,36 @@
   background-color: white;
 }
 
-.header-menu .sub-tip {
-  position: absolute;
-  top: 36px;
-  left: 0;
-  font-size: 16px;
-  color: #333333;
-}
-
-.header-menu .sub-tip a {
+.header-menu .sub-search {
   position: relative;
-  top: -2px;
-  display: inline-block;
-  width: 15px;
-  height: 14px;
-  margin-left: 4px;
-  line-height: 0;
+  width: 100%;
+  margin-top: 30px;
+  border-bottom: 1px solid #5d5d5d;
 }
 
-.sub-menu-bg {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  background-color: white;
-  -webkit-box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.15);
+.header-menu .sub-search img {
+  position: relative;
+  top: 2px;
+}
+
+.header-menu .sub-search input {
+  width: calc(100% - 20px);
+  height: 62px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #999;
+  border: 1px solid white;
+}
+
+.header-menu .sub-search input:focus {
+  color: #333333;
 }
 
 .header-right {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 a.header-login {
@@ -137,7 +173,17 @@ a.header-login {
 .header-user {
   position: relative;
   display: inline-block;
-  margin-top: 25px;
+  padding: 25px 0;
+}
+
+.header-user .picture {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  vertical-align: middle;
+  overflow: hidden;
 }
 
 .header-user .arrow {
@@ -149,16 +195,17 @@ a.header-login {
   top: 0;
   left: 0;
   display: none;
-  width: 40px;
-  height: 40px;
-  padding: 12px 10px;
+  width: 50px;
+  height: 50px;
+  padding: 17px 15px;
+  z-index: 1;
 }
 
 .header-hamberger .line {
   position: relative;
   display: block;
-  width: 20px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   border-top: 2px solid #7e69fe;
   border-bottom: 2px solid #7e69fe;
 }
@@ -203,10 +250,25 @@ a.header-login {
 
 .header-profile .block:first-child {
   border-top: 0;
+  padding: 20px 20px 10px 20px;
+  background-color: #faf9fe;
+}
+
+.header-profile .picture {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-profile .picture.mobile {
+  display: none;
 }
 
 .header-profile .menu {
-  margin: 16px 0;
+  margin: 12px 0;
 }
 
 .header-profile .menu li {
@@ -226,7 +288,6 @@ a.header-login {
 }
 
 .header-profile .name {
-  margin: 20px 0 0 0;
   font-size: 17px;
   color: #7e69fe;
   text-align: center;
@@ -251,6 +312,7 @@ a.header-login {
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid #7e69fe;
+  background-color: white;
 }
 
 .header-profile .buttons a {
@@ -343,9 +405,18 @@ a.header-login {
 }
 
 @media screen and (max-width: 1320px) {
+  .header-right {
+    right: 10px;
+  }
+  .header-menu .sub-width {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .header {
     top: 0;
-    height: 40px;
+    height: 50px;
     border-bottom: 1px solid #f0eff7;
   }
   .header-logo {
@@ -353,7 +424,7 @@ a.header-login {
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 14px;
     text-align: center;
   }
   .header-logo img {
@@ -362,11 +433,11 @@ a.header-login {
   }
   .header-menu {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 0;
     width: 100%;
-    height: 30px;
-    padding: 0 10px;
+    height: 40px;
+    padding: 0 15px;
     border-bottom: 1px solid #ffe655;
     background-color: white;
   }
@@ -375,10 +446,11 @@ a.header-login {
   }
   .header-menu .menu-a {
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding: 0;
-    font-size: 12px;
-    line-height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
   }
   .header-right {
     left: 0;
@@ -387,8 +459,8 @@ a.header-login {
   }
   a.header-login {
     position: absolute;
-    top: 8px;
-    right: 10px;
+    top: 13px;
+    left: 15px;
     width: 56px;
     height: 22px;
     margin: 0;
@@ -398,7 +470,69 @@ a.header-login {
   .header-user {
     display: none;
   }
+  .header-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   .header-hamberger {
+    display: block;
+  }
+  .header-profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border: 0;
+  }
+  .header-profile .picture.mobile {
+    display: block;
+  }
+  .header-profile .name {
+    margin-top: 12px;
+  }
+  .header-menu .sub-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px 10px;
+    border-bottom: 1px solid #dddddd;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    overflow: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  .header-menu .sub-menu::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+  }
+  .header-menu .sub-tip {
+    display: none;
+  }
+  .header-menu ul {
+    white-space: nowrap;
+  }
+  .header-menu .sub-a {
+    height: 28px;
+    padding: 0 14px;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .header-menu.pc {
+    display: none;
+  }
+  .header-menu.mobile {
     display: block;
   }
 }

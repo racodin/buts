@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://3.35.248.255/css/default_shop.css?ver=180820" />
     <link rel="stylesheet" href="http://3.35.248.255/css/apms.css?ver=180820" />
     <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/assets/bs3/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/colorset/Basic/colorset.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/colorset/Basic/colorset.css" type="text/css" /> -->
     <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/colorset/Basic/main_section.css?time=1609484211" type="text/css" />
     <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/assets/css/animate.css?time=1609484211" type="text/css" />
     <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/assets/css/hover.css?time=1609484211" type="text/css" />
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/widget/anb-section-4/widget.css" />
     <link rel="stylesheet" href="http://3.35.248.255/thema/Blue_Shop/widget/basic-sidebar/widget.css?ver=180820" />
     <link rel="stylesheet" href="http://3.35.248.255/css/level/basic.css?ver=180820" />
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
     <script>
       // 자바스크립트에서 사용하는 전역변수 선언
       var g5_url = 'http://3.35.248.255';
@@ -40,399 +41,269 @@
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
     <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
     <script src="http://3.35.248.255/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
 
     <!-- 벗츠 리뉴얼 css, js  -->
-    <link rel="stylesheet" href="/src/assets/css/fonts.css" />
-    <link rel="stylesheet" href="/src/assets/css/icons.css" />
-    <link rel="stylesheet" href="/src/assets/css/common.css" />
-    <link rel="stylesheet" href="/src/assets/css/topper.css" />
-    <link rel="stylesheet" href="/src/assets/css/header.css" />
-    <link rel="stylesheet" href="/src/assets/css/body.css" />
-    <link rel="stylesheet" href="/src/assets/css/side.css" />
-    <link rel="stylesheet" href="/src/assets/css/footer.css" />
-    <script src="/src/assets/js/buts.js"></script>
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/topper.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/body.css" />
+    <link rel="stylesheet" href="./assets/css/side.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <script src="./assets/js/buts.js"></script>
+    <script src="./assets/js/buts.main.js"></script>
+
+    <style>
+      .header-menu.mobile .sub-menu {
+        display: none !important;
+      }
+    </style>
   </head>
 
   <body>
     <div class="wrap">
-      <!-- topper -->
-      <div class="topper">
-        <div class="width-container">
-          <div class="topper-menu">
-            <a href="" class="v-bar">이벤트</a>
-            <a href="">공지사항</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- header -->
-      <div class="header">
-        <div class="sub-menu-bg" style="display: none"></div>
-        <div class="width-container">
-          <div class="header-logo">
-            <a href=""><img src="/src/assets/images/small-butslogo.png" alt="" /></a>
-          </div>
-          <div class="header-menu">
-            <ul>
-              <li class="menu-li on">
-                <a href="" class="menu-a">영상</a>
-                <div class="sub-menu sub-menu01" style="display: none">
-                  <div class="sub-tip">
-                    <span class="text-purple">영상</span> 인기 카테고리
-                    <a href=""><img src="/src/assets/images/tip.png" alt="" /></a>
-                  </div>
-                  <ul>
-                    <li class="sub-li on"><a href="" class="sub-a">#넷플릭스</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#왓챠</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#티빙</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#웨이브</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#유튜브</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-li">
-                <a href="" class="menu-a">도서ㆍ음악</a>
-                <div class="sub-menu sub-menu01" style="display: none">
-                  <div class="sub-tip">
-                    <span class="text-purple">영상</span> 인기 카테고리
-                    <a href=""><i class="icon-tip"></i></a>
-                  </div>
-                  <ul>
-                    <li class="sub-li on"><a href="" class="sub-a">#넷</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#왓</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#티</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#웨</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#유</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-li">
-                <a href="" class="menu-a">기타</a>
-                <div class="sub-menu sub-menu01" style="display: none">
-                  <div class="sub-tip">
-                    <span class="text-purple">영상</span> 인기 카테고리
-                    <a href=""><i class="icon-tip"></i></a>
-                  </div>
-                  <ul>
-                    <li class="sub-li on"><a href="" class="sub-a">#11</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#22</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#33</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#44</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-li">
-                <a href="" class="menu-a">기프트</a>
-                <div class="sub-menu sub-menu01" style="display: none">
-                  <div class="sub-tip">
-                    <span class="text-purple">영상</span> 인기 카테고리
-                    <a href=""><i class="icon-tip"></i></a>
-                  </div>
-                  <ul>
-                    <li class="sub-li on"><a href="" class="sub-a">#a</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#b</a></li>
-                    <li class="sub-li"><a href="" class="sub-a">#c</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="header-right">
-            <!-- <a href="" class="header-login">로그인</a> -->
-            <a href="" class="header-user">
-              <img src="/src/assets/images/icon-myimg.png" alt="" />
-              <span class="arrow"><img src="/src/assets/images/mymenu-arrow.png" alt="" /></span>
-            </a>
-            <a href="" class="header-hamberger"><span class="line"></span></a>
-            <div class="header-profile" style="display: none">
-              <div class="block">
-                <div class="name">
-                  벗츠매니저
-                  <a href="" class="header-logout"><img src="/src/assets/images/img-input-text-reste-copy.png" alt="" /></a>
-                </div>
-                <div class="credit-percent">
-                  <div class="credit-bar" style="right: 50%"></div>
-                </div>
-                <div class="grade">
-                  벗츠 신용 <span class="text-purple">4등급</span>
-                  <a href=""><img src="/src/assets/images/tip.png" alt="" /></a>
-                </div>
-                <div class="buttons">
-                  <a href="">파티관리</a>
-                  <a href="">관리자</a>
-                </div>
-                <ul class="menu">
-                  <li>
-                    <div class="point">
-                      <span class="icon"><img src="/src/assets/images/icon-coin-star-big.png" alt="" /></span>
-                      <span>버트</span>
-                      <span class="right">
-                        <span class="price Rajdhani">2,800</span>
-                        <a href="" class="charge fill">충전</a>
-                      </span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="point">
-                      <span class="icon"><img src="/src/assets/images/icon-up.png" alt="" /></span>
-                      <span>버트 Up</span>
-                      <span class="right">
-                        <span class="price Rajdhani">5</span>
-                        <span>개</span>
-                        <a href="" class="charge">충전</a>
-                      </span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="point">
-                      <span class="icon"><img src="/src/assets/images/icon-plus.png" alt="" /></span>
-                      <span>버트 Plus</span>
-                      <span class="right">
-                        <span class="price Rajdhani">3</span>
-                        <span>개</span>
-                        <a href="" class="charge">충전</a>
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="block">
-                <ul class="menu">
-                  <li><a href="">내 파티 보기</a></li>
-                  <li><a href="">MY 프로필</a></li>
-                  <li><a href="">결제내역 조회</a></li>
-                </ul>
-              </div>
-              <div class="block">
-                <ul class="menu">
-                  <li><a href="">FAQ</a></li>
-                  <li><a href="">1:1문의</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div include-html="./pages/common/topper.html"></div>
+      <div include-html="./pages/common/header.html"></div>
 
       <!-- body -->
       <div class="body">
-        <div class="width-container">
+        <div class="width-container main">
           <!-- buts party -->
-          <div class="title">벗츠 파티</div>
-          <div class="item-list">
-            <!-- item row -->
-            <div class="item-row">
-              <div class="item-type">넷플릭스 프리미엄</div>
-              <div class="item-title">넷플릭스 프리미엄 1인 1프로필 모집</div>
-              <div class="item-members">
-                <span class="item-member on"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-              </div>
-              <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+          <div class="relative">
+            <div class="title">벗츠 <span class="text-purple">파티</span></div>
+            <a href="" class="button-register button border mini round button-purple">파티 만들기</a>
+          </div>
+          <div class="item-slide party">
+            <a href="" class="slide-navi prev"></a>
+            <a href="" class="slide-navi next"></a>
+            <div class="item-boundary">
+              <div class="item-list">
+                <div class="item-row">
+                  <div class="item-type">1넷플릭스 프리미엄</div>
+                  <div class="item-title">넷플릭스 프리미엄 1인 1프로필 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                  <a href="" class="item-button"></a>
+                </div>
 
-            <!-- item row -->
-            <div class="item-row">
-              <div class="item-type">WAVVE 프리미엄</div>
-              <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
-              <div class="item-members">
-                <span class="item-member on"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-              </div>
-              <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row disabled">
+                  <div class="item-type">2WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member plus">+<span class="Rajdhani text-purple">95</span></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- item row -->
-            <div class="item-row">
-              <div class="item-type">넷플릭스 프리미엄</div>
-              <div class="item-title">넷플릭스 프리미엄 1인 1프로필 모집</div>
-              <div class="item-members">
-                <span class="item-member on"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-              </div>
-              <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">3넷플릭스 프리미엄</div>
+                  <div class="item-title">넷플릭스 프리미엄 1인 1프로필 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- item row -->
-            <div class="item-row">
-              <div class="item-type">WAVVE 프리미엄</div>
-              <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
-              <div class="item-members">
-                <span class="item-member on"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-              </div>
-              <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">4WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- item row -->
-            <div class="item-row">
-              <div class="item-type">넷플릭스 프리미엄</div>
-              <div class="item-title">넷플릭스 프리미엄 1인 1프로필 모집</div>
-              <div class="item-members">
-                <span class="item-member on"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-              </div>
-              <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">5넷플릭스 프리미엄</div>
+                  <div class="item-title">넷플릭스 프리미엄 1인 1프로필 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- item row -->
-            <div class="item-row">
-              <div class="item-type">WAVVE 프리미엄</div>
-              <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
-              <div class="item-members">
-                <span class="item-member on"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-                <span class="item-member"></span>
-              </div>
-              <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">6WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <div class="indicator">
-              <a href="" class="on"></a>
-              <a href=""></a>
-              <a href=""></a>
+                <div class="item-row">
+                  <div class="item-type">7WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
+
+                <div class="item-row">
+                  <div class="item-type">8WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
+
+                <div class="item-row">
+                  <div class="item-type">9WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
+
+                <div class="item-row">
+                  <div class="item-type">10WAVVE 프리미엄</div>
+                  <div class="item-title">웨이브 프리미엄 4회선 4인 모집</div>
+                  <div class="item-members">
+                    <span class="item-member on"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                    <span class="item-member"></span>
+                  </div>
+                  <div class="item-date">2021.05.09 까지 (<strong>98</strong>일)</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
+              </div>
             </div>
+            <div class="indicator"></div>
           </div>
 
           <!-- event -->
-          <div class="event">
-            <a href="" class="event-banner"><img src="/src/assets/images/banner01.png" alt="" /></a>
-            <a href="" class="event-banner"><img src="/src/assets/images/banner02.png" alt="" /></a>
-            <div class="indicator">
-              <a href="" class="on"></a>
-              <a href=""></a>
-              <a href=""></a>
+          <div class="event-slide event">
+            <a href="" class="slide-navi prev"></a>
+            <a href="" class="slide-navi next"></a>
+            <div class="event-boundary">
+              <div class="event-list">
+                <a href="" class="event-row"><img src="./assets/css/img/banner01.png" alt="" /></a>
+                <a href="" class="event-row"><img src="./assets/css/img/banner02.png" alt="" /></a>
+                <a href="" class="event-row"><img src="./assets/css/img/banner02.png" alt="" /></a>
+              </div>
             </div>
+            <div class="indicator"></div>
           </div>
 
           <!-- recommand -->
-          <div class="title">벗츠 추천 컨텐츠!</div>
+          <div class="title">벗츠 <span class="text-purple">추천 컨텐츠!</span></div>
           <div class="recommand-list">
-            <a href="" class="recommand-thumb"><img src="/src/assets/images/youtube_thumb01.jpg" alt="" /></a>
-            <a href="" class="recommand-thumb"><img src="/src/assets/images/youtube_thumb01.jpg" alt="" /></a>
-            <a href="" class="recommand-thumb"><img src="/src/assets/images/youtube_thumb01.jpg" alt="" /></a>
-            <a href="" class="recommand-thumb"><img src="/src/assets/images/youtube_thumb01.jpg" alt="" /></a>
+            <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="recommand-thumb popup-youtube"><img src="./assets/css/img/youtube_thumb01.jpg" alt="" /></a>
+            <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="recommand-thumb popup-youtube"><img src="./assets/css/img/youtube_thumb01.jpg" alt="" /></a>
+            <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="recommand-thumb popup-youtube"><img src="./assets/css/img/youtube_thumb01.jpg" alt="" /></a>
+            <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="recommand-thumb popup-youtube"><img src="./assets/css/img/youtube_thumb01.jpg" alt="" /></a>
           </div>
 
           <!-- gift -->
-          <div class="title">온라인 기프트</div>
-          <div class="item-list gift">
-            <!-- gift row -->
-            <div class="item-row">
-              <div class="item-type">스타벅스</div>
-              <div class="item-title">카페모카 Tall</div>
-              <div class="item-thumb"><img src="/src/assets/images/gift_thumb01.jpg" alt="" /></div>
-              <div class="item-date">2021.05.31까지</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+          <div class="relative">
+            <div class="title"><span class="text-purple">기프트/이용권</span></div>
+            <a href="" class="button-register button border mini round button-purple">판매하기</a>
+          </div>
+          <div class="item-slide gift">
+            <a href="" class="slide-navi prev"></a>
+            <a href="" class="slide-navi next"></a>
+            <div class="item-boundary">
+              <div class="item-list">
+                <div class="item-row">
+                  <div class="item-type">1스타벅스</div>
+                  <div class="item-title">카페모카 Tall</div>
+                  <div class="item-thumb"><img src="./assets/css/img/gift_thumb01.jpg" alt="" /></div>
+                  <div class="item-date">2021.05.31까지</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- gift row -->
-            <div class="item-row">
-              <div class="item-type">스타벅스</div>
-              <div class="item-title">카페모카 Tall</div>
-              <div class="item-thumb"><img src="/src/assets/images/gift_thumb01.jpg" alt="" /></div>
-              <div class="item-date">2021.05.31까지</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">2스타벅스</div>
+                  <div class="item-title">카페모카 Tall</div>
+                  <div class="item-thumb"><img src="./assets/css/img/gift_thumb01.jpg" alt="" /></div>
+                  <div class="item-date">2021.05.31까지</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- gift row -->
-            <div class="item-row">
-              <div class="item-type">스타벅스</div>
-              <div class="item-title">카페모카 Tall</div>
-              <div class="item-thumb"><img src="/src/assets/images/gift_thumb01.jpg" alt="" /></div>
-              <div class="item-date">2021.05.31까지</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">3스타벅스</div>
+                  <div class="item-title">카페모카 Tall</div>
+                  <div class="item-thumb"><img src="./assets/css/img/gift_thumb01.jpg" alt="" /></div>
+                  <div class="item-date">2021.05.31까지</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <!-- gift row -->
-            <div class="item-row">
-              <div class="item-type">스타벅스</div>
-              <div class="item-title">카페모카 Tall</div>
-              <div class="item-thumb"><img src="/src/assets/images/gift_thumb01.jpg" alt="" /></div>
-              <div class="item-date">2021.05.31까지</div>
-              <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
-            </div>
+                <div class="item-row">
+                  <div class="item-type">4스타벅스</div>
+                  <div class="item-title">카페모카 Tall</div>
+                  <div class="item-thumb"><img src="./assets/css/img/gift_thumb01.jpg" alt="" /></div>
+                  <div class="item-date">2021.05.31까지</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
 
-            <div class="indicator">
-              <a href="" class="on"></a>
-              <a href=""></a>
-              <a href=""></a>
+                <div class="item-row">
+                  <div class="item-type">5스타벅스</div>
+                  <div class="item-title">카페모카 Tall</div>
+                  <div class="item-thumb"><img src="./assets/css/img/gift_thumb01.jpg" alt="" /></div>
+                  <div class="item-date">2021.05.31까지</div>
+                  <div class="item-price"><span class="Rajdhani">3,000</span> 원</div>
+                </div>
+              </div>
             </div>
+            <div class="indicator"></div>
           </div>
         </div>
       </div>
 
-      <!-- side -->
-      <div class="side">
-        <a href=""><img src="/src/assets/images/side_img01.png" alt="" /></a>
-        <a href=""><img src="/src/assets/images/side_img02.png" alt="" /></a>
-      </div>
-
-      <!-- footer -->
-      <div class="footer">
-        <div class="width-container">
-          <div class="padding-left">
-            <div class="footer-logo">
-              <img src="/src/assets/images/small-butslogo-glay.png" alt="" />
-            </div>
-            <a href="" class="v-bar">벗츠 서비스 이용 약관</a>
-            <a href="" class="v-bar"><strong>개인정보 처리 방침</strong></a>
-            <a href="" class="v-bar">고객센터</a>
-            <span>제휴 및 협력 문의: <a href="mailto:manager@buts.co.kr">manager@buts.co.kr</a></span>
-            <br />
-            <br />
-
-            <span class="v-bar">대표 : 김시진</span>
-            <span class="v-bar">경기도 의정시 송양로94 1909</span>
-            <span class="v-bar">대표번호 : 1670-8789</span>
-            <span class="v-bar">고객센터 : 1670-8789</span>
-            <span class="v-bar">이메일 : manager@buts.co.kr</span>
-            <br />
-            <span class="v-bar">사업자등록번호 : 375-36-00640</span>
-            <span class="v-bar"
-              ><a href=""><strong>사업자정보확인</strong></a></span
-            >
-            <span class="v-bar">통신판매업신고 : 제 2019-의정부송산-040호</span>
-            <span class="v-bar">개인정보보호책임 : 김시진</span>
-            <br />
-
-            <span>호스팅 사업자 : Amazon Web Service(AWS)</span>
-            <br />
-            <br />
-
-            <span>Copyright © 2021 Buts Inc. All rights reserved.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        <div class="width-container">
-          <div class="footer-kcp">
-            <img src="/src/assets/images/img-kcp.png" />
-            <strong>안전한전자상거래</strong><br />
-            NHN한국사이버결제 주식회사
-          </div>
-          벗츠는 통신판매중개자이며, 통신판매의 당사자가 아닙니다.파티정보, 구매에 관한 의무와 책임은 판매자에게 있습니다.<br />
-          벗츠는 소비자 보호와 안전거래를 위해고객센터(manager@buts.co.kr)를 운영하고 있으며,분쟁이 발생 된 경우 별도의 분쟁처리절차에 의거분쟁해결 및 청약철회 등이 진행 됩니다.
-        </div>
-      </div>
+      <div include-html="./pages/common/side.html"></div>
+      <div include-html="./pages/common/footer.html"></div>
     </div>
+
+    <!-- 개발용 -->
+    <script src="./assets/js/includeHTML.js"></script>
+    <script>
+      includeHTML(function () {
+        buts();
+      });
+    </script>
   </body>
 </html>
