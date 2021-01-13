@@ -309,6 +309,7 @@
   color: #333333;
   line-height: 58px;
   letter-spacing: 0;
+  white-space: nowrap;
   border-top: 1px solid #efefef;
 }
 
@@ -351,6 +352,11 @@
   width: 32px;
   height: 32px;
   margin-right: 10px;
+  vertical-align: middle;
+}
+
+.item-view-row .picture img {
+  vertical-align: top;
 }
 
 .item-view-row .credit-percent {
@@ -358,7 +364,17 @@
 }
 
 .item-view-row .icon-sns {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
   margin: 0 8px;
+  vertical-align: middle;
+}
+
+.item-view-row .icon-sns img {
+  vertical-align: top;
 }
 
 .item-view-row .fw300 {
@@ -391,6 +407,14 @@
   width: 160px;
   padding: 30px 0;
   text-align: center;
+}
+
+.item-view-user .picture {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }
 
 .item-view-user .name {
@@ -430,7 +454,7 @@
 }
 
 .item-view-caution .text {
-  margin: 40px 0;
+  margin-top: 40px;
   font-size: 16px;
   color: #333;
 }
@@ -547,6 +571,76 @@
   }
   .item-view-title .up {
     margin-top: -17px;
+  }
+  .item-view-row {
+    height: 44px;
+    font-size: 11px;
+    line-height: 42px;
+  }
+  .item-view-row .v-bar {
+    margin-right: 20px;
+  }
+  .item-view-row .v-bar::after {
+    right: -10px;
+    height: 10px;
+    margin-top: -5px;
+  }
+  .item-view-row .picture {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+  }
+  .item-view-row .credit-percent {
+    width: 60px;
+  }
+  .item-view-row .icon-sns {
+    width: 16px;
+    height: 16px;
+    margin: 0 2px;
+  }
+  .item-view-row .price {
+    font-size: 14px;
+  }
+  .item-view-grade {
+    font-size: 11px;
+  }
+  .item-view-user {
+    padding: 25px 0;
+  }
+  .item-view-user li {
+    width: 25%;
+  }
+  .item-view-user .picture {
+    width: 50px;
+    height: 50px;
+  }
+  .item-view-user .name {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .item-view-user .date {
+    font-size: 11px;
+  }
+  .item-view-caution {
+    padding: 20px;
+  }
+  .item-view-caution .tag span {
+    margin-right: 8px;
+    height: 22px;
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 20px;
+    border-radius: 10px;
+  }
+  .item-view-caution .text {
+    margin-top: 15px;
+    font-size: 11px;
+  }
+  .item-view-check {
+    padding: 12px;
+  }
+  .item-view-check .input-check input[type='checkbox'] + label {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=item.css.map */

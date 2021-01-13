@@ -274,6 +274,7 @@
   color: #333333;
   line-height: 58px;
   letter-spacing: 0;
+  white-space: nowrap;
   border-top: 1px solid #efefef;
   .right {
     position: absolute;
@@ -307,12 +308,25 @@
     width: 32px;
     height: 32px;
     margin-right: 10px;
+    vertical-align: middle;
+    img {
+      vertical-align: top;
+    }
   }
   .credit-percent {
     margin: 0 6px;
   }
   .icon-sns {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
     margin: 0 8px;
+    vertical-align: middle;
+    img {
+      vertical-align: top;
+    }
   }
   .fw300 {
     font-weight: 300;
@@ -342,6 +356,13 @@
     width: 160px;
     padding: 30px 0;
     text-align: center;
+  }
+  .picture {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
   }
   .name {
     margin-top: 14px;
@@ -376,7 +397,7 @@
     }
   }
   .text {
-    margin: 40px 0;
+    margin-top: 40px;
     font-size: 16px;
     color: #333;
     li {
@@ -496,6 +517,78 @@
     }
     .up {
       margin-top: -17px;
+    }
+  }
+  .item-view-row {
+    height: 44px;
+    font-size: 11px;
+    line-height: 42px;
+    .v-bar {
+      margin-right: 20px;
+      &::after {
+        right: -10px;
+        height: 10px;
+        margin-top: -5px;
+      }
+    }
+    .picture {
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+    }
+    .credit-percent {
+      width: 60px;
+    }
+    .icon-sns {
+      width: 16px;
+      height: 16px;
+      margin: 0 2px;
+    }
+    .price {
+      font-size: 14px;
+    }
+  }
+  .item-view-grade {
+    font-size: 11px;
+  }
+  .item-view-user {
+    padding: 25px 0;
+    li {
+      width: 25%;
+    }
+    .picture {
+      width: 50px;
+      height: 50px;
+    }
+    .name {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .date {
+      font-size: 11px;
+    }
+  }
+  .item-view-caution {
+    padding: 20px;
+    .tag {
+      span {
+        margin-right: 8px;
+        height: 22px;
+        padding: 0 8px;
+        font-size: 11px;
+        line-height: 20px;
+        border-radius: 10px;
+      }
+    }
+    .text {
+      margin-top: 15px;
+      font-size: 11px;
+    }
+  }
+  .item-view-check {
+    padding: 12px;
+    .input-check input[type='checkbox'] + label {
+      font-size: 12px;
     }
   }
 }

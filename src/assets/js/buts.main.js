@@ -292,5 +292,5 @@ $(function () {
     }
   }
 
-  $('.body .width-container').eq(0).addClass('main');
+  $('.body').addClass('main');
 });
