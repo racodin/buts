@@ -1,0 +1,490 @@
+/* form */
+#captcha {
+  width: 100%;
+  #captcha_img {
+    height: 62px;
+  }
+  #captcha_key {
+    width: calc(100% - 193px);
+    height: 62px;
+  }
+}
+
+.form-mg-left {
+  margin-left: 10px;
+}
+
+.form-mg-right {
+  margin-right: 10px;
+}
+
+.form-pd {
+  padding-top: 120px;
+}
+
+.form-round {
+  position: relative;
+  padding: 25px 40px;
+  border: solid 1px #cec8f1;
+  border-radius: 20px;
+  &.scroll {
+    height: 260px;
+    font-size: 13px;
+    color: #989797;
+    line-height: 18px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+}
+
+.form-half {
+  display: inline-block;
+  width: calc(50% - 25px);
+  vertical-align: top;
+  &.left {
+    margin-right: 47px;
+  }
+}
+
+.form-title {
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #333333;
+  &.center {
+    text-align: center;
+  }
+}
+
+.form-text {
+  position: relative;
+  font-size: 14px;
+  color: #666666;
+  &.center {
+    text-align: center;
+  }
+}
+
+.form-checkbox {
+  margin-top: 20px;
+}
+
+.form-button {
+  width: 100%;
+  height: 60px;
+  line-height: 58px;
+  border-radius: 10px;
+}
+
+.form-list {
+  &.border {
+    border-top: 1px solid #333333;
+    li {
+      min-height: auto;
+      padding: 0;
+      border-bottom: 1px solid #ececec;
+    }
+    select {
+      position: relative;
+      width: 350px;
+      height: 32px;
+      font-size: 14px;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: 300;
+      color: #888;
+      border: solid 1px #ececec;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      outline: none;
+      &:focus {
+        border: solid 1px #7e69fe;
+      }
+    }
+    input[type='text'] {
+      position: relative;
+      height: 32px;
+      margin-right: 0;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: 300;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .subject {
+      position: relative;
+      width: 120px;
+      padding: 14px 0 13px 0;
+    }
+    .contact {
+      max-width: 460px;
+      padding: 0 14px 18px 14px;
+    }
+    .email {
+      width: 344px;
+    }
+    .comment {
+      width: 100%;
+      margin-bottom: 69px;
+    }
+    .point {
+      width: 86px;
+      margin: 0 2px 0 12px;
+      text-align: right;
+      vertical-align: top;
+    }
+    .all {
+      width: 50px;
+      margin-top: 0;
+      font-size: 13px;
+    }
+  }
+  li {
+    position: relative;
+    min-height: 42px;
+    padding: 2px 0 2px 120px;
+    font-size: 14px;
+    color: #333333;
+  }
+  .total {
+    position: relative;
+    top: -1px;
+    padding: 0 15px !important;
+    border: 1px solid #7e69fe !important;
+    background-color: #f9f9f9;
+    .right {
+      right: 15px;
+    }
+  }
+  .text-right {
+    text-align: right;
+  }
+  .Rajdhani {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -2px;
+  }
+  .lightgrey {
+    font-size: 12px;
+    font-weight: 300;
+    color: #888888;
+    line-height: 16px;
+    word-break: keep-all;
+  }
+  .subject {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 120px;
+    padding: 10px 0;
+    &.w100 {
+      width: 100%;
+    }
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 88px);
+    padding: 14px 0 13px 0;
+    text-align: right;
+    &.fill {
+      padding: 9px 0 8px 0;
+    }
+  }
+  select {
+    width: 180px;
+    color: #aaa;
+    &:focus {
+      color: #333333;
+    }
+  }
+  input[type='text'] {
+    width: 180px;
+    margin-right: 10px;
+  }
+  .input-radio {
+    top: -3px;
+    margin-left: 20px;
+  }
+  .input-checkbox {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .break {
+    margin: 6px 0 12px 0;
+  }
+  .form-captcha {
+    margin-top: 5px;
+    width: 350px;
+  }
+  .at {
+    margin: 0 5px 0 -5px;
+    font-size: 16px;
+  }
+  .account {
+    padding: 0 0 10px 0;
+    select {
+      width: 300px;
+    }
+    input {
+      width: 100px;
+    }
+  }
+}
+
+.form-login {
+  .login-logo {
+    position: relative;
+    margin-bottom: 42px;
+    text-align: center;
+  }
+  .login-input {
+    position: relative;
+    margin: 8px 0;
+    input {
+      height: 60px;
+      padding: 0 20px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+  }
+  .login-option {
+    position: relative;
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .v-bar {
+      margin-right: 20px;
+      &::after {
+        right: -12px;
+      }
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+  .form-button {
+    margin: 25px 0 20px 0;
+  }
+  .login-sns {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 40px;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    &::before {
+      content: 'SNS LOGIN';
+      position: absolute;
+      top: -11px;
+      left: 50%;
+      display: block;
+      width: 80px;
+      margin-left: -40px;
+      font-size: 12px;
+      color: #666666;
+      letter-spacing: 0;
+      background-color: white;
+    }
+    a {
+      display: inline-block;
+      margin: 0 4px;
+    }
+  }
+}
+
+.form-password {
+  .password-email {
+    margin: 15px 0 20px 0;
+  }
+}
+
+.form-clause {
+  .article-title {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333333;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-pd {
+    max-width: 280px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .form-round {
+    padding: 10px 15px;
+    border-radius: 10px;
+    &.scroll {
+      height: 150px;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+  .form-half {
+    width: 100%;
+    &.left {
+      margin-right: 0;
+    }
+  }
+  .form-title {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .form-text {
+    font-size: 11px;
+    line-height: 14px;
+  }
+  .form-checkbox {
+    margin-top: 6px;
+  }
+  .form-button {
+    height: 42px;
+    line-height: 40px;
+  }
+  .form-list {
+    &.border {
+      select {
+        width: 100%;
+        height: 24px;
+        padding: 0 5px;
+        font-size: 11px;
+      }
+      input[type='text'] {
+        height: 24px;
+        padding: 0 5px;
+        font-size: 11px;
+      }
+      .subject {
+        padding: 10px 0;
+      }
+      .contact {
+        padding: 0 14px 10px 14px;
+      }
+      .email {
+        width: 100%;
+      }
+      .comment {
+        width: 100%;
+        margin: -2px 0 13px 0;
+      }
+      .point {
+        width: 65px;
+        margin: 0 0 0 4px;
+      }
+      .all {
+        width: 35px;
+        padding: 0;
+        font-size: 11px;
+      }
+    }
+    li {
+      min-height: 28px;
+      padding-left: 90px;
+      font-size: 11px;
+    }
+    .Rajdhani {
+      font-size: 18px;
+      vertical-align: -1px;
+    }
+    .lightgrey {
+      font-size: 10px;
+      line-height: 14px;
+    }
+    .subject {
+      width: 90px;
+      padding: 6px 0;
+    }
+    .right {
+      padding: 10px 0;
+      &.fill {
+        padding: 8px 0;
+      }
+    }
+    select {
+      width: 100%;
+    }
+    input[type='text'] {
+      width: 100%;
+      margin-right: 0;
+    }
+    .input-radio {
+      margin-left: 10px;
+    }
+    .input-checkbox {
+      margin: 3px 0;
+    }
+    .break {
+      margin: 6px 0 6px 0;
+    }
+    .inline-break {
+      display: block;
+      margin: 6px 0 6px 0;
+    }
+    .phone {
+      margin-top: 8px;
+    }
+    .account {
+      select {
+        margin-bottom: 2px;
+      }
+    }
+  }
+  .form-login {
+    .login-logo {
+      width: 84px;
+      height: 22px;
+      margin: 0 auto 20px auto;
+    }
+    .login-input {
+      margin: 4px 0;
+      input {
+        height: 42px;
+        padding: 0 15px;
+        font-size: 12px;
+      }
+    }
+    .login-option {
+      margin-top: 12px;
+    }
+    .right {
+      .v-bar {
+        margin-right: 10px;
+        &::after {
+          right: -6px;
+        }
+      }
+      a {
+        font-size: 11px;
+      }
+    }
+    .form-button {
+      margin: 12px 0;
+    }
+    .login-sns {
+      margin-top: 30px;
+      padding-top: 25px;
+      a {
+        width: 30px;
+        height: 30px;
+        margin: 0 2px;
+      }
+    }
+  }
+  .form-password {
+    .password-email {
+      margin: 8px 0 10px 0;
+    }
+  }
+  .form-clause {
+    .article-title {
+      margin-bottom: 5px;
+      font-size: 10px;
+    }
+  }
+}

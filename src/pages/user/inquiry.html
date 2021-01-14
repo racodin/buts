@@ -50,7 +50,8 @@
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
 
-    <link rel="stylesheet" href="../../assets/css/table.css" />
+    <link rel="stylesheet" href="../../assets/css/user.css" />
+    <link rel="stylesheet" href="../../assets/css/form.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -59,35 +60,67 @@
       <div include-html="../common/header.html"></div>
       <div class="body">
         <div class="width-container">
-          <div class="title-wrap border">
-            <div class="title">
-              <a href="" class="text">공지사항</a>
+          <div class="mw-800 inquiry">
+            <div class="h3">1:1문의 <span class="text-purple">작성</span></div>
+            <div class="form-round signup">
+              <ul class="form-list">
+                <li>
+                  <span class="subject">ㆍ 아이디</span>
+                  <input type="text" placeholder="아이디" name="" id="" />
+                </li>
+                <li>
+                  <span class="subject">ㆍ 이메일</span>
+                  <input type="text" cla placeholder="이메일" name="" id="" />
+                  <div class="lightgrey break">위 이메일로 답변을 드리기 때문에, 정확히 입력해 주시길 바랍니다.</div>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 연락처</span>
+                  <input type="text" placeholder="연락처" name="" id="" />
+                </li>
+                <li>
+                  <span class="subject">ㆍ 서비스 구분</span>
+                  <select name="" id="">
+                    <option value=""></option>
+                  </select>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 질문 구분</span>
+                  <div class="input-check input-checkbox form-mg-right">
+                    <input type="checkbox" id="signup-email" />
+                    <label for="signup-email">네트워크</label>
+                  </div>
+                  <div class="input-check input-checkbox">
+                    <input type="checkbox" id="signup-email" />
+                    <label for="signup-email">서비스 중단</label>
+                  </div>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 문의작성</span>
+                  <input type="text" style="margin-bottom: 4px; width: 100%" />
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </li>
+              </ul>
             </div>
-          </div>
-
-          <div class="table-row">
-            <span class="category">분류</span>
-            <span class="input-check">
-              <input type="checkbox" id="table-notice" />
-              <label for="table-notice">공지</label>
-            </span>
-            <span class="input-check">
-              <input type="checkbox" id="table-main" />
-              <label for="table-main">메인글</label>
-            </span>
-          </div>
-          <div class="table-row">
-            <span class="category">제목</span>
-            <input type="text" class="input-subject" placeholder="제목을 입력해 주세요" />
-          </div>
-          <div class="table-write-editor"></div>
-          <div class="button-align center">
-            <a href="" class="button large">취소</a>
-            <a href="" class="button large button-purple">작성 완료</a>
+            <div class="h3">개인정보 수집 이용에 대한 동의</div>
+            <ul class="list-circle">
+              <li>수집 항목 : 이름, 이메일, 연락처</li>
+              <li>수집 목적 : 서비스 이용에 따른 고객 문의, 불만처리, 오류 해결 등 민원 처리 및 결과 회신</li>
+              <li>보유 및 이용 기간 : 문의처리 후 5년간 보관</li>
+              <li>그 밖의 사항은 개인정보 처리방침을 준수합니다.</li>
+            </ul>
+            <div class="agree">
+              <div class="input-check">
+                <input type="checkbox" id="agree" />
+                <label for="agree">개인정보 수집 및 이용에 대해 동의합니다.</label>
+              </div>
+            </div>
+            <div class="button-align center">
+              <a href="" class="button">취소</a>
+              <a href="" class="button button-purple">등록</a>
+            </div>
           </div>
         </div>
       </div>
-      <div include-html="../common/side.html"></div>
       <div include-html="../common/footer.html"></div>
     </div>
 

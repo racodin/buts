@@ -40,17 +40,18 @@
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
     <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
     <script src="http://3.35.248.255/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+    <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
 
     <!-- 벗츠 리뉴얼 css, js  -->
     <link rel="stylesheet" href="../../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../../assets/css/icons.css" />
     <link rel="stylesheet" href="../../assets/css/common.css" />
     <link rel="stylesheet" href="../../assets/css/topper.css" />
     <link rel="stylesheet" href="../../assets/css/header.css" />
-    <link rel="stylesheet" href="../../assets/css/body.css" />
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
-    <link rel="stylesheet" href="./form.css" />
+
+    <link rel="stylesheet" href="../../assets/css/table.css" />
+    <link rel="stylesheet" href="../../assets/css/form.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -59,22 +60,22 @@
       <div include-html="../common/header.html"></div>
       <div class="body">
         <div class="width-container">
-          <div class="title-border">
-            <span class="title">진행/결제</span>
+          <div class="title-wrap border">
+            <div class="title">
+              <a href="" class="text">진행/결제</a>
+            </div>
           </div>
           <div class="h3">진행 정보</div>
-          <div class="form-order-table">
+          <div class="payment-name item-name mobile-block">
+            <span class="brand"></span>
+            <span class="name">유튜브 프리미엄 가족 요금제 참여</span>
+            <span class="comment">유튜브 가족요금제 인도 계정 참여하실 분</span>
+          </div>
+          <div class="table-list table-list-payment">
             <table>
-              <colgroup>
-                <col style="width: 39%" />
-                <col style="width: 15%" />
-                <col style="width: 15%" />
-                <col style="width: 15%" />
-                <col style="width: 16%" />
-              </colgroup>
               <thead>
                 <tr>
-                  <th>서비스명</th>
+                  <th class="pc-block">서비스명</th>
                   <th>참여일</th>
                   <th>판매가</th>
                   <th>수수료</th>
@@ -83,20 +84,24 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <div class="name">유튜브 프리미엄 가족 요금제 참여</div>
+                  <td class="pc-block">
+                    <div class="item-name">
+                      <span class="brand"></span>
+                      <span class="name">유튜브 프리미엄 가족 요금제 참여</span>
+                      <span class="comment">유튜브 가족요금제 인도 계정 참여하실 분</span>
+                    </div>
                   </td>
-                  <td>362일</td>
-                  <td>25,340원</td>
-                  <td>2,534원</td>
-                  <td><span class="Rajdhani">12,000</span><span class="won">원</span></td>
+                  <td><strong>362</strong>일</td>
+                  <td><strong>25,340</strong>원</td>
+                  <td><strong>2,534</strong>원</td>
+                  <td><span class="Rajdhani">12,000</span>원</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="form-order-wrap half" style="margin-right: 47px">
+          <div class="form-half left">
             <div class="h3">결제자 정보</div>
-            <div class="form-order-list">
+            <div class="form-list border">
               <ul>
                 <li>
                   <div class="subject">ㆍ 아이디</div>
@@ -105,24 +110,24 @@
                 <li>
                   <div class="subject">ㆍ 연락처</div>
                   <div class="right">010-8886-7174</div>
-                  <div class="lightgrey" style="padding: 7px 13px">벗츠 결제정보 및 이용정보 안내에 필요한 내용이며, <br />참여하신 파티장 및 파티원들에게 연락처 정보를 무단 제공 및 노출 시키지 않습니다.</div>
+                  <div class="lightgrey contact">벗츠 결제정보 및 이용정보 안내에 필요한 내용이며, 참여하신 파티장 및 파티원들에게 연락처 정보를 무단 제공 및 노출 시키지 않습니다.</div>
                 </li>
                 <li>
-                  <div class="subject">이메일(아이디)</div>
-                  <div class="right">
+                  <div class="subject">ㆍ 이메일(아이디)</div>
+                  <div class="right fill">
                     <input type="text" class="email" placeholder="참여가능(등록가능) 한 이메일이나 아이디를 입력해 주세요" />
                   </div>
                 </li>
                 <li>
-                  <div class="subject">참여하는 파티장, 파티원에게 한 마디!</div>
+                  <div class="subject w100">ㆍ 참여하는 파티장, 파티원에게 한 마디!</div>
                   <input type="text" class="comment" placeholder="예) 사용기간까지 좋은 굿 파티로 진행해 봐요~" />
                 </li>
               </ul>
             </div>
           </div>
-          <div class="form-order-wrap half">
+          <div class="form-half">
             <div class="h3">결제 정보</div>
-            <div class="form-order-list">
+            <div class="form-list border">
               <ul>
                 <li>
                   <div class="subject">ㆍ 서비스 금액</div>
@@ -138,16 +143,16 @@
                 </li>
                 <li>
                   <div class="subject">ㆍ 사용 포인트</div>
-                  <div class="right" style="padding: 9px 0">
+                  <div class="right fill">
                     보유 포인트
                     <span class="text-purple">4,190P</span>
                     <input type="text" class="point" placeholder="사용 포인트" />
-                    <a href="" class="all button mini button-purple">전액사용</a>
+                    <a href="" class="all button mini button-purple">적용</a>
                   </div>
                 </li>
                 <li>
                   <div class="subject">ㆍ 쿠폰 적용</div>
-                  <div class="right">
+                  <div class="right fill">
                     <select name="" id="">
                       <option value="">사용 가능한 쿠폰을 선택 해 주세요</option>
                     </select>
@@ -156,37 +161,37 @@
                 <li>
                   <div class="subject">ㆍ 결제방법</div>
                   <div class="right">
-                    <span class="input-check">
+                    <span class="input-check input-radio">
                       <input type="radio" name="pay-type" id="order-account" />
                       <label for="order-account">계좌이체</label>
                     </span>
-                    <span class="input-check">
+                    <span class="input-check input-radio">
                       <input type="radio" name="pay-type" id="order-card" />
                       <label for="order-card">신용카드</label>
                     </span>
                   </div>
                 </li>
-                <li class="purple">
-                  <div class="subject">총 결제금액</div>
-                  <div class="right"><span class="Rajdhani">20,103</span> <span class="won">원</span></div>
+                <li class="total">
+                  <div class="subject text-purple">총 결제금액</div>
+                  <div class="right"><span class="Rajdhani text-purple">20,103</span><span class="won">원</span></div>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="form-order-caution">
+          <div class="caution">
             <strong>유의사항</strong>
             <ul>
-              <li>1. ‘벗츠’는 사용자간의 컨텐츠 비용을 나눔을 할 수 있도록 지원해 드리고 있으며, 참여하신 서비스의 주체가 아닙니다.</li>
-              <li>2. 개별 공급자가 등록한 나눔 내용 및 거래에 대한 책임은 공급자가 부담하며, 이에 따라서 공급자가 진행하는 서비스에 대해서 ‘벗츠’는 어떠한 책임과 의무를 지지 않습니다.</li>
-              <li>3. 파티장 연락두절 및 이용불가능한 상태 방치 등에 의한 환불인 경우 벗츠에서 남은 기간에 대한 환불을 보장하며, 포인트로 환불 진행됩니다. (단 참여 후 3일이 경과되지 않았을 경우 지불했던 수단으로 100% 환불)</li>
+              <li>‘벗츠’는 사용자간의 컨텐츠 비용을 나눔을 할 수 있도록 지원해 드리고 있으며, 참여하신 서비스의 주체가 아닙니다.</li>
+              <li>개별 공급자가 등록한 나눔 내용 및 거래에 대한 책임은 공급자가 부담하며, 이에 따라서 공급자가 진행하는 서비스에 대해서 ‘벗츠’는 어떠한 책임과 의무를 지지 않습니다.</li>
+              <li>파티장 연락두절 및 이용불가능한 상태 방치 등에 의한 환불인 경우 벗츠에서 남은 기간에 대한 환불을 보장하며, 포인트로 환불 진행됩니다. (단 참여 후 3일이 경과되지 않았을 경우 지불했던 수단으로 100% 환불)</li>
             </ul>
             <p>※ 서비스 참여 중에 판매자의 실수를 비롯 하여 네트워크, 서비스 제공업체, 다른 파티원 등의 문제로 의도치 않는 문제가 발생 할 수 있습니다. 문제 발생 시 상호간 매너있는 대화 부탁드리며, 부적절한 언어 선택 시 이용제한 등의 조치가 진행 될 수 있습니다.</p>
           </div>
-          <div class="input-check form-order-checkbox">
+          <div class="input-check form-checkbox form-payment-agree">
             <input type="checkbox" id="order-agree" />
-            <label for="order-agree">유의사항 내용을 충분히 인지 하였으며, 결제진행에 동의 합니다.</label>
+            <label for="order-agree">유의사항 내용을 충분히 인지 하였으며, 결제진행에 동의합니다.</label>
           </div>
-          <div class="button-center">
+          <div class="button-align center">
             <a href="" class="button large">취소</a>
             <a href="" class="button large button-purple">결제 하기</a>
           </div>

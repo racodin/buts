@@ -1,0 +1,45 @@
+/* payment */
+.payment-name {
+  margin: 0;
+  border-top: 1px solid #333;
+}
+
+/* inquiry */
+.inquiry .guide {
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.inquiry .table-list {
+  border-top: 1px solid #333;
+}
+
+.inquiry .list-circle {
+  list-style: circle;
+  margin-top: -10px;
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.inquiry .agree {
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .inquiry .guide {
+    padding: 4px 0;
+    font-size: 11px;
+  }
+  .inquiry .list-circle {
+    margin-top: -6px;
+    margin-left: 18px;
+    font-size: 11px;
+  }
+  .inquiry .agree {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=user.css.map */

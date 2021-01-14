@@ -1,0 +1,219 @@
+.accordion {
+  position: relative;
+  margin-top: 40px;
+  li {
+    position: relative;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: solid 1px #e3e1ee;
+    background-color: #ffffff;
+    overflow: hidden;
+    &.active {
+      border: solid 1px #cec8f1;
+      background-color: #f9f8ff;
+      .icon::after {
+        display: none;
+      }
+      .article {
+        display: block;
+      }
+    }
+    &:hover {
+      border: solid 1px #cec8f1;
+      background-color: #f9f8ff;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .select {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 26px 110px 26px 40px;
+    font-size: 20px;
+    color: #333;
+    line-height: 24px;
+    word-break: keep-all;
+  }
+  .plus {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    width: 38px;
+    height: 38px;
+    margin-top: -19px;
+    background-color: #7e69fe;
+    border-radius: 5px;
+    &::before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: white;
+    }
+    &:before {
+      width: 14px;
+      height: 2px;
+      margin-left: -7px;
+      margin-top: -1px;
+    }
+    &:after {
+      width: 2px;
+      height: 14px;
+      margin-left: -1px;
+      margin-top: -7px;
+    }
+  }
+  .article {
+    display: none;
+    margin: 0 40px 40px 40px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .input-check {
+    width: 100%;
+    height: 100%;
+  }
+  .input-check input[type='radio'] + label {
+    width: 100%;
+    height: 100%;
+    padding: 24px 110px 20px 75px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #666666;
+    &::before {
+      left: 40px;
+    }
+    &::after {
+      left: 45px;
+    }
+  }
+  .right {
+    position: absolute;
+    top: 24px;
+    right: 36px;
+    height: 32px;
+  }
+  .Rajdhani {
+    margin-right: 4px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
+    vertical-align: -1px;
+  }
+  .icon {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+  .benefit {
+    margin-right: 20px;
+  }
+}
+
+/* charge */
+.charge-tab {
+  position: relative;
+  font-size: 0;
+  a {
+    position: relative;
+    display: inline-block;
+    width: calc(33.33%);
+    height: 120px;
+    margin-right: -1px;
+    padding: 24px 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: #333333;
+    text-align: center;
+    vertical-align: top;
+    border: solid 1px #e3e1ee;
+    border-top: 1px solid #7e69fe;
+    background-color: white;
+    &.on {
+      color: white;
+      border: solid 1px #7e69fe;
+      background-color: #7e69fe;
+      z-index: 1;
+      .lightgrey {
+        color: white;
+      }
+    }
+  }
+  .lightgrey {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: #888888;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .accordion {
+    margin-top: 15px;
+    li {
+      border-radius: 10px;
+    }
+    .select {
+      padding: 12px 45px 12px 15px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .plus {
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      border-radius: 3px;
+      &:before {
+        width: 8px;
+        margin-left: -4px;
+      }
+      &:after {
+        height: 8px;
+        margin-top: -4px;
+      }
+    }
+    .article {
+      margin: 0 15px 15px 15px;
+      font-size: 11px;
+      line-height: 18px;
+    }
+    .input-check input[type='radio'] + label {
+      padding: 13px 60px 11px 45px;
+      font-size: 11px;
+      &::before {
+        left: 15px;
+      }
+      &::after {
+        left: 20px;
+      }
+    }
+    .right {
+      top: 10px;
+      right: 13px;
+      height: 24px;
+    }
+    .Rajdhani {
+      font-size: 14px;
+    }
+    .icon {
+      top: -1px;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+    .tip {
+      display: block;
+      margin-top: -3px;
+    }
+    .benefit {
+      margin-right: 8px;
+    }
+  }
+}

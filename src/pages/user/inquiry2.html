@@ -50,7 +50,9 @@
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
 
+    <link rel="stylesheet" href="../../assets/css/user.css" />
     <link rel="stylesheet" href="../../assets/css/form.css" />
+    <link rel="stylesheet" href="../../assets/css/table.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -59,34 +61,91 @@
       <div include-html="../common/header.html"></div>
       <div class="body">
         <div class="width-container">
-          <div class="mw-400 form-pd form-login">
-            <div class="login-logo">
-              <img src="../../assets/css/img/big-butslogo.png" alt="" />
-            </div>
-            <div class="login-input">
-              <input type="text" placeholder="아이디를 입력하세요" name="" id="" />
-            </div>
-            <div class="login-input">
-              <input type="text" placeholder="패스워드를 입력하세요" name="" id="" />
-            </div>
-            <div class="login-option">
-              <div class="input-check">
-                <input type="checkbox" id="login-save" />
-                <label for="login-save">자동로그인</label>
-              </div>
-              <div class="right">
-                <a href="" class="v-bar">회원가입</a>
-                <a href="">아이디/비밀번호찾기</a>
+          <div class="mw-800 inquiry">
+            <div class="h3">1:1 문의</div>
+            <div class="form-round">
+              <div class="guide">
+                wavve 서비스 이용 시 불편사항이나 문의사항을 1:1 문의로 보내주시면 신속하고 친절하게 안내해 드리겠습니다! <br />
+                참여하신 파티에 대한 문의는 <a href="" class="text-purple">[내 벗츠보기]</a> 페이지 내의 해당 <span class="text-purple">파티장을 통해서 빠른 해결</span>이 가능합니다.
               </div>
             </div>
-            <a href="" class="form-button button button-purple">로그인</a>
-            <div class="form-text">
-              벗츠 회원이 아닌가요? <br />
-              가입 즉시 <span class="text-purple">사용 가능한 1,000포인트</span> 받으세요~
+            <div class="button-align center">
+              <a href="" class="button">내 파티 문의</a>
+              <a href="" class="button button-purple">1:1 문의 작성</a>
             </div>
-            <div class="login-sns">
-              <a href=""><img src="../../assets/css/img/btn-sns-login-naver.png" alt="" /></a>
-              <a href=""><img src="../../assets/css/img/btn-sns-login-kakao.png" alt="" /></a>
+            <div class="h3"><span class="text-purple">나의 문의</span> 내역</div>
+            <div class="table-list scroll">
+              <table style="min-width: 400px">
+                <colgroup>
+                  <col style="width: 12%" />
+                  <col style="width: 10%" />
+                  <col style="width: 63%" />
+                  <col style="width: 15%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>상태</th>
+                    <th>구분</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>답변대기</td>
+                    <td>회원</td>
+                    <td>
+                      <div class="subject">
+                        <a href=""> 추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트! 500포인트! </a>
+                      </div>
+                    </td>
+                    <td>2020.11.20</td>
+                  </tr>
+                  <tr>
+                    <td>답변대기</td>
+                    <td>결제</td>
+                    <td>
+                      <div class="subject">
+                        <a href=""> 추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트! 500포인트! </a>
+                      </div>
+                    </td>
+                    <td>2020.11.20</td>
+                  </tr>
+                  <tr>
+                    <td>답변대기</td>
+                    <td>환불</td>
+                    <td>
+                      <div class="subject">
+                        <a href=""> 추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트! 500포인트! </a>
+                      </div>
+                    </td>
+                    <td>2020.11.20</td>
+                  </tr>
+                  <tr>
+                    <td>답변대기</td>
+                    <td>회원</td>
+                    <td>
+                      <div class="subject">
+                        <a href=""> 추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트! 500포인트! </a>
+                      </div>
+                    </td>
+                    <td>2020.11.20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="button-align border number">
+              <div class="page-number">
+                <a href=""><<</a>
+                <a href=""><</a>
+                <a href="">1</a>
+                <a class="active">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">></a>
+                <a href="">>></a>
+              </div>
             </div>
           </div>
         </div>

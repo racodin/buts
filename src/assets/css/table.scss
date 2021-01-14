@@ -1,0 +1,254 @@
+/* tabe list */
+.table-list {
+  position: relative;
+  &.scroll {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+  }
+  th,
+  td {
+    position: relative;
+    text-align: center;
+  }
+  th {
+    padding: 19px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    background-color: #f9f9f9;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 1px;
+      height: 10px;
+      margin-top: -5px;
+      background-color: #ddd;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+  td {
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    line-height: 16px;
+    border-top: 1px solid #ececec;
+  }
+  tr.active {
+    td {
+      background-color: #faf9ff;
+    }
+  }
+  strong {
+    font-weight: 500;
+    color: #333;
+  }
+  .button {
+    padding: 0 10px;
+  }
+  .subject {
+    position: relative;
+    display: block;
+    margin: 0 10px;
+    padding: 20px 0 19px 0;
+    text-align: left;
+    a {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      color: #333333;
+    }
+  }
+  .notice {
+    padding-left: 44px;
+    &::before {
+      content: '알림';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: inline-block;
+      width: 35px;
+      height: 20px;
+      margin-top: -10px;
+      font-size: 11px;
+      color: #7e69fe;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #7e69fe;
+      border-radius: 4px;
+    }
+  }
+  .Rajdhani {
+    margin-right: 2px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    vertical-align: -2px;
+    letter-spacing: -1px;
+  }
+}
+
+.table-list-payment {
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #ececec;
+  .service {
+    margin-left: 30px;
+  }
+}
+
+/* table view */
+.table-row {
+  position: relative;
+  height: 60px;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #252525;
+  line-height: 60px;
+  border-bottom: 1px solid #ececec;
+  background-color: #f9f9f9;
+  .v-bar {
+    margin-right: 40px;
+    &::after {
+      right: -20px;
+    }
+  }
+  .picture {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-color: #efefef;
+    border-radius: 5px;
+  }
+  .subject {
+    font-size: 17px;
+    font-weight: 500;
+    color: #333333;
+  }
+  .category {
+    display: inline-block;
+    width: 86px;
+    font-weight: 500;
+  }
+  .input-subject {
+    width: calc(100% - 90px);
+    margin-top: -5px;
+  }
+  .input-check {
+    margin-right: 30px;
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 30px;
+  }
+}
+
+.table-view-article {
+  position: relative;
+  min-height: 500px;
+  padding: 30px;
+  font-size: 17px;
+  font-weight: 300;
+  color: #333333;
+  img {
+    max-width: 100%;
+  }
+}
+
+/* table write */
+.table-write-editor {
+  position: relative;
+  min-height: 575px;
+  border-bottom: 1px solid #333333;
+}
+
+@media screen and (max-width: 960px) {
+  .table-list {
+    th {
+      padding: 10px 0;
+      font-size: 11px;
+    }
+    td {
+      font-size: 11px;
+      line-height: 12px;
+    }
+    .subject {
+      padding: 13px 0 12px 0;
+      a {
+        font-size: 12px;
+      }
+    }
+    .notice {
+      padding-left: 35px;
+      &::before {
+        width: 27px;
+        height: 18px;
+        margin-right: 5px;
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+    .Rajdhani {
+      font-size: 18px;
+      vertical-align: -1px;
+    }
+  }
+  .table-list-payment {
+    border-top: 1px solid #ececec;
+    td {
+      height: 40px;
+    }
+  }
+  .table-row {
+    height: 44px;
+    padding: 0 15px;
+    font-size: 11px;
+    line-height: 42px;
+    .v-bar {
+      margin-right: 20px;
+      &::after {
+        right: -10px;
+      }
+    }
+    .picture {
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+    }
+    .subject {
+      font-size: 13px;
+    }
+    .right {
+      right: 15px;
+    }
+    .category {
+      width: 56px;
+    }
+    .input-subject {
+      width: calc(100% - 58px);
+    }
+    .input-check {
+      margin-right: 30px;
+    }
+  }
+  .table-view-article {
+    min-height: 300px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .table-write-editor {
+    min-height: 340px;
+  }
+}

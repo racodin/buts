@@ -40,17 +40,17 @@
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
     <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
     <script src="http://3.35.248.255/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+    <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
 
     <!-- 벗츠 리뉴얼 css, js  -->
     <link rel="stylesheet" href="../../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../../assets/css/icons.css" />
     <link rel="stylesheet" href="../../assets/css/common.css" />
     <link rel="stylesheet" href="../../assets/css/topper.css" />
     <link rel="stylesheet" href="../../assets/css/header.css" />
-    <link rel="stylesheet" href="../../assets/css/body.css" />
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
-    <link rel="stylesheet" href="./form.css" />
+
+    <link rel="stylesheet" href="../../assets/css/form.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -58,107 +58,109 @@
       <div include-html="../common/topper.html"></div>
       <div include-html="../common/header.html"></div>
       <div class="body">
-        <div class="form-width">
-          <div class="h3">아이디/비밀번호</div>
-          <div class="form-round signup">
-            <ul class="form-list">
-              <li>
-                <span class="form-subject">ㆍ 아이디</span>
-                <input type="text" placeholder="아이디" name="" id="" />
-                <span class="form-tip">영문자, 숫자, _ 입력 가능, 최소 3글자 입력해주세요</span>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 비밀번호</span>
-                <input type="text" placeholder="비밀번호" name="" id="" />
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 비밀번호 확인</span>
-                <input type="text" placeholder="비밀번호 확인" name="" id="" />
-              </li>
-            </ul>
-          </div>
-          <div class="h3"><span class="text-purple">내 정보</span> 입력</div>
-          <div class="form-round signup">
-            <ul class="form-list">
-              <li>
-                <span class="form-subject">ㆍ 이름</span>
-                <input type="text" placeholder="이름" name="" id="" />
-                <a href="" class="button round button-purple">휴대폰 본인인증</a>
-                <div class="form-tip"><span class="text-purple">[휴대폰 본인확인 완료]</span> 휴대폰 번호는 인증한 휴대폰 번호와 동일하게 자동 입력 됩니다.</div>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 닉네임</span>
-                <input type="text" placeholder="닉네임 " name="" id="" />
-                <span class="form-tip">공백없이 한글, 영문, 숫자만 입력 가능 (닉네임은 월 30일에 1회 변경 가능합니다)</span>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 이메일</span>
-                <input type="text" placeholder="이메일" name="" id="" />
-                <span class="form-at">@</span>
-                <select name="" id="">
-                  <option value="">hanmail.net</option>
-                  <option value="">naver.com</option>
-                  <option value="">gmail.com</option>
-                </select>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 휴대폰 번호</span>
-                <input type="text" placeholder="휴대폰 번호" name="" id="" />
-              </li>
-            </ul>
-          </div>
-          <div class="h3"><span class="text-purple">기타</span> 입력</div>
-          <div class="form-round signup">
-            <ul class="form-list">
-              <li>
-                <span class="form-subject">ㆍ 프로필 사진</span>
-                <div class="input-file">
-                  <label class="button round border button-purple" for="file-upload">파일 선택</label>
-                  <input type="file" id="file-upload" onchange="$('.file-name').val(window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop());" />
-                  <input class="file-name" value="선택된 파일 없음" disabled="disabled" />
-                </div>
-                <div class="form-tip">이미지는 60px X 60px 사이즈에 최적화 / gif, jpg, png파일만 가능하며 용량 5MB 이하만 등록됩니다.</div>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 이메일 수신</span>
-                <div class="input-check">
-                  <input type="checkbox" id="signup-email" />
-                  <label for="signup-email">이메일로 정보를 받겠습니다.</label>
-                </div>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ SMS 수신</span>
-                <div class="input-check">
-                  <input type="checkbox" id="signup-phone" />
-                  <label for="signup-phone">휴대폰으로 정보를 받겠습니다.</label>
-                </div>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 추천인 아이디</span>
-                <input type="text" placeholder="추천인 아이디" name="" id="" />
-                <span class="form-tip">추천인 ID를 적어주시면 500P가 지급되며, 추천 받은사람도 500P가 지급됩니다.</span>
-              </li>
-              <li>
-                <span class="form-subject">ㆍ 자동등록방지</span>
-                <div>
-                  <script>
-                    var g5_captcha_url = 'http://3.35.248.255/plugin/kcaptcha';
-                  </script>
-                  <script src="http://3.35.248.255/plugin/kcaptcha/kcaptcha.js"></script>
-                  <fieldset id="captcha">
-                    <legend><label for="captcha_key">자동등록방지</label></legend>
-                    <img src="http://3.35.248.255/plugin/kcaptcha/kcaptcha_image.php?t=1609819832768" alt="" id="captcha_img" /><input type="text" name="captcha_key" id="captcha_key" required="" class="required" size="6" maxlength="6" style="color: black" />
-                    <button type="button" id="captcha_mp3"><span></span>숫자음성듣기</button>
-                    <button type="button" id="captcha_reload"><span></span>새로고침</button>
-                    <span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>
-                  </fieldset>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="button-center">
-            <a href="" class="button">취소</a>
-            <a href="" class="button button-purple">회원 가입</a>
+        <div class="width-container">
+          <div class="mw-800 form-signup">
+            <div class="h3">아이디/비밀번호</div>
+            <div class="form-round signup">
+              <ul class="form-list">
+                <li>
+                  <span class="subject">ㆍ 아이디</span>
+                  <input type="text" placeholder="아이디" name="" id="" />
+                  <span class="lightgrey inline-break">영문자, 숫자, _ 입력 가능, 최소 3글자 입력해주세요</span>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 비밀번호</span>
+                  <input type="text" placeholder="비밀번호" name="" id="" />
+                </li>
+                <li>
+                  <span class="subject">ㆍ 비밀번호 확인</span>
+                  <input type="text" placeholder="비밀번호 확인" name="" id="" />
+                </li>
+              </ul>
+            </div>
+            <div class="h3"><span class="text-purple">내 정보</span> 입력</div>
+            <div class="form-round signup">
+              <ul class="form-list">
+                <li>
+                  <span class="subject">ㆍ 이름</span>
+                  <input type="text" placeholder="이름" name="" id="" />
+                  <a href="" class="button round button-purple phone">휴대폰 본인인증</a>
+                  <div class="lightgrey break"><span class="text-purple">[휴대폰 본인확인 완료]</span> 휴대폰 번호는 인증한 휴대폰 번호와 동일하게 자동 입력 됩니다.</div>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 닉네임</span>
+                  <input type="text" placeholder="닉네임 " name="" id="" />
+                  <span class="lightgrey inline-break">공백없이 한글, 영문, 숫자만 입력 가능 (닉네임은 월 30일에 1회 변경 가능합니다)</span>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 이메일</span>
+                  <input type="text" cla placeholder="이메일" name="" id="" />
+                  <!-- <span class="lightgrey at">@</span>
+                  <select name="" id="">
+                    <option value="">hanmail.net</option>
+                    <option value="">naver.com</option>
+                    <option value="">gmail.com</option>
+                  </select> -->
+                </li>
+                <li>
+                  <span class="subject">ㆍ 휴대폰 번호</span>
+                  <input type="text" placeholder="휴대폰 번호" name="" id="" />
+                </li>
+              </ul>
+            </div>
+            <div class="h3"><span class="text-purple">기타</span> 입력</div>
+            <div class="form-round signup">
+              <ul class="form-list">
+                <li>
+                  <span class="subject">ㆍ 프로필 사진</span>
+                  <div class="input-file">
+                    <label class="button round border button-purple" for="file-upload">파일 선택</label>
+                    <input type="file" id="file-upload" onchange="$('.file-name').val(window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop());" />
+                    <input class="file-name" value="선택된 파일 없음" disabled="disabled" />
+                  </div>
+                  <div class="lightgrey break">이미지는 60px X 60px 사이즈에 최적화 / gif, jpg, png파일만 가능하며 용량 5MB 이하만 등록됩니다.</div>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 이메일 수신</span>
+                  <div class="input-check input-checkbox">
+                    <input type="checkbox" id="signup-email" />
+                    <label for="signup-email">이메일로 정보를 받겠습니다.</label>
+                  </div>
+                </li>
+                <li>
+                  <span class="subject">ㆍ SMS 수신</span>
+                  <div class="input-check input-checkbox">
+                    <input type="checkbox" id="signup-phone" />
+                    <label for="signup-phone">휴대폰으로 정보를 받겠습니다.</label>
+                  </div>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 추천인 아이디</span>
+                  <input type="text" placeholder="추천인 아이디" name="" id="" />
+                  <span class="lightgrey inline-break">추천인 ID를 적어주시면 500P가 지급되며, 추천 받은사람도 500P가 지급됩니다.</span>
+                </li>
+                <li>
+                  <span class="subject">ㆍ 자동등록방지</span>
+                  <div class="form-captcha">
+                    <script>
+                      var g5_captcha_url = 'http://3.35.248.255/plugin/kcaptcha';
+                    </script>
+                    <script src="http://3.35.248.255/plugin/kcaptcha/kcaptcha.js"></script>
+                    <fieldset id="captcha">
+                      <legend><label for="captcha_key">자동등록방지</label></legend>
+                      <img src="http://3.35.248.255/plugin/kcaptcha/kcaptcha_image.php?t=1609819832768" alt="" id="captcha_img" /><input type="text" name="captcha_key" id="captcha_key" required="" class="required" size="6" maxlength="6" style="color: black" />
+                      <button type="button" id="captcha_mp3"><span></span>숫자음성듣기</button>
+                      <button type="button" id="captcha_reload"><span></span>새로고침</button>
+                      <span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>
+                    </fieldset>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="button-align center">
+              <a href="" class="button">취소</a>
+              <a href="" class="button button-purple">회원 가입</a>
+            </div>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ select:focus {
 
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 14px;
   color: #333;
   resize: none;
@@ -296,23 +296,53 @@ input[type='text']:disabled {
 }
 
 .text-purple {
-  color: #7e69fe;
+  color: #7e69fe !important;
 }
 
 .text-red {
   color: #fb4c16;
 }
 
+.pc-block {
+  display: block !important;
+}
+
+.pc-inline {
+  display: inline-block !important;
+}
+
+.mobile-block {
+  display: none !important;
+}
+
+.mobile-inline {
+  display: none !important;
+}
+
 .wrap {
   position: relative;
-  letter-spacing: -0.5px;
   overflow: hidden;
+}
+
+.body {
+  min-height: 600px;
+  padding: 100px 0;
 }
 
 .width-container {
   position: relative;
   max-width: 1280px;
   height: 100%;
+  margin: 0 auto;
+}
+
+.mw-800 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mw-400 {
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -374,11 +404,44 @@ input[type='text']:disabled {
   color: #333333;
 }
 
+.text-head {
+  position: relative;
+  padding: 0 10px;
+  font-size: 28px;
+  color: #333333;
+  margin: 70px 0 16px 0;
+}
+
+.text-head.center {
+  text-align: center;
+}
+
+.text-para {
+  position: relative;
+  margin: 0 auto 10px auto;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #666666;
+  word-break: keep-all;
+  line-height: 22px;
+}
+
+.text-para.center {
+  text-align: center;
+}
+
+.text-logo {
+  margin-right: 4px;
+  vertical-align: -2px;
+}
+
 .button {
   position: relative;
   display: inline-block;
   min-width: 240px;
   height: 70px;
+  margin: 1px 0;
   padding: 0 10px;
   font-size: 18px;
   color: white;
@@ -474,6 +537,14 @@ input[type='text']:disabled {
   vertical-align: top;
 }
 
+.button-align .float-left {
+  float: left;
+}
+
+.button-align .float-right {
+  float: right;
+}
+
 .button-align.center {
   text-align: center;
 }
@@ -487,8 +558,25 @@ input[type='text']:disabled {
 }
 
 .button-align.border {
+  margin-top: 0;
   padding-top: 30px;
   border-top: 1px solid #333333;
+}
+
+.button-align.border.number .page-number {
+  margin-top: 36px;
+}
+
+.button-align.number .button {
+  z-index: 1;
+}
+
+.button-align.number .page-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 6px 0;
 }
 
 .indicator {
@@ -622,7 +710,6 @@ input[type='text']:disabled {
 .search-bar select,
 .search-bar input,
 .search-bar a {
-  height: 40px;
   border: 0;
   border-bottom: 1px solid #7e69fe;
 }
@@ -630,17 +717,11 @@ input[type='text']:disabled {
 .search-bar select {
   width: 100px;
   margin-right: 15px;
-  font-size: 15px;
-  font-weight: 300;
-  color: #252525;
 }
 
 .search-bar input {
   width: 240px;
   padding: 0;
-  font-size: 15px;
-  font-weight: 300;
-  color: #aaaaaa;
 }
 
 .search-bar input:focus {
@@ -651,10 +732,115 @@ input[type='text']:disabled {
 .search-bar a {
   display: inline-block;
   width: 40px;
+  height: 40px;
   margin: 0;
   text-align: right;
   line-height: 40px;
   vertical-align: middle;
+}
+
+.page-number {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.page-number a {
+  display: inline-block;
+  width: 20px;
+  height: 38px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #aaaaaa;
+  text-align: center;
+  line-height: 36px;
+}
+
+.page-number a:hover {
+  text-decoration: underline;
+}
+
+.page-number a.active {
+  width: 38px;
+  height: 38px;
+  margin: 0 6px;
+  color: white;
+  text-decoration: none;
+  background-color: #7e69fe;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.item-name {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  padding: 28px 0 27px 45px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  text-align: left;
+  line-height: 18px;
+}
+
+.item-name a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.item-name .brand {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.item-name .name {
+  display: block;
+}
+
+.item-name .comment {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+.caution {
+  position: relative;
+  padding: 24px 30px;
+  margin-top: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #888888;
+  word-break: keep-all;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  background-color: #f9f9f9;
+}
+
+.caution ul {
+  list-style: decimal;
+  margin-left: 10px;
+}
+
+.caution li {
+  padding: 2px 0;
+}
+
+.caution strong {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.caution p {
+  margin: 8px 0 0 0;
 }
 
 .popup {
@@ -694,9 +880,13 @@ input[type='text']:disabled {
   background-color: lightblue;
 }
 
-.body {
-  min-height: 600px;
-  padding: 100px 0;
+.sns-share-icon {
+  margin: 60px 0 30px 0;
+  text-align: right;
+}
+
+.sns-share-icon img {
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1320px) {
@@ -706,7 +896,11 @@ input[type='text']:disabled {
 }
 
 @media screen and (max-width: 960px) {
+  select {
+    padding: 0 8px;
+  }
   .body {
+    min-height: 300px;
     padding: 140px 0 35px 0;
   }
   .body.main {
@@ -719,10 +913,52 @@ input[type='text']:disabled {
   .width-container {
     padding: 0 10px;
   }
+  .pc-block {
+    display: none !important;
+  }
+  .pc-inline {
+    display: none !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .mobile-inline {
+    display: inline-block !important;
+  }
+  select {
+    height: 28px;
+    padding: 0 5px;
+    font-size: 11px;
+  }
+  textarea {
+    height: 100px;
+    padding: 10px;
+    font-size: 11px;
+  }
+  input[type='text'] {
+    height: 28px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+  .input-check input[type='checkbox'] + label {
+    font-size: 11px;
+  }
+  .input-check input[type='checkbox'] + label::before {
+    margin: -2px 6px 0 0;
+  }
+  .input-file {
+    height: 24px;
+  }
+  .input-file .file-name {
+    width: calc(100% - 80px);
+    height: 24px;
+    margin-left: 10px;
+    font-size: 11px;
+  }
   .title {
     font-size: 13px;
     margin-top: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     line-height: 24px;
   }
   .title .text {
@@ -730,6 +966,30 @@ input[type='text']:disabled {
   }
   .title .button {
     margin-left: 8px;
+  }
+  .h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .text-head {
+    font-size: 15px;
+    margin: 25px 0 10px 0;
+  }
+  .text-para {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .text-logo {
+    width: 50px;
+    vertical-align: -1px;
+  }
+  .button {
+    min-width: 110px;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 40px;
   }
   .button.round {
     padding: 0 10px;
@@ -751,9 +1011,9 @@ input[type='text']:disabled {
   }
   .button.large {
     min-width: 130px;
-    height: 44px;
-    font-size: 12px;
-    line-height: 42px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 44px;
   }
   .button-align {
     margin-top: 30px;
@@ -761,42 +1021,77 @@ input[type='text']:disabled {
   .button-align.border {
     padding-top: 15px;
   }
-  .search-bar {
-    position: relative;
-    font-size: 0;
+  .button-align.border.number .page-number {
+    margin-top: 18px;
   }
-  .search-bar select,
-  .search-bar input,
-  .search-bar a {
-    height: 40px;
-    border: 0;
-    border-bottom: 1px solid #7e69fe;
+  .search-bar {
+    margin-top: -5px;
   }
   .search-bar select {
-    width: 100px;
-    margin-right: 15px;
-    font-size: 15px;
-    font-weight: 300;
-    color: #252525;
+    width: 70px;
+    margin-right: 8px;
   }
   .search-bar input {
-    width: 240px;
-    padding: 0;
-    font-size: 15px;
-    font-weight: 300;
-    color: #aaaaaa;
-  }
-  .search-bar input:focus {
-    border: 0;
-    border-bottom: 1px solid #7e69fe;
+    width: 130px;
   }
   .search-bar a {
-    display: inline-block;
-    width: 40px;
+    width: 26px;
+    height: 28px;
+    line-height: 28px;
+  }
+  .search-bar a img {
+    width: 16px;
+    height: 16px;
+  }
+  .item-name {
+    padding: 18px 0 17px 32px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .item-name a {
+    font-size: 12px;
+  }
+  .item-name .brand {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+  }
+  .item-name .comment {
+    font-size: 10px;
+  }
+  .caution {
+    padding: 13px 15px;
+    margin-top: 20px;
+    font-size: 11px;
+  }
+  .caution li {
+    line-height: 14px;
+  }
+  .caution strong {
+    margin-bottom: 4px;
+  }
+  .caution p {
+    margin: 4px 0 0 0;
+    line-height: 14px;
+  }
+  .page-number a {
+    width: 14px;
+    height: 24px;
+    margin: 0 -1px;
+    font-size: 11px;
+    line-height: 22px;
+  }
+  .page-number a.active {
+    width: 24px;
+    height: 24px;
     margin: 0;
-    text-align: right;
-    line-height: 40px;
-    vertical-align: middle;
+    line-height: 22px;
+  }
+  .sns-share-icon {
+    margin: 30px 0 15px 0;
+  }
+  .sns-share-icon img {
+    max-width: 25px;
   }
 }
 /*# sourceMappingURL=common.css.map */

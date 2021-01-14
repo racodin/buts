@@ -1,4 +1,19 @@
 /* item list */
+.item-sort {
+  position: absolute;
+  top: 5px;
+  right: 125px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #aaaaaa;
+  .v-bar {
+    margin-right: 15px;
+    &::after {
+      right: -9px;
+    }
+  }
+}
+
 .item-slide {
   position: relative;
   &.party {
@@ -113,6 +128,7 @@
   border-radius: 20px;
   border: solid 1px #dddddd;
   background-color: white;
+  overflow: hidden;
   &:not(.disabled):hover {
     border: 1px solid #a89cf4;
     .item-type {
@@ -154,6 +170,7 @@
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 0;
+  white-space: nowrap;
 }
 
 .item-member {
@@ -378,7 +395,7 @@
 
 .item-view-caution {
   position: relative;
-  padding: 50px;
+  padding: 40px;
   border: solid 1px #eeeeee;
   background-color: #fcfcfc;
   .tag {
@@ -386,6 +403,7 @@
     span {
       display: inline-block;
       margin-right: 8px;
+      margin-bottom: 8px;
       height: 36px;
       padding: 0 15px;
       font-size: 16px;
@@ -397,7 +415,7 @@
     }
   }
   .text {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 16px;
     color: #333;
     li {
@@ -413,13 +431,19 @@
   border: solid 1px #eeeeee;
   background-color: #fcfcfc;
   border-top: 0;
-  .input-check input[type='checkbox'] + label {
-    font-size: 16px;
-    color: #666666;
-  }
 }
 
 @media screen and (max-width: 960px) {
+  .item-sort {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: -2px;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-right: 0;
+    font-size: 11px;
+  }
   .item-list {
     width: calc(100% + 10px);
     margin-top: -5px;
@@ -428,7 +452,7 @@
   .item-row {
     width: calc(50% - 10px);
     margin: 5px;
-    padding: 11px 15px;
+    padding: 11px 10px;
     font-size: 10px;
     border-radius: 10px;
   }
@@ -452,12 +476,12 @@
     margin: 12px 0;
   }
   .item-member {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     margin-left: 4px;
-    background-size: 26px 26px;
+    background-size: 22px 22px;
     &.on {
-      background-size: 26px 26px;
+      background-size: 22px 22px;
     }
     &:first-child {
       margin-left: 0;
@@ -465,8 +489,8 @@
     &.plus {
       font-size: 13px;
       .Rajdhani {
-        font-size: 13px;
-        line-height: 24px;
+        font-size: 11px;
+        line-height: 20px;
       }
     }
   }
@@ -489,7 +513,6 @@
       }
     }
   }
-
   .item-view-title {
     padding: 15px 0;
     padding-left: 54px;
@@ -512,7 +535,7 @@
       font-size: 12px;
     }
     .subject {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 20px;
     }
     .up {
@@ -551,6 +574,9 @@
   .item-view-grade {
     font-size: 11px;
   }
+  .item-view-idpw {
+    margin-left: 0px;
+  }
   .item-view-user {
     padding: 25px 0;
     li {
@@ -569,10 +595,11 @@
     }
   }
   .item-view-caution {
-    padding: 20px;
+    padding: 10px;
     .tag {
       span {
-        margin-right: 8px;
+        margin-right: 2px;
+        margin-bottom: 2px;
         height: 22px;
         padding: 0 8px;
         font-size: 11px;
@@ -581,14 +608,11 @@
       }
     }
     .text {
-      margin-top: 15px;
+      margin-top: 5px;
       font-size: 11px;
     }
   }
   .item-view-check {
     padding: 12px;
-    .input-check input[type='checkbox'] + label {
-      font-size: 12px;
-    }
   }
 }

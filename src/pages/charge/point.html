@@ -40,17 +40,18 @@
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
     <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
     <script src="http://3.35.248.255/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+    <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
 
     <!-- 벗츠 리뉴얼 css, js  -->
     <link rel="stylesheet" href="../../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../../assets/css/icons.css" />
     <link rel="stylesheet" href="../../assets/css/common.css" />
     <link rel="stylesheet" href="../../assets/css/topper.css" />
     <link rel="stylesheet" href="../../assets/css/header.css" />
-    <link rel="stylesheet" href="../../assets/css/body.css" />
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
-    <link rel="stylesheet" href="./form.css" />
+
+    <link rel="stylesheet" href="../../assets/css/charge.css" />
+    <link rel="stylesheet" href="../../assets/css/form.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -59,46 +60,34 @@
       <div include-html="../common/header.html"></div>
       <div class="body">
         <div class="width-container">
-          <div class="title-border" style="border-bottom: 0">
-            <span class="title">파트너 센터</span>
-          </div>
-          <div class="form-point-tab">
-            <a href="">
-              벗츠 UP
-              <span class="lightgrey">일반 리스트 최상단으로 끌어 올려 줍니다.</span>
-            </a>
-            <a href="" class="on">
-              벗츠 PLUS
-              <span class="lightgrey">생성 가능한 파티 갯 수가 늘어 납니다.</span>
-            </a>
-            <a href="">
-              광고 문의
-              <span class="lightgrey">배너 및 기타 광고 문의</span>
-            </a>
-          </div>
-          <div class="form-point-width">
-            <div class="form-point-title">
-              <img src="../../assets/images/small-butslogo.png" alt="" />
-              벗츠 PLUS!!
-            </div>
-            <div class="form-point-p"><span class="text-purple">[벗츠 PLUS]</span> 이란 더 다양한 모집(판매)를 위해 1일 개설 제한 없이 사용한 유료 상품 입니다.</div>
-            <div class="form-point-price">
+          <div class="mw-800">
+            <div class="h3"><span class="text-purple">포인트</span> 충전</div>
+            <div class="accordion">
               <ul>
                 <li>
                   <span class="input-check">
                     <input type="radio" name="point" id="point1" />
                     <label for="point1">
-                      <span class="Rajdhani">9,900</span>포인트
-                      <span class="right"><span class="Rajdhani">5,000</span>원</span>
+                      <span class="icon"><img src="../../assets/css/img/icon-coin-star-big.png" alt="" /></span>
+                      <span class="Rajdhani">9,900</span>
+                      <span class="tip text-red">(이벤트 기간동안 1인당 1회만 결제가능)</span>
+                      <span class="right">
+                        <span class="benefit"><span class="text-purple">+990</span> 추가 포인트</span>
+                        <span class="button round border button-purple">10% ↑</span>
+                      </span>
                     </label>
                   </span>
                 </li>
-                <li class="on">
+                <li class="active">
                   <span class="input-check">
                     <input type="radio" name="point" id="point4" />
                     <label for="point4">
-                      <span class="Rajdhani">9,900</span>포인트
-                      <span class="right"><span class="Rajdhani">5,000</span>원</span>
+                      <span class="icon"><img src="../../assets/css/img/icon-coin-star-big.png" alt="" /></span>
+                      <span class="Rajdhani">50,000</span>
+                      <span class="right">
+                        <span class="benefit"><span class="text-purple">+2,590</span> 추가 포인트</span>
+                        <span class="button round border button-purple">5% ↑</span>
+                      </span>
                     </label>
                   </span>
                 </li>
@@ -106,8 +95,12 @@
                   <span class="input-check">
                     <input type="radio" name="point" id="point2" />
                     <label for="point2">
-                      <span class="Rajdhani">9,900</span>포인트
-                      <span class="right"><span class="Rajdhani">5,000</span>원</span>
+                      <span class="icon"><img src="../../assets/css/img/icon-coin-star-big.png" alt="" /></span>
+                      <span class="Rajdhani">100,000</span>
+                      <span class="right">
+                        <span class="benefit"><span class="text-purple">+7,000</span> 추가 포인트</span>
+                        <span class="button round border button-purple">7% ↑</span>
+                      </span>
                     </label>
                   </span>
                 </li>
@@ -115,48 +108,60 @@
                   <span class="input-check">
                     <input type="radio" name="point" id="point3" />
                     <label for="point3">
-                      <span class="Rajdhani">9,900</span>포인트
-                      <span class="right"><span class="Rajdhani">5,000</span>원</span>
+                      <span class="icon"><img src="../../assets/css/img/icon-coin-star-big.png" alt="" /></span>
+                      <span class="Rajdhani">200,000</span>
+                      <span class="right">
+                        <span class="button round border button-purple">10% ↑</span>
+                      </span>
                     </label>
                   </span>
                 </li>
               </ul>
             </div>
-            <div class="h3"><span class="text-purple">결제</span> 정보</div>
-            <div class="form-order-list">
+            <div class="caution">
+              <strong>유의사항</strong>
+              <ul>
+                <li>벗츠 포인트는 현금과 동일하게 벗츠 내 에서 사용이 가능합니다.</li>
+                <li>포인트로 결제 시 결제 직 후 별도의 확인 절차없이 파티장이 공유한 참여정보 확인이 가능합니다.</li>
+                <li>포인트결제는 현금결제로만 가능하며 결제 액수에 따라 포인트가 추가 지급됩니다.</li>
+                <li>남은 포인트는 인출신청이 가능하며 인출 진행 시 혜택받은 포인트는 차감된 금액으로 진행됩니다.</li>
+              </ul>
+            </div>
+            <div class="h3">결제 정보</div>
+            <div class="form-list border">
               <ul>
                 <li>
                   <div class="subject">ㆍ 결재 금액</div>
-                  <div class="right">18,275원</div>
+                  <div class="right"><span class="Rajdhani">20,103</span><span class="won">원</span></div>
                 </li>
                 <li>
                   <div class="subject">ㆍ 결제방법</div>
                   <div class="right">
-                    <span class="input-check">
+                    <span class="input-check input-radio">
                       <input type="radio" name="pay-type" id="order-account" />
                       <label for="order-account">계좌이체</label>
                     </span>
-                    <span class="input-check">
+                    <span class="input-check input-radio">
                       <input type="radio" name="pay-type" id="order-card" />
                       <label for="order-card">신용카드</label>
                     </span>
                   </div>
-                  <div class="form-order-account">
+                  <div class="account text-right">
                     <select name="" id="">
                       <option value="">입금계좌 선택</option>
                     </select>
                     <input type="text" placeholder="입금자명" />
-                    <p>
-                      *계좌이체 진행시 입금 확인까지 <span class="text-purple">최대 10분 정도 소요</span>됩니다.(단, 해당 은행 점검시간이나 사정에 의하여 늦어질 수 있습니다) <br />
-                      <span class="text-purple">1시간 이내 미입금시 주문내역이 취소</span> 되실수 있습니다.
-                    </p>
                   </div>
+                  <p class="lightgrey text-right">
+                    *계좌이체 진행시 입금 확인까지 <span class="text-purple">최대 10분 정도 소요</span>됩니다.(단, 해당 은행 점검시간이나 사정에 의하여 늦어질 수 있습니다) <br />
+                    <span class="text-purple">1시간 이내 미입금시 주문내역이 취소</span> 되실수 있습니다.
+                  </p>
                 </li>
               </ul>
             </div>
-            <div class="button-center">
-              <a href="" class="button">취소</a>
-              <a href="" class="button button-purple">결제</a>
+            <div class="button-align center">
+              <a href="" class="button large">취소</a>
+              <a href="" class="button large button-purple">결제</a>
             </div>
           </div>
         </div>

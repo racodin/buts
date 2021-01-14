@@ -40,17 +40,17 @@
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
     <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
     <script src="http://3.35.248.255/plugin/apms/js/jquery.mobile.swipe.min.js"></script>
+    <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
 
     <!-- 벗츠 리뉴얼 css, js  -->
     <link rel="stylesheet" href="../../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../../assets/css/icons.css" />
     <link rel="stylesheet" href="../../assets/css/common.css" />
     <link rel="stylesheet" href="../../assets/css/topper.css" />
     <link rel="stylesheet" href="../../assets/css/header.css" />
-    <link rel="stylesheet" href="../../assets/css/body.css" />
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
-    <link rel="stylesheet" href="./post.css" />
+
+    <link rel="stylesheet" href="../../assets/css/table.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -61,8 +61,7 @@
         <div class="width-container">
           <div class="title-wrap border">
             <div class="title">
-              <a href="" class="text">고객센터</a>
-              <a href="" class="button border round button-white">공지사항</a>
+              <a href="" class="text">공지사항</a>
             </div>
             <div class="title-right">
               <div class="search-bar">
@@ -70,21 +69,22 @@
                   <option value="">제목</option>
                 </select>
                 <input type="text" placeholder="검색어를 입력해 주세요" />
-                <a href=""
-                  ><img
+                <a href="">
+                  <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZtJREFUeNqUk78vQ1Ecxc/tj4mIpqqlJiEhDZI+lfjRsEmsEouhu4U/xYJZwmAxCmMr7aA/EpHGQLr49Sgh6Nb2Orev+l6pas/wXt6953O/997veUJKiW8960gn5FUWb3n16fJgKABtRvT48FvCIEtFnBzKZBSWdb4dAloYi8vC6fxFEtvfkblL2B0IzWNME54+NZd/wEVaLUfD4AhW1wQNdeTRgTyLosul5rz+nzUf77C/Ld9fMbWApRVRG7fldaROVbWGGMVBTjkcSMVAs0lmErJcxmQYDbEazKPSRrNJ8iap8ZBAUxkGw1wlXysN8A00B+GtGAxzlURrKpfU0263kGw3pd/+Q7JDVLfbQg4H1It9a04ahsFRCxmcFjYbUlHVt7/0dK8MtDGJJsm4sCXFomp3Q5iDe1uSBm0ORrb+TN9ESLgrEX/RcZ6spo/q9SOyLjo620l8cBY3ObVnKyysfxnDlY7L66zqG+vzJnklPBs3WfjE7qa0wnVkc5lwPyIbotUkUKxDgBjhTBw8WHsqfMjYsXx/k18CDACJhvJ23Xt3WQAAAABJRU5ErkJggg=="
                     alt=""
-                /></a>
+                  />
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="post-list-table">
-            <table>
+          <div class="table-list scroll">
+            <table style="min-width: 500px">
               <colgroup>
                 <col style="width: 10%" />
-                <col style="width: 55%" />
-                <col style="width: 20%" />
+                <col style="width: 57%" />
+                <col style="width: 18%" />
                 <col style="width: 15%" />
               </colgroup>
               <thead>
@@ -99,11 +99,8 @@
                 <tr class="active">
                   <td>22</td>
                   <td>
-                    <div class="post-list-subject">
-                      <a href="">
-                        <span class="post-list-alert">알림</span>
-                        추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!
-                      </a>
+                    <div class="subject notice">
+                      <a href=""> 추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트! 500포인트! </a>
                     </div>
                   </td>
                   <td>2020.11.20</td>
@@ -112,7 +109,7 @@
                 <tr>
                   <td>22</td>
                   <td>
-                    <div class="post-list-subject">
+                    <div class="subject">
                       <a href="">추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!</a>
                     </div>
                   </td>
@@ -122,7 +119,7 @@
                 <tr>
                   <td>22</td>
                   <td>
-                    <div class="post-list-subject">
+                    <div class="subject">
                       <a href="">추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!</a>
                     </div>
                   </td>
@@ -132,7 +129,7 @@
                 <tr>
                   <td>22</td>
                   <td>
-                    <div class="post-list-subject">
+                    <div class="subject">
                       <a href="">추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!</a>
                     </div>
                   </td>
@@ -142,8 +139,12 @@
               </tbody>
             </table>
           </div>
-          <div class="post-wrap">
-            <div class="post-list-number">
+          <div class="button-align right border number">
+            <div class="float-left">
+              <a href="" class="button small button-red">선택삭제</a>
+              <a href="" class="button small button-green">설정</a>
+            </div>
+            <div class="page-number">
               <a href=""><<</a>
               <a href=""><</a>
               <a href="">1</a>
@@ -154,16 +155,7 @@
               <a href="">></a>
               <a href="">>></a>
             </div>
-            <div class="post-buttons-left">
-              <a href="" class="button mini button-red">선택삭제</a>
-              <a href="" class="button mini border">선택복사</a>
-              <a href="" class="button mini border">선택이동</a>
-              <a href="" class="button mini button-blue">전체선택</a>
-              <a href="" class="button mini button-green">설정</a>
-            </div>
-            <div class="post-buttons-right">
-              <a href="" class="button small button-purple">글쓰기</a>
-            </div>
+            <a href="" class="button small button-purple">글쓰기</a>
           </div>
         </div>
       </div>
