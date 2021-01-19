@@ -1,6 +1,8 @@
 .accordion {
   position: relative;
-  margin-top: 40px;
+  &.mg-top {
+    margin-top: 40px;
+  }
   li {
     position: relative;
     margin-top: 5px;
@@ -119,30 +121,33 @@
 /* charge */
 .charge-tab {
   position: relative;
-  font-size: 0;
+  display: flex;
+  background: url('../../assets/css/img/payment_tab_bg.jpg') no-repeat 50% 0;
+  background-size: cover;
+  border: solid 1px #e3e1ee;
+  border-top: 1px solid #7e69fe;
+  overflow: hidden;
   a {
     position: relative;
-    display: inline-block;
-    width: calc(33.33%);
-    height: 120px;
-    margin-right: -1px;
-    padding: 24px 0;
+    display: block;
+    width: 100%;
+    padding: 26px 0 34px 0;
     font-size: 22px;
     font-weight: 500;
     color: #333333;
     text-align: center;
-    vertical-align: top;
-    border: solid 1px #e3e1ee;
-    border-top: 1px solid #7e69fe;
     background-color: white;
+    border-left: solid 1px #e3e1ee;
     &.on {
       color: white;
-      border: solid 1px #7e69fe;
-      background-color: #7e69fe;
+      background-color: transparent;
       z-index: 1;
       .lightgrey {
         color: white;
       }
+    }
+    &:first-child {
+      border-left: 0;
     }
   }
   .lightgrey {
@@ -156,6 +161,9 @@
 @media screen and (max-width: 960px) {
   .accordion {
     margin-top: 15px;
+    &.mg-top {
+      margin-top: 20px;
+    }
     li {
       border-radius: 10px;
     }
@@ -214,6 +222,18 @@
     }
     .benefit {
       margin-right: 8px;
+    }
+  }
+  .charge-tab {
+    a {
+      height: auto;
+      padding: 10px 10px 14px 10px;
+      font-size: 12px;
+    }
+    .lightgrey {
+      margin-top: 4px;
+      font-size: 11px;
+      line-height: 12px;
     }
   }
 }

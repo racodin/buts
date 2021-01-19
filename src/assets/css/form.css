@@ -43,12 +43,12 @@
 
 .form-half {
   display: inline-block;
-  width: calc(50% - 25px);
+  width: calc(50% - 22px);
   vertical-align: top;
 }
 
 .form-half.left {
-  margin-right: 47px;
+  margin-right: 40px;
 }
 
 .form-title {
@@ -154,6 +154,11 @@
   margin-top: 0;
   padding: 0;
   font-size: 13px;
+}
+
+.form-list.border-bottom {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
 }
 
 .form-list li {
@@ -352,6 +357,217 @@
   color: #333333;
 }
 
+/* mypage */
+.form-pannel {
+  position: relative;
+  height: 310px;
+  padding: 30px;
+  border: solid 1px #ececec;
+}
+
+.form-pannel .title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-pannel.mg-top {
+  margin-top: 40px;
+}
+
+.form-profile .pd-left {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 140px;
+}
+
+.form-profile .picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.form-profile .picture .button {
+  margin-top: 10px;
+}
+
+.form-profile .image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.form-profile .name {
+  font-size: 18px;
+  color: #333333;
+}
+
+.form-profile .position {
+  font-size: 14px;
+  color: #888888;
+}
+
+.form-profile .right {
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+
+.form-profile .circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  background-color: #7e69fe;
+  border-radius: 50%;
+}
+
+.form-profile .gage {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-profile .gage .left {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+}
+
+.form-profile .gage .right {
+  position: absolute;
+  top: auto;
+  bottom: -26px;
+  right: 0;
+}
+
+.form-profile .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-color: #7e69fe;
+  border-radius: 6px;
+}
+
+.form-profile .point {
+  position: relative;
+  padding: 25px 0;
+  border-top: 1px solid #ececec;
+}
+
+.form-profile .point .icon {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.form-profile .point .right {
+  top: 17px;
+}
+
+.form-profile .point .Rajdhani {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7e69fe;
+  vertical-align: middle;
+}
+
+.form-profile .point .button {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.form-list-clear {
+  margin-top: 30px;
+}
+
+.form-list-clear li {
+  min-height: auto;
+  padding: 2px 0 2px 80px;
+}
+
+.form-list-clear .subject {
+  top: 2px;
+  width: 80px;
+  padding: 0;
+}
+
+.form-list-clear .normal {
+  font-weight: 300;
+}
+
+.form-sns {
+  margin-top: 38px;
+}
+
+.form-sns .icon {
+  display: inline-block;
+}
+
+.form-sns .icon.disabled {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.4;
+}
+
+.form-table {
+  position: relative;
+  margin-bottom: 14px;
+  border-top: 1px solid #333333;
+}
+
+.form-table table {
+  width: 100%;
+}
+
+.form-table td {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+  color: #aaaaaa;
+  border-bottom: 1px solid #ececec;
+}
+
+.form-table .date {
+  font-size: 12px;
+}
+
+.form-table .symbol {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  border-radius: 3px;
+  background-color: #efefef;
+  vertical-align: middle;
+}
+
+.form-table .subject {
+  padding: 13px 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.form-table .text-right {
+  text-align: right;
+}
+
 @media screen and (max-width: 960px) {
   .form-pd {
     max-width: 280px;
@@ -513,6 +729,106 @@
   .form-clause .article-title {
     margin-bottom: 5px;
     font-size: 10px;
+  }
+  .form-profile .pd-left {
+    margin-top: 12px;
+    padding-left: 80px;
+  }
+  .form-profile .image {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .form-profile .name {
+    font-size: 12px;
+  }
+  .form-profile .position {
+    font-size: 11px;
+  }
+  .form-profile .right {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    font-size: 11px;
+  }
+  .form-profile .circle {
+    width: 18px;
+    height: 18px;
+  }
+  .form-profile .gage {
+    height: 8px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 12px;
+  }
+  .form-profile .gage .left {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+  }
+  .form-profile .gage .right {
+    position: absolute;
+    top: auto;
+    bottom: -24px;
+    right: 0;
+  }
+  .form-profile .bar {
+    height: 8px;
+  }
+  .form-profile .point {
+    padding: 15px 0 40px 0;
+  }
+  .form-profile .point .icon {
+    position: relative;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+  }
+  .form-profile .point .right {
+    top: 9px;
+  }
+  .form-profile .point .Rajdhani {
+    font-size: 20px;
+  }
+  .form-list-clear {
+    margin-top: 20px;
+  }
+  .form-list-clear li {
+    min-height: auto;
+    padding: 2px 0 2px 80px;
+  }
+  .form-list-clear .subject {
+    top: 2px;
+    padding: 0;
+  }
+  .form-sns {
+    margin-top: 22px;
+  }
+  .form-sns .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .form-pannel {
+    height: auto;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+  .form-pannel .title {
+    margin-bottom: 10px;
+  }
+  .form-pannel.mg-top {
+    margin-top: 0px;
+  }
+  .form-table td {
+    font-size: 11px;
+  }
+  .form-table .date {
+    font-size: 10px;
+  }
+  .form-table .subject {
+    padding: 8px 0;
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=form.css.map */

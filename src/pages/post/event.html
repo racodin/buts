@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
 
-    <link rel="stylesheet" href="../../assets/css/form.css" />
+    <link rel="stylesheet" href="../../assets/css/table.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -59,38 +59,92 @@
       <div include-html="../common/header.html"></div>
       <div class="body">
         <div class="width-container">
-          <div class="mw-400 form-pd form-login">
-            <div class="login-logo">
-              <img src="../../assets/css/img/big-butslogo.png" alt="" />
+          <div class="title-wrap">
+            <div class="title">
+              <a href="" class="text">이벤트</a>
             </div>
-            <div class="login-input">
-              <input type="text" placeholder="아이디를 입력하세요" name="" id="" />
+          </div>
+          <div class="pevent-banner">
+            <a href=""><img src="../../assets/css/img/banner01.png" style="width: 100%" alt="" /></a>
+          </div>
+          <div class="pevent-tab">
+            <a href="" class="active">진행중 이벤트</a>
+            <a href="">당첨자 발표</a>
+            <a href="">종료괸 이벤트</a>
+          </div>
+          <div class="pevent-list">
+            <ul>
+              <li class="finish">
+                <div class="thumb"><img src="../../assets/css/img/banner01.png" alt="" /></div>
+                <div class="info">
+                  <a href="" class="subject">추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!</a>
+                  <span class="state">종료</span>
+                  <span class="date">2021.03.30</span>
+                </div>
+                <a href="" class="button border">당첨자 보기</a>
+              </li>
+              <li>
+                <div class="thumb"><img src="../../assets/css/img/banner01.png" alt="" /></div>
+                <div class="info">
+                  <a href="" class="subject">추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!</a>
+                  <span class="state">이벤트 기간</span>
+                  <span class="date">2021.03.30</span>
+                </div>
+                <a href="" class="button border">당첨자 보기</a>
+              </li>
+              <li>
+                <div class="thumb"><img src="../../assets/css/img/banner01.png" alt="" /></div>
+                <div class="info">
+                  <a href="" class="subject">추천인 이벤트!! 가입 시 추천인 입력 하면 500포인트!</a>
+                  <span class="state">발표</span>
+                  <span class="date">2021.03.30</span>
+                </div>
+                <a href="" class="button border">당첨자 보기</a>
+              </li>
+            </ul>
+          </div>
+          <div class="button-align right number">
+            <div class="float-left">
+              <a href="" class="button small button-red">선택삭제</a>
+              <a href="" class="button small button-green">설정</a>
             </div>
-            <div class="login-input">
-              <input type="text" placeholder="패스워드를 입력하세요" name="" id="" />
+            <div class="page-number">
+              <ul>
+                <li class="disabled">
+                  <a><i class="fa fa-angle-double-left"></i></a>
+                </li>
+                <li class="disabled">
+                  <a><i class="fa fa-angle-left"></i></a>
+                </li>
+                <li class="active"><a>1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li class="disabled">
+                  <a><i class="fa fa-angle-right"></i></a>
+                </li>
+                <li class="disabled">
+                  <a><i class="fa fa-angle-double-right"></i></a>
+                </li>
+              </ul>
             </div>
-            <div class="login-option">
-              <div class="input-check">
-                <input type="checkbox" id="login-save" />
-                <label for="login-save">자동로그인</label>
-              </div>
-              <div class="right">
-                <a href="" class="v-bar">회원가입</a>
-                <a href="">아이디/비밀번호찾기</a>
-              </div>
-            </div>
-            <a href="" class="form-button button button-purple">로그인</a>
-            <div class="form-text">
-              벗츠 회원이 아닌가요? <br />
-              가입 즉시 <span class="text-purple">사용 가능한 1,000포인트</span> 받으세요~
-            </div>
-            <div class="login-sns">
-              <a href="" class="sns-icon social_link sns-naver"><img src="../../assets/css/img/btn-sns-login-naver.png" alt="" /></a>
-              <a href=""><img src="../../assets/css/img/btn-sns-login-kakao.png" alt="" /></a>
-            </div>
+            <!-- <div class="page-number">
+              <a href=""><<</a>
+              <a href=""><</a>
+              <a href="">1</a>
+              <a class="active">2</a>
+              <a href="">3</a>
+              <a href="">4</a>
+              <a href="">5</a>
+              <a href="">></a>
+              <a href="">>></a>
+            </div> -->
+            <a href="" class="button small button-purple">글쓰기</a>
           </div>
         </div>
       </div>
+      <div include-html="../common/side.html"></div>
       <div include-html="../common/footer.html"></div>
     </div>
 

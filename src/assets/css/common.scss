@@ -905,7 +905,7 @@ input[type='text'] {
     margin: 25px 0 10px 0;
   }
   .text-para {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 18px;
   }
   .text-logo {
@@ -917,30 +917,30 @@ input[type='text'] {
     height: 42px;
     padding: 0 10px;
     font-size: 13px;
-    line-height: 40px;
+    line-height: 42px;
     &.round {
       padding: 0 10px;
       height: 24px;
       font-size: 11px;
-      line-height: 22px;
+      line-height: 24px;
     }
     &.mini {
       min-width: 36px;
       height: 24px;
       font-size: 11px;
-      line-height: 22px;
+      line-height: 24px;
     }
     &.small {
       min-width: 60px;
       height: 32px;
       font-size: 11px;
-      line-height: 30px;
+      line-height: 32px;
     }
     &.large {
       min-width: 130px;
       height: 46px;
       font-size: 14px;
-      line-height: 44px;
+      line-height: 46px;
     }
   }
   .button-align {
@@ -949,7 +949,9 @@ input[type='text'] {
       padding-top: 15px;
       &.number {
         .page-number {
-          margin-top: 18px;
+          position: relative;
+          display: block;
+          margin: 0 0 15px 0;
         }
       }
     }
@@ -1011,7 +1013,7 @@ input[type='text'] {
           width: 24px;
           height: 24px;
           margin: 0;
-          line-height: 22px;
+          line-height: 24px;
         }
       }
     }
@@ -1020,7 +1022,7 @@ input[type='text'] {
       height: 24px;
       margin: 0 -1px;
       font-size: 11px;
-      line-height: 22px;
+      line-height: 24px;
     }
   }
   .empty {

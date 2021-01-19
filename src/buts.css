@@ -2053,6 +2053,17 @@ a.header-login {
   }
 }
 
+/* FAQ */
+.faq-tab a {
+  display: inline-block;
+  font-size: 22px;
+  color: #aaaaaa;
+}
+
+.faq-tab a.active {
+  color: #7e69fe;
+}
+
 /* item list */
 .item-sort {
   position: absolute;

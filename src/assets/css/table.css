@@ -206,6 +206,124 @@
   border-bottom: 1px solid #333333;
 }
 
+/* event page */
+.pevent-tab {
+  position: relative;
+  margin-left: -20px;
+}
+
+.pevent-tab a {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #aaaaaa;
+}
+
+.pevent-tab a.active {
+  color: #7e69fe;
+}
+
+.pevent-banner {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.pevent-list li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  font-size: 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.pevent-list li.finish .thumb::before, .pevent-list li.finish .thumb::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.pevent-list li.finish .thumb::before {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pevent-list li.finish .thumb::after {
+  content: '이벤트 종료';
+  top: 50%;
+  left: 50%;
+  width: 106px;
+  height: 34px;
+  margin: -17px 0 0 -53px;
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+  line-height: 32px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 17px;
+}
+
+.pevent-list li.finish .state {
+  color: #aaa;
+  border: solid 1px #aaa;
+}
+
+.pevent-list .thumb {
+  position: relative;
+  display: block;
+  max-width: 440px;
+  margin-right: 38px;
+}
+
+.pevent-list .info {
+  display: block;
+  margin-right: 20px;
+}
+
+.pevent-list .subject {
+  position: relative;
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.pevent-list .subject:hover {
+  color: #7e69fe;
+}
+
+.pevent-list .state {
+  height: 32px;
+  margin-right: 10px;
+  padding: 3px 17px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #00afc0;
+  border: solid 1px #00afc0;
+  border-radius: 16px;
+}
+
+.pevent-list .date {
+  font-size: 16px;
+  font-weight: 300;
+  color: #888888;
+}
+
+.pevent-list .button {
+  display: block;
+  margin-left: auto;
+}
+
 @media screen and (max-width: 960px) {
   .table-list th {
     padding: 10px 0;
@@ -280,6 +398,56 @@
   }
   .table-write-editor {
     min-height: 340px;
+  }
+  .pevent-tab {
+    position: relative;
+    margin-left: -10px;
+  }
+  .pevent-tab a {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .pevent-banner {
+    margin-bottom: 18px;
+  }
+  .pevent-list li {
+    display: block;
+    padding: 0 0 22px 0;
+  }
+  .pevent-list li.finish .thumb::after {
+    content: '이벤트 종료';
+    width: 80px;
+    height: 22px;
+    margin: -11px 0 0 -40px;
+    font-size: 11px;
+    line-height: 22px;
+    border-radius: 11px;
+  }
+  .pevent-list .thumb {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .pevent-list .info {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  .pevent-list .subject {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .pevent-list .state {
+    margin-right: 10px;
+    padding: 2px 10px;
+    font-size: 11px;
+    color: #00afc0;
+    border-radius: 11px;
+  }
+  .pevent-list .date {
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=table.css.map */

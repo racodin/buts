@@ -50,8 +50,8 @@
     <link rel="stylesheet" href="../../assets/css/side.css" />
     <link rel="stylesheet" href="../../assets/css/footer.css" />
 
-    <link rel="stylesheet" href="../../assets/css/charge.css" />
-    <link rel="stylesheet" href="../../assets/css/user.css" />
+    <link rel="stylesheet" href="../../assets/css/table.css" />
+    <link rel="stylesheet" href="../../assets/css/form.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -60,60 +60,101 @@
       <div include-html="../common/header.html"></div>
       <div class="body">
         <div class="width-container">
-          <div class="mw-800 faq">
-            <div class="text-head center">
-              <img src="../../assets/css/img/small-butslogo.png" class="text-logo" alt="" />
-              <span class="text-purple">벗츠</span>에 대해 궁금하시다고요?
+          <div class="title-wrap border">
+            <div class="title">
+              <a href="" class="text">결제내역</a>
             </div>
-            <p class="text-para center" style="max-width: 500px">벗츠는 사용자가 이용하고 있는 <span class="text-purple">공유형 구독 서비스</span>를 허용된 범위 안에서 경제적이고 <span class="text-purple">안전하게 모집 및 참여</span> 할 수 있도록 도와주는 서비스입니다.</p>
-            <p class="text-para center">또한 기프트상품권, 이용권, 상품권 등의 <span class="text-purple">디지털 코드의 안전하고 편리한 거래</span>를 도와줍니다.</p>
-            <div class="faq-tab">
-              <a href="" class="active">전체</a>
-              <a href="">서비스 이용</a>
-              <a href="">파티 이용</a>
-              <a href="">회원 정보</a>
-            </div>
-            <div class="accordion">
+          </div>
+          <div class="h3">진행 정보</div>
+          <div class="payment-name item-name mobile-block">
+            <span class="brand"></span>
+            <span class="name">포인트구매</span>
+            <span class="comment">유튜브 가족요금제 인도 계정 참여하실 분</span>
+          </div>
+          <div class="table-list table-list-payment">
+            <table>
+              <thead>
+                <tr>
+                  <th class="pc-block">파티명</th>
+                  <th>합계금액</th>
+                  <th>상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pc-block">
+                    <div class="item-name">
+                      <span class="brand"></span>
+                      <span class="name">포인트구매</span>
+                      <span class="comment">유튜브 가족요금제 인도 계정 참여하실 분</span>
+                    </div>
+                  </td>
+                  <td><strong>18,275</strong>원</td>
+                  <td>입금대기</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-half left">
+            <div class="h3">결제 정보</div>
+            <div class="form-list border">
               <ul>
-                <li class="active">
-                  <a href="" class="select">
-                    구독 공유 참여 중 서비스 이용에 문제가 발생 하였나요? 구독 공유 참여 중 서비스 이용에 문제가 발생 하였나요?
-                    <span class="plus"></span>
-                  </a>
-                  <div class="article">
-                    구독 공유 참여 중 서비스 이용에 문제가 발생 하였나요?<br />
-                    구독 공유 참여 중 서비스 이용에 문제가 발생 하였나요?<br />
-                    구독 공유 참여 중 서비스 이용에 문제가 발생 하였나요?<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                  </div>
+                <li>
+                  <div class="subject">ㆍ 결제번호</div>
+                  <div class="right">2021011417264817</div>
                 </li>
                 <li>
-                  <a href="" class="select">
-                    구독 공유 참여 중 서비스 이용에
-                    <span class="plus"></span>
-                  </a>
-                  <div class="article"></div>
+                  <div class="subject">ㆍ 결제일시</div>
+                  <div class="right">2021-01-14 17:26:51</div>
                 </li>
                 <li>
-                  <a href="" class="select">
-                    구독 공유 참여 중 서비스 이용에 문제가 발생 하였나요?
-                    <span class="plus"></span>
-                  </a>
-                  <div class="article"></div>
+                  <div class="subject">ㆍ 결제방식</div>
+                  <div class="right">무통장</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 결제금액</div>
+                  <div class="right">50,000원 (0 포인트 차감)</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 입금자명</div>
+                  <div class="right">testadm</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 입금계좌</div>
+                  <div class="right">하나은행 165-910009-55405 김시진</div>
                 </li>
               </ul>
             </div>
+          </div>
+          <div class="form-half">
+            <div class="h3">결제 합계</div>
+            <div class="form-list border">
+              <ul>
+                <li>
+                  <div class="subject">ㆍ 총구매액</div>
+                  <div class="right">18,275원</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 수수료(10%)</div>
+                  <div class="right">11,828원</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 포인트 사용</div>
+                  <div class="right">200P</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 미결제액</div>
+                  <div class="right">11,828원</div>
+                </li>
+                <li class="total">
+                  <div class="subject text-purple">결제금액</div>
+                  <div class="right"><span class="Rajdhani text-purple">20,103</span><span class="won">원</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="button-align center">
+            <a href="" class="button large button-purple">확인</a>
           </div>
         </div>
       </div>
