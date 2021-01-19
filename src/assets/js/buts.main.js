@@ -292,5 +292,11 @@ $(function () {
     }
   }
 
+  $window.on('resize', function(){
+    itemPartyRowWidth = $('.item-slide.party .item-row').outerWidth(true);
+    eventRowWidth = $('.event-slide .event-row').outerWidth(true);
+    itemGiftRowWidth = $('.item-slide.gift .item-row').outerWidth(true);
+  });
+
   $('.body').addClass('main');
 });

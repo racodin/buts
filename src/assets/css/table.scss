@@ -5,6 +5,9 @@
     width: 100%;
     overflow: hidden;
     overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   table {
     width: 100%;
@@ -129,6 +132,10 @@
     vertical-align: middle;
     background-color: #efefef;
     border-radius: 5px;
+    overflow: hidden;
+    img {
+      vertical-align: top;
+    }
   }
   .subject {
     font-size: 17px;
@@ -169,7 +176,7 @@
 /* table write */
 .table-write-editor {
   position: relative;
-  min-height: 575px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #333333;
 }
 

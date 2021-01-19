@@ -52,6 +52,8 @@
 
     <link rel="stylesheet" href="../../assets/css/item.css" />
     <link rel="stylesheet" href="../../assets/css/comment.css" />
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="../../assets/css/popup.css" />
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body>
@@ -77,14 +79,14 @@
             <span class="picture">
               <img src="../../assets/css/img/icon-butsicon-small.png" alt="" />
             </span>
-            <span class="v-bar">
+            <span>
               벗츠매니저
               <span class="credit-percent">
                 <span class="credit-bar credit-6" style="right: 50%"></span>
               </span>
               <span class="item-view-grade text-purple"><span class="Rajdhani">4</span>등급</span>
             </span>
-            <span class="social">
+            <span class="social v-bar left">
               문의 :
               <span class="icon-sns"><img src="../../assets/css/img/icon-sns-kakao-small.png" alt="" /></span>
               funnychiko, 010-8886-7174
@@ -93,16 +95,118 @@
           </div>
           <div class="item-view-row mobile-block">
             <span>파티 번호 : <span class="lightgrey">1603018729</span></span>
-            <a href="" class="right fw300 text-purple">벗츠 환불 보증 정책 보기</a>
+            <a href="#popup-policy" class="right fw300 text-purple popup-inline">벗츠 환불 보증 정책 보기</a>
           </div>
           <div class="item-view-row">
-            <span class="v-bar"> 종료일 : <span class="fw300">2021.09.23</span><span class="lightgrey">(163일 남음)</span></span>
-            <span class="pc-inline">파티 참여 비용 : <span class="price Rajdhani text-purple">32,900</span> <span class="lightgrey">원</span></span>
-            <a href="" class="item-view-idpw button round button-red">아이디/패스워드 보기</a>
-            <a href="" class="right fw300 text-purple pc-block">벗츠 환불 보증 정책 보기</a>
+            <span> 종료일 : <span class="fw300">2021.09.23</span><span class="lightgrey">(163일 남음)</span></span>
+            <span class="v-bar left pc-inline">파티 참여 비용 : <span class="price Rajdhani text-purple">32,900</span> <span class="lightgrey">원</span></span>
+            <a href="#popup-account" class="item-view-idpw popup-inline button round button-red">아이디/패스워드 보기</a>
+            <div id="popup-account" class="popup-magnific mfp-hide white-popup-block">
+              <h3><span class="text-purple">계정</span> 정보</h3>
+              <div class="popup-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 30%" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>계정</th>
+                      <td><span class="text-purple">1234</span></td>
+                    </tr>
+                    <tr>
+                      <th>비밀번호</th>
+                      <td><span class="text-purple">1234</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="popup-button center">
+                <a href="" class="magnific-close button small button-purple">닫기</a>
+              </div>
+            </div>
+            <a href="#popup-policy" class="right fw300 text-purple pc-block popup-inline">벗츠 환불 보증 정책 보기</a>
+            <div id="popup-policy" class="popup-magnific mfp-hide white-popup-block">
+              <h3 class="center">환불정책 안내</h3>
+              <div class="popup-policy">
+                <h4 class="text-purple">환불 진행 절차</h4>
+                <ul>
+                  <li>
+                    판매자의 귀책사유로 서비스 이용이 제한되는 직 후, 파티장(판매자)에게 문제해결 요청을 반드시 진행 해야하며, 요청 진행 후 24시간 내에 조치가 진행되지 않을 경우 환불이 진행 됩니다.
+                    <div class="lightgrey">참여자(구매자)가 문제해결 요청한 내용은 분쟁해결 및 환불내용에 자료로 사용 될 수 있습니다.</div>
+                  </li>
+                  <li>환불신청은 [결제내역조회] 페이지에서 가능하며, 환불 비용은 환불신청을 진행한 날짜의 +1일로 계산되어 환불이 진행 됩니다.</li>
+                  <li>위 사항에 해당하는 경우 파티장 의사와 상관없이 벗츠에서 환불비용을 부담하여 제공하고 있으며, 포인트 환불로 진행됩니다.</li>
+                </ul>
+                <h4 class="text-purple">환불 불가</h4>
+                <ul>
+                  <li>
+                    구매자의 필요 사항에 의한 요구일 경우 환불이 반려 될 수 있습니다.
+                    <div class="lightgrey">예) 성인인증 및 핀번호 설정 등 불편하지만 구매자가 직접 설정할 수 있는 영역</div>
+                  </li>
+                  <li>
+                    환불신청은 [결제내역조회] 페이지에서 가능하며, 환불 비용은 환불신청을 진행한 날짜의 +1일로 계산되어 환불이 진행 됩니다.
+                    <div class="lightgrey">예) 프로그램 오류, 네트워크 환경 불안으로 인한 오류 등</div>
+                  </li>
+                  <li>위 사항에 해당하는 경우 파티장 의사와 상관없이 벗츠에서 환불비용을 부담하여 제공하고 있으며, 포인트 환불로 진행됩니다.</li>
+                </ul>
+              </div>
+              <div class="popup-button center">
+                <a href="" class="magnific-close button small button-purple">확인</a>
+              </div>
+            </div>
           </div>
           <div class="item-view-user">
             <ul>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
+              <li>
+                <div class="picture">
+                  <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
+                </div>
+                <div class="name">마동석입니다</div>
+                <div class="date">2021.09.23 참여</div>
+              </li>
               <li>
                 <div class="picture">
                   <img src="../../assets/css/img/icon-butsicon-middle.png" alt="" />
@@ -182,7 +286,7 @@
             </div>
             <a href="" class="button small button-purple">수정</a>
           </div>
-          <div class="comment-box mg-top">
+          <div class="comment-wrap mg-top">
             <div class="comment-title">무엇이든 물어 보이소</div>
             <div class="comment-wirte">
               <div class="select">

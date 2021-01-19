@@ -10,6 +10,10 @@
   overflow-x: auto;
 }
 
+.table-list.scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .table-list table {
   width: 100%;
 }
@@ -148,6 +152,11 @@
   vertical-align: middle;
   background-color: #efefef;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.table-row .picture img {
+  vertical-align: top;
 }
 
 .table-row .subject {
@@ -193,7 +202,7 @@
 /* table write */
 .table-write-editor {
   position: relative;
-  min-height: 575px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #333333;
 }
 

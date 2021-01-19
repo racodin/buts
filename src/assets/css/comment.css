@@ -1,9 +1,9 @@
 /* comment */
-.comment-box {
+.comment-wrap {
   position: relative;
 }
 
-.comment-box.mg-top {
+.comment-wrap.mg-top {
   margin-top: 75px;
 }
 

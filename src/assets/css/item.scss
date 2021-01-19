@@ -158,6 +158,8 @@
 .item-type {
   font-size: 22px;
   color: #333333;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .item-title {
@@ -174,47 +176,74 @@
 }
 
 .item-member {
-  position: relative;
-  background: url('./img/icon-butsicon-small-glay.png') no-repeat;
+  // position: relative;
   display: inline-block;
+  // width: calc(16.6% - 6px);
   width: 32px;
   height: 32px;
-  margin-left: 9px;
-  border-radius: 5px;
+  margin-left: 8px;
+  border-radius: 8px;
   vertical-align: top;
-  &.on {
-    background: url('./img/icon-butsicon-small.png') no-repeat;
-  }
+  overflow: hidden;
   &:first-child {
     margin-left: 0;
   }
   &.plus {
+    position: relative;
+    max-width: 32px;
     font-size: 14px;
     text-align: center;
-    background-image: none;
     border: 1px solid #ececec;
     .Rajdhani {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       font-size: 14px;
       font-weight: 600;
       color: #7e69fe;
-      line-height: 30px;
+      line-height: 32px;
       vertical-align: 1px;
+      background-color: white;
     }
   }
 }
 
+.item-finish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 .item-info {
   position: relative;
+  .item-price {
+    bottom: -6px;
+    right: 0;
+  }
 }
 
 .item-price {
   position: absolute;
-  bottom: 18px;
+  bottom: 12px;
   right: 26px;
   .Rajdhani {
     font-size: 20px;
     font-weight: 700;
     color: #252525;
+    vertical-align: -2px;
   }
 }
 
@@ -241,11 +270,28 @@
   }
 }
 
+.item-more {
+  margin-top: 20px;
+  a {
+    display: block;
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    background-color: #7e69fe;
+    border-radius: 5px;
+  }
+}
+
 /* item view */
 .item-view-title {
   position: relative;
   padding: 40px 0;
   padding-left: 90px;
+  border-bottom: 1px solid #efefef;
   .symbol {
     position: absolute;
     top: 50%;
@@ -292,20 +338,11 @@
   line-height: 58px;
   letter-spacing: 0;
   white-space: nowrap;
-  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
   .right {
     position: absolute;
     top: 0;
     right: 0;
-  }
-  .v-bar {
-    margin-right: 40px;
-    &::after {
-      right: -20px;
-      height: 16px;
-      margin-top: -8px;
-      border-left: 1px solid #ddd;
-    }
   }
   .text-purple {
     color: #7e69fe;
@@ -349,8 +386,12 @@
     font-weight: 300;
   }
   .price {
-    margin: 0 4px 0 10px;
+    margin-left: 10px;
     font-size: 24px;
+    letter-spacing: -1px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -366,11 +407,11 @@
 .item-view-user {
   position: relative;
   padding: 50px 0;
-  border-top: 1px solid #dedede;
+  font-size: 0;
   li {
     position: relative;
     display: inline-block;
-    width: 160px;
+    width: 212px;
     padding: 30px 0;
     text-align: center;
   }
@@ -400,6 +441,11 @@
   background-color: #fcfcfc;
   .tag {
     position: relative;
+    margin-bottom: 20px;
+    img {
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
     span {
       display: inline-block;
       margin-right: 8px;
@@ -415,7 +461,6 @@
     }
   }
   .text {
-    margin-top: 20px;
     font-size: 16px;
     color: #333;
     li {
@@ -433,6 +478,12 @@
   border-top: 0;
 }
 
+@media screen and (max-width: 1220px) {
+  .item-row {
+    width: calc(33.33% - 26px);
+    margin: 13px;
+  }
+}
 @media screen and (max-width: 960px) {
   .item-sort {
     position: relative;
@@ -476,32 +527,39 @@
     margin: 12px 0;
   }
   .item-member {
-    width: 22px;
-    height: 22px;
+    width: calc(16.6% - 4px);
+    height: auto;
     margin-left: 4px;
-    background-size: 22px 22px;
-    &.on {
-      background-size: 22px 22px;
-    }
     &:first-child {
       margin-left: 0;
     }
     &.plus {
       font-size: 13px;
       .Rajdhani {
-        font-size: 11px;
-        line-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
       }
+    }
+  }
+  .item-finish {
+    font-size: 10px;
+  }
+  .item-info {
+    .item-price {
+      bottom: -6px;
+      right: 0;
     }
   }
   .item-slide {
     &.party {
       margin-bottom: 30px;
       .item-list {
-        height: 272px;
+        height: 284px;
         .item-row {
           width: calc(50% - 10px);
-          height: 126px;
+          height: 132px;
         }
       }
     }
@@ -546,14 +604,6 @@
     height: 44px;
     font-size: 11px;
     line-height: 42px;
-    .v-bar {
-      margin-right: 20px;
-      &::after {
-        right: -10px;
-        height: 10px;
-        margin-top: -5px;
-      }
-    }
     .picture {
       width: 22px;
       height: 22px;
@@ -575,7 +625,7 @@
     font-size: 11px;
   }
   .item-view-idpw {
-    margin-left: 0px;
+    margin-left: 10px;
   }
   .item-view-user {
     padding: 25px 0;
@@ -591,12 +641,19 @@
       font-size: 12px;
     }
     .date {
-      font-size: 11px;
+      font-size: 10px;
     }
   }
   .item-view-caution {
     padding: 10px;
     .tag {
+      margin-bottom: 5px;
+      img {
+        width: 22px;
+        height: 22px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+      }
       span {
         margin-right: 2px;
         margin-bottom: 2px;
@@ -608,7 +665,6 @@
       }
     }
     .text {
-      margin-top: 5px;
       font-size: 11px;
     }
   }

@@ -89,7 +89,7 @@
 .form-list.border li {
   min-height: auto;
   padding: 0;
-  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
 }
 
 .form-list.border select {
@@ -139,7 +139,7 @@
 
 .form-list.border .comment {
   width: 100%;
-  margin-bottom: 69px;
+  margin-bottom: 10px;
 }
 
 .form-list.border .point {
@@ -150,8 +150,9 @@
 }
 
 .form-list.border .all {
-  width: 50px;
+  width: 70px;
   margin-top: 0;
+  padding: 0;
   font-size: 13px;
 }
 
@@ -416,7 +417,7 @@
     margin: 0 0 0 4px;
   }
   .form-list.border .all {
-    width: 35px;
+    width: 48px;
     padding: 0;
     font-size: 11px;
   }

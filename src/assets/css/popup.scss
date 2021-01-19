@@ -277,3 +277,167 @@
     border-right: 1px solid #ececec;
   }
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.popup-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    background-color: lightblue;
+  }
+}
+
+.popup-button {
+  position: relative;
+  margin-top: 30px;
+  &.center {
+    text-align: center;
+  }
+}
+
+/* magnific popup */
+.popup-magnific {
+  position: relative;
+  background: #fff;
+  padding: 3em;
+  width: auto;
+  margin: 20px auto;
+  max-width: 680px;
+  h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: #333;
+    &.center {
+      text-align: center;
+    }
+  }
+  h4 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #333;
+    &.center {
+      text-align: center;
+    }
+  }
+}
+
+.popup-table {
+  table {
+    width: 100%;
+  }
+  th,
+  td {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+    border: 1px solid #dddddd;
+  }
+  th {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #fbfbfb;
+  }
+  td {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.popup-policy {
+  position: relative;
+  padding: 8px 28px 28px 28px;
+  border: solid 1px #dddddd;
+  ul {
+    margin-left: 15px;
+  }
+  li {
+    position: relative;
+    padding: 5px 0;
+    list-style: decimal;
+    font-size: 14px;
+    color: #555555;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+  }
+  .lightgrey {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #999999;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .popup-button {
+    margin-top: 15px;
+  }
+  .popup-magnific {
+    padding: 1.5em;
+    h3 {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    h4 {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+  }
+  .popup-table {
+    th,
+    td {
+      height: 30px;
+      padding: 0 10px;
+    }
+    th {
+      font-size: 12px;
+    }
+    td {
+      font-size: 11px;
+    }
+  }
+  .popup-policy {
+    padding: 4px 18px 18px 18px;
+    border: solid 1px #dddddd;
+    ul {
+      margin-left: 10px;
+    }
+    li {
+      padding: 3px 0;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    .lightgrey {
+      margin-top: 2px;
+      font-size: 10px;
+    }
+  }
+}

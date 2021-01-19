@@ -184,6 +184,8 @@
 .item-type {
   font-size: 22px;
   color: #333333;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .item-title {
@@ -200,18 +202,13 @@
 }
 
 .item-member {
-  position: relative;
-  background: url("./img/icon-butsicon-small-glay.png") no-repeat;
   display: inline-block;
   width: 32px;
   height: 32px;
-  margin-left: 9px;
-  border-radius: 5px;
+  margin-left: 8px;
+  border-radius: 8px;
   vertical-align: top;
-}
-
-.item-member.on {
-  background: url("./img/icon-butsicon-small.png") no-repeat;
+  overflow: hidden;
 }
 
 .item-member:first-child {
@@ -219,27 +216,62 @@
 }
 
 .item-member.plus {
+  position: relative;
+  max-width: 32px;
   font-size: 14px;
   text-align: center;
-  background-image: none;
   border: 1px solid #ececec;
 }
 
 .item-member.plus .Rajdhani {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   font-weight: 600;
   color: #7e69fe;
-  line-height: 30px;
+  line-height: 32px;
   vertical-align: 1px;
+  background-color: white;
+}
+
+.item-finish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .item-info {
   position: relative;
 }
 
+.item-info .item-price {
+  bottom: -6px;
+  right: 0;
+}
+
 .item-price {
   position: absolute;
-  bottom: 18px;
+  bottom: 12px;
   right: 26px;
 }
 
@@ -247,6 +279,7 @@
   font-size: 20px;
   font-weight: 700;
   color: #252525;
+  vertical-align: -2px;
 }
 
 .item-button {
@@ -273,11 +306,29 @@
   height: 100%;
 }
 
+.item-more {
+  margin-top: 20px;
+}
+
+.item-more a {
+  display: block;
+  width: 80px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  background-color: #7e69fe;
+  border-radius: 5px;
+}
+
 /* item view */
 .item-view-title {
   position: relative;
   padding: 40px 0;
   padding-left: 90px;
+  border-bottom: 1px solid #efefef;
 }
 
 .item-view-title .symbol {
@@ -329,24 +380,13 @@
   line-height: 58px;
   letter-spacing: 0;
   white-space: nowrap;
-  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 
 .item-view-row .right {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-.item-view-row .v-bar {
-  margin-right: 40px;
-}
-
-.item-view-row .v-bar::after {
-  right: -20px;
-  height: 16px;
-  margin-top: -8px;
-  border-left: 1px solid #ddd;
 }
 
 .item-view-row .text-purple {
@@ -401,8 +441,13 @@
 }
 
 .item-view-row .price {
-  margin: 0 4px 0 10px;
+  margin-left: 10px;
   font-size: 24px;
+  letter-spacing: -1px;
+}
+
+.item-view-row .price:hover {
+  text-decoration: none;
 }
 
 .item-view-grade {
@@ -417,13 +462,13 @@
 .item-view-user {
   position: relative;
   padding: 50px 0;
-  border-top: 1px solid #dedede;
+  font-size: 0;
 }
 
 .item-view-user li {
   position: relative;
   display: inline-block;
-  width: 160px;
+  width: 212px;
   padding: 30px 0;
   text-align: center;
 }
@@ -457,6 +502,12 @@
 
 .item-view-caution .tag {
   position: relative;
+  margin-bottom: 20px;
+}
+
+.item-view-caution .tag img {
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .item-view-caution .tag span {
@@ -474,7 +525,6 @@
 }
 
 .item-view-caution .text {
-  margin-top: 20px;
   font-size: 16px;
   color: #333;
 }
@@ -490,6 +540,13 @@
   border: solid 1px #eeeeee;
   background-color: #fcfcfc;
   border-top: 0;
+}
+
+@media screen and (max-width: 1220px) {
+  .item-row {
+    width: calc(33.33% - 26px);
+    margin: 13px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -535,13 +592,9 @@
     margin: 12px 0;
   }
   .item-member {
-    width: 22px;
-    height: 22px;
+    width: calc(16.6% - 4px);
+    height: auto;
     margin-left: 4px;
-    background-size: 22px 22px;
-  }
-  .item-member.on {
-    background-size: 22px 22px;
   }
   .item-member:first-child {
     margin-left: 0;
@@ -550,18 +603,33 @@
     font-size: 13px;
   }
   .item-member.plus .Rajdhani {
-    font-size: 11px;
-    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 12px;
+  }
+  .item-finish {
+    font-size: 10px;
+  }
+  .item-info .item-price {
+    bottom: -6px;
+    right: 0;
   }
   .item-slide.party {
     margin-bottom: 30px;
   }
   .item-slide.party .item-list {
-    height: 272px;
+    height: 284px;
   }
   .item-slide.party .item-list .item-row {
     width: calc(50% - 10px);
-    height: 126px;
+    height: 132px;
   }
   .item-slide.gift .item-date {
     top: 11px;
@@ -602,14 +670,6 @@
     font-size: 11px;
     line-height: 42px;
   }
-  .item-view-row .v-bar {
-    margin-right: 20px;
-  }
-  .item-view-row .v-bar::after {
-    right: -10px;
-    height: 10px;
-    margin-top: -5px;
-  }
   .item-view-row .picture {
     width: 22px;
     height: 22px;
@@ -630,7 +690,7 @@
     font-size: 11px;
   }
   .item-view-idpw {
-    margin-left: 0px;
+    margin-left: 10px;
   }
   .item-view-user {
     padding: 25px 0;
@@ -647,10 +707,19 @@
     font-size: 12px;
   }
   .item-view-user .date {
-    font-size: 11px;
+    font-size: 10px;
   }
   .item-view-caution {
     padding: 10px;
+  }
+  .item-view-caution .tag {
+    margin-bottom: 5px;
+  }
+  .item-view-caution .tag img {
+    width: 22px;
+    height: 22px;
+    margin-right: 2px;
+    margin-bottom: 2px;
   }
   .item-view-caution .tag span {
     margin-right: 2px;
@@ -662,7 +731,6 @@
     border-radius: 10px;
   }
   .item-view-caution .text {
-    margin-top: 5px;
     font-size: 11px;
   }
   .item-view-check {

@@ -67,6 +67,16 @@ $(function () {
       removalDelay: 160,
       preloader: false,
     });
+
+    $('.popup-inline').magnificPopup({
+      type: 'inline',
+      preloader: false,
+    });
+
+    $(document).on('click', '.magnific-close', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
   };
 
   buts();

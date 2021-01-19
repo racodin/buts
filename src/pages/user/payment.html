@@ -105,7 +105,11 @@
               <ul>
                 <li>
                   <div class="subject">ㆍ 아이디</div>
-                  <div class="right">이동률(funnychiko)</div>
+                  <div class="right">funnychiko</div>
+                </li>
+                <li>
+                  <div class="subject">ㆍ 이름</div>
+                  <div class="right">이동률</div>
                 </li>
                 <li>
                   <div class="subject">ㆍ 연락처</div>
@@ -147,7 +151,7 @@
                     보유 포인트
                     <span class="text-purple">4,190P</span>
                     <input type="text" class="point" placeholder="사용 포인트" />
-                    <a href="" class="all button mini button-purple">적용</a>
+                    <a href="" class="all button mini button-purple">전액사용</a>
                   </div>
                 </li>
                 <li>
@@ -163,12 +167,18 @@
                   <div class="right">
                     <span class="input-check input-radio">
                       <input type="radio" name="pay-type" id="order-account" />
-                      <label for="order-account">계좌이체</label>
+                      <label for="order-account" onclick="$('.account').removeClass('blind').addClass('sight');">계좌이체</label>
                     </span>
                     <span class="input-check input-radio">
                       <input type="radio" name="pay-type" id="order-card" />
-                      <label for="order-card">신용카드</label>
+                      <label for="order-card" onclick="$('.account').addClass('blind').removeClass('sight');">신용카드</label>
                     </span>
+                  </div>
+                  <div class="account text-right blind">
+                    <select name="" id="">
+                      <option value="">입금계좌 선택</option>
+                    </select>
+                    <input type="text" placeholder="입금자명" value="이동률" />
                   </div>
                 </li>
                 <li class="total">

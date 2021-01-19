@@ -63,6 +63,12 @@ textarea {
   }
 }
 
+input[type='submit'] {
+  &:focus {
+    outline: none;
+  }
+}
+
 input[type='text'] {
   width: 100%;
   height: 38px;
@@ -104,6 +110,7 @@ input[type='text'] {
     margin-bottom: 0;
     cursor: pointer;
     font-size: 14px;
+    font-weight: 400;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -149,6 +156,7 @@ input[type='text'] {
     position: relative;
     margin-bottom: 0;
     padding-left: 28px;
+    font-weight: 400;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -235,7 +243,6 @@ input[type='text'] {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
   }
 }
 
@@ -307,6 +314,18 @@ input[type='text'] {
     height: 12px;
     margin-top: -6px;
     border-left: 1px solid #ececec;
+  }
+  &.left {
+    margin-left: 40px;
+    &::after {
+      left: -20px;
+    }
+  }
+  &.right {
+    margin-right: 40px;
+    &::after {
+      right: -20px;
+    }
   }
 }
 
@@ -390,8 +409,10 @@ input[type='text'] {
   color: white;
   text-align: center;
   line-height: 68px;
+  border: 0;
   border-radius: 5px;
   background-color: #cecdd4;
+  overflow: hidden;
   &:link,
   &:visited {
     color: white;
@@ -460,6 +481,7 @@ input[type='text'] {
 
 .button-align {
   position: relative;
+  min-height: 53px;
   margin-top: 60px;
   .button {
     vertical-align: top;
@@ -613,7 +635,7 @@ input[type='text'] {
   font-size: 0;
   select,
   input,
-  a {
+  .submit {
     border: 0;
     border-bottom: 1px solid #7e69fe;
   }
@@ -629,14 +651,15 @@ input[type='text'] {
       border-bottom: 1px solid #7e69fe;
     }
   }
-  a {
+  .submit {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     margin: 0;
     text-align: right;
     line-height: 40px;
     vertical-align: middle;
+    background-color: transparent;
   }
 }
 
@@ -644,9 +667,27 @@ input[type='text'] {
   position: relative;
   width: 100%;
   text-align: center;
-  a {
+  ul {
+    font-size: 0;
+  }
+  li {
     display: inline-block;
-    width: 20px;
+    &.active {
+      a {
+        width: 38px;
+        height: 38px;
+        margin: 0 6px;
+        color: white;
+        text-decoration: none;
+        background-color: #7e69fe;
+        border-radius: 50%;
+        cursor: default;
+      }
+    }
+  }
+  a {
+    display: block;
+    width: 38px;
     height: 38px;
     font-size: 16px;
     font-weight: 300;
@@ -655,16 +696,6 @@ input[type='text'] {
     line-height: 36px;
     &:hover {
       text-decoration: underline;
-    }
-    &.active {
-      width: 38px;
-      height: 38px;
-      margin: 0 6px;
-      color: white;
-      text-decoration: none;
-      background-color: #7e69fe;
-      border-radius: 50%;
-      cursor: default;
     }
   }
 }
@@ -733,38 +764,23 @@ input[type='text'] {
   }
 }
 
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1000;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 101%;
-    height: 101%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-}
-
-.popup-container {
+.empty {
   position: relative;
-  width: 100%;
-  height: 100%;
+  padding: 150px 0;
   text-align: center;
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 100%;
-    vertical-align: middle;
-    background-color: lightblue;
+  .icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  h5 {
+    margin: 30px 0 20px 0;
+    font-size: 22px;
+    color: #333;
+  }
+  p {
+    font-size: 16px;
+    color: #aaa;
   }
 }
 
@@ -788,7 +804,7 @@ input[type='text'] {
   }
   .body {
     min-height: 300px;
-    padding: 140px 0 35px 0;
+    padding: 140px 0 50px 0;
     &.main {
       padding: 140px 0 0 0;
       .width-container {
@@ -835,7 +851,6 @@ input[type='text'] {
       }
     }
   }
-
   .input-file {
     height: 24px;
     .file-name {
@@ -845,7 +860,29 @@ input[type='text'] {
       font-size: 11px;
     }
   }
-
+  .v-bar {
+    &::after {
+      height: 10px;
+      margin-top: -5px;
+    }
+    &.left {
+      margin-left: 20px;
+      &::after {
+        left: -10px;
+      }
+    }
+    &.right {
+      margin-right: 20px;
+      &::after {
+        right: -10px;
+      }
+    }
+  }
+  .title-wrap {
+    &.mg-top-minus {
+      margin-top: -50px;
+    }
+  }
   .title {
     font-size: 13px;
     margin-top: 20px;
@@ -926,7 +963,7 @@ input[type='text'] {
     input {
       width: 130px;
     }
-    a {
+    .submit {
       width: 26px;
       height: 28px;
       line-height: 28px;
@@ -968,18 +1005,36 @@ input[type='text'] {
     }
   }
   .page-number {
+    li {
+      &.active {
+        a {
+          width: 24px;
+          height: 24px;
+          margin: 0;
+          line-height: 22px;
+        }
+      }
+    }
     a {
-      width: 14px;
+      width: 24px;
       height: 24px;
       margin: 0 -1px;
       font-size: 11px;
       line-height: 22px;
-      &.active {
-        width: 24px;
-        height: 24px;
-        margin: 0;
-        line-height: 22px;
-      }
+    }
+  }
+  .empty {
+    padding: 80px 0;
+    .icon {
+      width: 60px;
+      height: 60px;
+    }
+    h5 {
+      margin: 16px 0 10px 0;
+      font-size: 12px;
+    }
+    p {
+      font-size: 11px;
     }
   }
   .sns-share-icon {
