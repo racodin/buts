@@ -176,6 +176,10 @@
   margin-top: -5px;
 }
 
+.table-row .input-date {
+  max-width: 160px;
+}
+
 .table-row .input-check {
   margin-right: 30px;
 }
@@ -385,8 +389,11 @@
   .table-row .category {
     width: 56px;
   }
-  .table-row .input-subject {
-    width: calc(100% - 58px);
+  .table-row input[type='text'] {
+    width: calc(100% - 60px);
+  }
+  .table-row .input-date {
+    width: 40% !important;
   }
   .table-row .input-check {
     margin-right: 30px;

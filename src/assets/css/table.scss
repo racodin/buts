@@ -151,6 +151,9 @@
     width: calc(100% - 90px);
     margin-top: -5px;
   }
+  .input-date {
+    max-width: 160px;
+  }
   .input-check {
     margin-right: 30px;
   }
@@ -350,8 +353,11 @@
     .category {
       width: 56px;
     }
-    .input-subject {
-      width: calc(100% - 58px);
+    input[type='text'] {
+      width: calc(100% - 60px);
+    }
+    .input-date {
+      width: 40% !important;
     }
     .input-check {
       margin-right: 30px;

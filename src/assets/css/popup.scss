@@ -1,9 +1,14 @@
 .dialog {
   position: relative;
   max-width: 690px;
-  padding: 0 30px;
-  border: solid 1px #ececec;
-  border-top: 3px solid #7e69fe;
+  padding: 40px 30px;
+  background-color: white;
+  &.border {
+    border-top: 3px solid #7e69fe;
+  }
+  &.center {
+    text-align: center;
+  }
 }
 
 .dialog-close {
@@ -24,7 +29,7 @@
     width: 22px;
     height: 1px;
     margin-left: -11px;
-    background-color: #7e69fe;
+    background-color: #333333;
     transform: rotate(-45deg);
   }
   &::after {
@@ -33,16 +38,24 @@
 }
 
 .dialog-title {
-  margin: 28px 0 18px 0;
+  margin: 0 0 18px 0;
+}
+
+.dialog-para {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
 }
 
 .dialog-buttons {
-  margin-bottom: 50px;
+  margin-top: 50px;
   text-align: center;
 }
 
 .dialog-body {
-  height: 415px;
+  &.step {
+    height: 350px;
+  }
 }
 
 .dialog-step {
@@ -276,6 +289,57 @@
     background-color: #f9f9f9;
     border-right: 1px solid #ececec;
   }
+}
+
+.dialog-cash {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 25px;
+  font-size: 0;
+  border: 1px solid #eeeeee;
+  .line {
+    display: inline-block;
+    width: 50%;
+    height: 70px;
+    font-size: 18px;
+    color: #555555;
+    line-height: 70px;
+    vertical-align: top;
+    &:last-child {
+      border-left: solid 1px #eeeeee;
+      background-color: #fbfbfb;
+    }
+  }
+  .icon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin-right: 4px;
+    vertical-align: middle;
+    img {
+      vertical-align: top;
+    }
+  }
+  .Rajdhani {
+    font-size: 28px;
+    font-weight: bold;
+    color: #7e69fe;
+    vertical-align: middle;
+  }
+}
+
+.dialog-alert {
+  max-width: 540px;
+  margin: 22px auto 0 auto;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 20px;
+  word-break: keep-all;
 }
 
 .popup {
