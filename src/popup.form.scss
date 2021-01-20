@@ -1,3 +1,417 @@
+@import './assets/css/fonts.scss';
+
+body {
+  padding: 0;
+  font-size: 13px;
+  font-family: 'Noto Sans KR', 'NanumGothic', '나눔고딕', ng, 'Malgun Gothic', Gulim, Dotum, Sans-Serif !important;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #666;
+  background-color: white;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility;
+  background-attachment: fixed;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7e69fe;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+select {
+  height: 38px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #333;
+  border: solid 1px #dddddd;
+  background-color: white;
+  &:focus {
+    border: solid 1px #7e69fe;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  border: solid 1px #dddddd;
+  background-color: white;
+  outline: none;
+  &:focus {
+    border: solid 1px #7e69fe;
+  }
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+input[type='submit'] {
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type='text'] {
+  width: 100%;
+  height: 38px;
+  font-size: 14px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #333;
+  border: solid 1px #dddddd;
+  background-color: white;
+  outline: none;
+  &:focus {
+    border: solid 1px #a89cf4;
+  }
+  &::placeholder {
+    color: #aaa;
+  }
+  &:disabled {
+    background-color: #ececec;
+  }
+}
+
+.input-check {
+  position: relative;
+  display: inline-block;
+  input[type='checkbox'] {
+    /* 실제 체크박스는 화면에서 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  input[type='checkbox'] + label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  input[type='checkbox'] + label:before {
+    content: '';
+    display: inline-block;
+    width: 18px; /* 체크박스의 너비를 지정 */
+    height: 18px; /* 체크박스의 높이를 지정 */
+    line-height: 18px; /* 세로정렬을 위해 높이값과 일치 */
+    margin: -3px 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #ececec;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+  }
+  input[type='checkbox'] + label:active:before,
+  input[type='checkbox']:checked + label:active:before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  input[type='checkbox']:checked + label:before {
+    /* 체크박스를 체크했을때 */
+    content: '\2714'; /* 체크표시 유니코드 사용 */
+    font-size: 12px;
+    font-weight: 600;
+    color: #7e69fe;
+    line-height: 16px;
+    border-color: #7e69fe;
+  }
+  input[type='radio'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  input[type='radio'] + label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 28px;
+    font-weight: 400;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  input[type='radio'] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  }
+  input[type='radio'] + label:active:before,
+  input[type='radio']:checked + label:active:before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  input[type='radio']:checked + label:before {
+    background: #e9ecee;
+    border-color: #adb8c0;
+  }
+  input[type='radio']:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    background: #99a1a7;
+    border-radius: 100%;
+    background-color: #7e69fe;
+  }
+}
+
+.input-file {
+  position: relative;
+  display: inline-block;
+  height: 32px;
+  label {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  input[type='file'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .file-name {
+    width: calc(100% - 150px);
+    height: 32px;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #999;
+    vertical-align: middle;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.user-select {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+  }
+}
+
+.Rajdhani {
+  font-family: 'Rajdhani';
+}
+
+.text-purple {
+  color: #7e69fe !important;
+}
+
+.text-red {
+  color: #fb4c16;
+}
+
+.pc-block {
+  display: block !important;
+}
+
+.pc-inline {
+  display: inline-block !important;
+}
+
+.mobile-block {
+  display: none !important;
+}
+
+.mobile-inline {
+  display: none !important;
+}
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.body {
+  min-height: 600px;
+  padding: 100px 0;
+}
+
+.width-container {
+  position: relative;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.mw-800 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mw-400 {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: 240px;
+  height: 70px;
+  margin: 1px 0;
+  padding: 0 10px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  line-height: 68px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #cecdd4;
+  overflow: hidden;
+  &:link,
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+  &.round {
+    min-width: auto;
+    padding: 0 16px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 17px;
+  }
+  &.mini {
+    min-width: 50px;
+    height: 32px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  &.small {
+    min-width: 100px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 48px;
+  }
+  &.large {
+    min-width: 340px;
+    height: 80px;
+    font-size: 20px;
+    line-height: 78px;
+  }
+  &.border {
+    color: #666666;
+    border: solid 1px #dddddd;
+    background-color: #f4f4f4;
+    &.button-purple {
+      color: #7e69fe;
+      border: solid 1px #a89cf4;
+      background-color: #ffffff;
+    }
+    &.button-red {
+      color: #fb4c16;
+      border: solid 1px #fb4c16;
+      background-color: #ffffff;
+    }
+  }
+  &.button-purple {
+    background-color: #7e69fe;
+  }
+  &.button-red {
+    background-color: #fb4c16;
+  }
+  &.button-yellow {
+    background-color: #ffc000;
+  }
+  &.button-green {
+    background-color: #4bb640;
+  }
+  &.button-blue {
+    background-color: #1697fb;
+  }
+  &.button-white {
+    background-color: #ffffff;
+  }
+}
+
+.button-align {
+  position: relative;
+  min-height: 53px;
+  margin-top: 30px;
+  .button {
+    vertical-align: top;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.border {
+    margin-top: 0;
+    padding-top: 30px;
+    border-top: 1px solid #333333;
+    &.number {
+      .page-number {
+        margin-top: 36px;
+      }
+    }
+  }
+}
+
 /* form */
 #captcha {
   width: 100%;
@@ -7,10 +421,6 @@
   #captcha_key {
     width: calc(100% - 193px);
     height: 62px;
-  }
-  legend {
-    height: 0;
-    border: 0;
   }
 }
 
@@ -23,7 +433,7 @@
 }
 
 .form-pd {
-  padding-top: 120px;
+  padding: 30px 20px;
 }
 
 .form-round {
@@ -105,8 +515,7 @@
         border: solid 1px #7e69fe;
       }
     }
-    input[type='text'],
-    input[type='password'] {
+    input[type='text'] {
       position: relative;
       height: 32px;
       margin-right: 0;
@@ -211,8 +620,7 @@
       color: #333333;
     }
   }
-  input[type='text'],
-  input[type='password'] {
+  input[type='text'] {
     width: 180px;
     margin-right: 10px;
   }
@@ -243,9 +651,6 @@
     input {
       width: 100px;
     }
-  }
-  #captcha #captcha_key {
-    max-width: 160px;
   }
 }
 
@@ -290,7 +695,6 @@
     margin-top: 40px;
     padding-top: 40px;
     text-align: center;
-    border: 0;
     border-top: 1px solid #dddddd;
     &::before {
       content: 'SNS LOGIN';
@@ -320,8 +724,9 @@
 
 .form-clause {
   .article-title {
+    margin-bottom: 12px;
     font-size: 14px;
-    color: #333333 !important;
+    color: #333333;
   }
 }
 
@@ -504,289 +909,5 @@
   }
   .text-right {
     text-align: right;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .form-pd {
-    max-width: 280px;
-    margin: 0 auto;
-    padding-top: 30px;
-  }
-  .form-round {
-    padding: 10px 15px;
-    border-radius: 10px;
-    &.scroll {
-      height: 150px;
-      font-size: 10px;
-      line-height: 16px;
-    }
-  }
-  .form-half {
-    width: 100%;
-    &.left {
-      margin-right: 0;
-    }
-  }
-  .form-title {
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  .form-text {
-    font-size: 11px;
-    line-height: 14px;
-  }
-  .form-checkbox {
-    margin-top: 6px;
-  }
-  .form-button {
-    height: 42px;
-    line-height: 40px;
-  }
-  .form-list {
-    &.border {
-      select {
-        width: 100%;
-        height: 24px;
-        padding: 0 5px;
-        font-size: 11px;
-      }
-      input[type='text'],
-      input[type='password'] {
-        height: 24px;
-        padding: 0 5px;
-        font-size: 11px;
-      }
-      .subject {
-        padding: 10px 0;
-      }
-      .contact {
-        padding: 0 14px 10px 14px;
-      }
-      .email {
-        width: 100%;
-      }
-      .comment {
-        width: 100%;
-        margin: -2px 0 13px 0;
-      }
-      .point {
-        width: 65px;
-        margin: 0 0 0 4px;
-      }
-      .all {
-        width: 48px;
-        padding: 0;
-        font-size: 11px;
-      }
-    }
-    li {
-      min-height: 28px;
-      padding-left: 90px;
-      font-size: 11px;
-    }
-    .Rajdhani {
-      font-size: 18px;
-      vertical-align: -1px;
-    }
-    .lightgrey {
-      font-size: 10px;
-      line-height: 14px;
-    }
-    .subject {
-      width: 90px;
-      padding: 6px 0;
-    }
-    .right {
-      padding: 10px 0;
-      &.fill {
-        padding: 8px 0;
-      }
-    }
-    select {
-      width: 100%;
-    }
-    input[type='text'],
-    input[type='password'] {
-      width: 100%;
-      margin-right: 0;
-    }
-    .input-radio {
-      margin-left: 10px;
-    }
-    .input-checkbox {
-      margin: 3px 0;
-    }
-    .break {
-      margin: 6px 0 6px 0;
-    }
-    .inline-break {
-      display: block;
-      margin: 6px 0 6px 0;
-    }
-    .phone {
-      margin-top: 8px;
-    }
-    .account {
-      select {
-        margin-bottom: 2px;
-      }
-    }
-  }
-  .form-login {
-    .login-logo {
-      width: 84px;
-      height: 22px;
-      margin: 0 auto 20px auto;
-    }
-    .login-input {
-      margin: 4px 0;
-      input {
-        height: 42px;
-        padding: 0 15px;
-        font-size: 12px;
-      }
-    }
-    .login-option {
-      margin-top: 12px;
-    }
-    .right {
-      .v-bar {
-        margin-right: 10px;
-        &::after {
-          right: -6px;
-        }
-      }
-      a {
-        font-size: 11px;
-      }
-    }
-    .form-button {
-      margin: 12px 0;
-    }
-    .login-sns {
-      margin-top: 30px;
-      padding-top: 25px;
-      a {
-        width: 30px;
-        height: 30px;
-        margin: 0 2px;
-      }
-    }
-  }
-  .form-password {
-    .password-email {
-      margin: 8px 0 10px 0;
-    }
-  }
-  .form-clause {
-    .article-title {
-      margin-bottom: 5px;
-      font-size: 10px;
-    }
-  }
-  .form-profile {
-    .pd-left {
-      margin-top: 12px;
-      padding-left: 80px;
-    }
-    .image {
-      width: 50px;
-      height: 50px;
-      margin: 0 auto;
-    }
-    .name {
-      font-size: 12px;
-    }
-    .position {
-      font-size: 11px;
-    }
-    .right {
-      position: absolute;
-      top: 2px;
-      right: 0;
-      font-size: 11px;
-    }
-    .circle {
-      width: 18px;
-      height: 18px;
-    }
-    .gage {
-      height: 8px;
-      margin-top: 10px;
-      margin-bottom: 35px;
-      font-size: 12px;
-      .left {
-        position: absolute;
-        bottom: -24px;
-        left: 0;
-      }
-      .right {
-        position: absolute;
-        top: auto;
-        bottom: -24px;
-        right: 0;
-      }
-    }
-    .bar {
-      height: 8px;
-    }
-    .point {
-      padding: 15px 0 40px 0;
-      .icon {
-        position: relative;
-        top: -1px;
-        width: 18px;
-        height: 18px;
-        margin-right: 3px;
-      }
-      .right {
-        top: 9px;
-      }
-      .Rajdhani {
-        font-size: 20px;
-      }
-    }
-  }
-  .form-list-clear {
-    margin-top: 20px;
-    li {
-      min-height: auto;
-      padding: 2px 0 2px 80px;
-    }
-    .subject {
-      top: 2px;
-      padding: 0;
-    }
-  }
-  .form-sns {
-    margin-top: 22px;
-    .icon {
-      width: 24px;
-      height: 24px;
-    }
-  }
-  .form-pannel {
-    height: auto;
-    margin-bottom: 10px;
-    padding: 15px;
-    .title {
-      margin-bottom: 10px;
-    }
-    &.mg-top {
-      margin-top: 0px;
-    }
-  }
-  .form-table {
-    td {
-      font-size: 11px;
-    }
-    .date {
-      font-size: 10px;
-    }
-    .subject {
-      padding: 8px 0;
-      font-size: 12px;
-    }
   }
 }

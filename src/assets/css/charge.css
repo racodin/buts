@@ -9,22 +9,18 @@
 .accordion li {
   position: relative;
   margin-top: 5px;
-  border-radius: 20px;
-  border: solid 1px #e3e1ee;
-  background-color: #ffffff;
-  overflow: hidden;
 }
 
-.accordion li.active {
+.accordion li.collapsed {
   border: solid 1px #cec8f1;
   background-color: #f9f8ff;
 }
 
-.accordion li.active .icon::after {
+.accordion li.collapsed .icon::after {
   display: none;
 }
 
-.accordion li.active .article {
+.accordion li.collapsed .article {
   display: block;
 }
 
@@ -46,6 +42,10 @@
   color: #333;
   line-height: 24px;
   word-break: keep-all;
+  border-radius: 20px;
+  border: solid 1px #e3e1ee;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
 .accordion .plus {

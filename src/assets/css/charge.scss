@@ -6,11 +6,7 @@
   li {
     position: relative;
     margin-top: 5px;
-    border-radius: 20px;
-    border: solid 1px #e3e1ee;
-    background-color: #ffffff;
-    overflow: hidden;
-    &.active {
+    &.collapsed {
       border: solid 1px #cec8f1;
       background-color: #f9f8ff;
       .icon::after {
@@ -37,6 +33,10 @@
     color: #333;
     line-height: 24px;
     word-break: keep-all;
+    border-radius: 20px;
+    border: solid 1px #e3e1ee;
+    background-color: #ffffff;
+    overflow: hidden;
   }
   .plus {
     position: absolute;
