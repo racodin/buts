@@ -22,22 +22,25 @@
     border: solid 1px #e3e1ee;
     background-color: #ffffff;
     overflow: hidden;
-    &.padding {
-      padding: 26px 110px 26px 40px;
-    }
-    &.collapsed {
+    &:hover,
+    &.active {
       border: solid 1px #cec8f1;
       background-color: #f9f8ff;
+    }
+    &.active {
+      .subject {
+        color: #7e69fe;
+      }
+    }
+  }
+  .subject {
+    position: relative;
+    display: block;
+    padding: 26px 110px 26px 40px;
+    &:not(.collapsed) {
       .plus::after {
         display: none;
       }
-      .article {
-        display: block;
-      }
-    }
-    &:hover {
-      border: solid 1px #cec8f1;
-      background-color: #f9f8ff;
     }
   }
   .plus {
@@ -50,20 +53,20 @@
     background-color: #7e69fe;
     border-radius: 5px;
     &::before,
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       top: 50%;
       left: 50%;
       background-color: white;
     }
-    &:before {
+    &::before {
       width: 14px;
       height: 2px;
       margin-left: -7px;
       margin-top: -1px;
     }
-    &:after {
+    &::after {
       width: 2px;
       height: 14px;
       margin-left: -1px;
@@ -71,7 +74,6 @@
     }
   }
   .article {
-    display: none;
     margin: 0 40px 40px 40px;
     font-size: 14px;
     line-height: 24px;
@@ -94,11 +96,13 @@
       left: 45px;
     }
   }
+  input[type='radio']:checked + label {
+    background-color: #f9f8ff;
+  }
   .right {
     position: absolute;
-    top: 50%;
+    top: 40px;
     right: 36px;
-    transform: translate(0, -50%);
     .button {
       vertical-align: middle;
     }
@@ -178,9 +182,9 @@
       font-size: 12px;
       line-height: 16px;
       border-radius: 10px;
-      &.padding {
-        padding: 12px 45px 12px 15px;
-      }
+    }
+    .subject {
+      padding: 12px 45px 12px 15px;
     }
     .plus {
       right: 15px;
@@ -213,6 +217,7 @@
       }
     }
     .right {
+      top: 9px;
       right: 18px;
     }
     .Rajdhani {
@@ -227,6 +232,7 @@
     .tip {
       display: block;
       margin-top: -3px;
+      font-size: 10px;
     }
     .benefit {
       margin-right: 8px;

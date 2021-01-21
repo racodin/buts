@@ -599,6 +599,10 @@ input[type='password']:disabled {
   margin-top: 36px;
 }
 
+.button-align.mg-top-0 {
+  margin-top: 0;
+}
+
 .button-align.number .button {
   z-index: 1;
 }
@@ -776,6 +780,8 @@ input[type='password']:disabled {
   position: relative;
   width: 100%;
   text-align: center;
+  padding: 30px 0 20px 0;
+  border-top: 1px solid #333333;
 }
 
 .page-number ul {
@@ -999,8 +1005,8 @@ input[type='password']:disabled {
   .v-bar.right::after {
     right: -10px;
   }
-  .title-wrap.mg-top-minus {
-    margin-top: -50px;
+  .mg-top-minus {
+    margin-top: -50px !important;
   }
   .title {
     font-size: 13px;
@@ -1122,6 +1128,9 @@ input[type='password']:disabled {
   .caution p {
     margin: 4px 0 0 0;
     line-height: 14px;
+  }
+  .page-number {
+    padding: 10px 0;
   }
   .page-number li.active a {
     width: 24px;

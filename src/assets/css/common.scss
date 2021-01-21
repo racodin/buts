@@ -513,6 +513,9 @@ input[type='password'] {
       }
     }
   }
+  &.mg-top-0 {
+    margin-top: 0;
+  }
   &.number {
     .button {
       z-index: 1;
@@ -669,6 +672,8 @@ input[type='password'] {
   position: relative;
   width: 100%;
   text-align: center;
+  padding: 30px 0 20px 0;
+  border-top: 1px solid #333333;
   ul {
     font-size: 0;
   }
@@ -881,10 +886,8 @@ input[type='password'] {
       }
     }
   }
-  .title-wrap {
-    &.mg-top-minus {
-      margin-top: -50px;
-    }
+  .mg-top-minus {
+    margin-top: -50px !important;
   }
   .title {
     font-size: 13px;
@@ -1010,6 +1013,7 @@ input[type='password'] {
     }
   }
   .page-number {
+    padding: 10px 0;
     li {
       &.active {
         a {

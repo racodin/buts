@@ -720,6 +720,10 @@ input[type='password']:disabled {
   margin-top: 36px;
 }
 
+.button-align.mg-top-0 {
+  margin-top: 0;
+}
+
 .button-align.number .button {
   z-index: 1;
 }
@@ -897,6 +901,8 @@ input[type='password']:disabled {
   position: relative;
   width: 100%;
   text-align: center;
+  padding: 30px 0 20px 0;
+  border-top: 1px solid #333333;
 }
 
 .page-number ul {
@@ -1120,8 +1126,8 @@ input[type='password']:disabled {
   .v-bar.right::after {
     right: -10px;
   }
-  .title-wrap.mg-top-minus {
-    margin-top: -50px;
+  .mg-top-minus {
+    margin-top: -50px !important;
   }
   .title {
     font-size: 13px;
@@ -1163,7 +1169,7 @@ input[type='password']:disabled {
     padding: 0 10px;
     height: 24px;
     font-size: 11px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .button.mini {
     min-width: 36px;
@@ -1243,6 +1249,9 @@ input[type='password']:disabled {
   .caution p {
     margin: 4px 0 0 0;
     line-height: 14px;
+  }
+  .page-number {
+    padding: 10px 0;
   }
   .page-number li.active a {
     width: 24px;
@@ -2546,8 +2555,10 @@ a.header-login {
 }
 
 .item-view-idpw {
+  top: -2px;
   margin-left: 20px;
   padding: 0 12px !important;
+  vertical-align: middle;
 }
 
 .item-view-user {
@@ -4123,6 +4134,10 @@ a.header-login {
   margin-top: -5px;
 }
 
+.table-row .input-date {
+  max-width: 160px;
+}
+
 .table-row .input-check {
   margin-right: 30px;
 }
@@ -4332,8 +4347,11 @@ a.header-login {
   .table-row .category {
     width: 56px;
   }
-  .table-row .input-subject {
-    width: calc(100% - 58px);
+  .table-row input[type='text'] {
+    width: calc(100% - 60px);
+  }
+  .table-row .input-date {
+    width: 40% !important;
   }
   .table-row .input-check {
     margin-right: 30px;
@@ -4411,24 +4429,6 @@ a.header-login {
   margin-top: 5px;
 }
 
-.accordion li.collapsed {
-  border: solid 1px #cec8f1;
-  background-color: #f9f8ff;
-}
-
-.accordion li.collapsed .icon::after {
-  display: none;
-}
-
-.accordion li.collapsed .article {
-  display: block;
-}
-
-.accordion li:hover {
-  border: solid 1px #cec8f1;
-  background-color: #f9f8ff;
-}
-
 .accordion li:first-child {
   margin-top: 0;
 }
@@ -4437,7 +4437,6 @@ a.header-login {
   position: relative;
   display: block;
   width: 100%;
-  padding: 26px 110px 26px 40px;
   font-size: 20px;
   color: #333;
   line-height: 24px;
@@ -4446,6 +4445,25 @@ a.header-login {
   border: solid 1px #e3e1ee;
   background-color: #ffffff;
   overflow: hidden;
+}
+
+.accordion .select:hover, .accordion .select.active {
+  border: solid 1px #cec8f1;
+  background-color: #f9f8ff;
+}
+
+.accordion .select.active .subject {
+  color: #7e69fe;
+}
+
+.accordion .subject {
+  position: relative;
+  display: block;
+  padding: 26px 110px 26px 40px;
+}
+
+.accordion .subject:not(.collapsed) .plus::after {
+  display: none;
 }
 
 .accordion .plus {
@@ -4459,7 +4477,7 @@ a.header-login {
   border-radius: 5px;
 }
 
-.accordion .plus::before, .accordion .plus:after {
+.accordion .plus::before, .accordion .plus::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -4467,14 +4485,14 @@ a.header-login {
   background-color: white;
 }
 
-.accordion .plus:before {
+.accordion .plus::before {
   width: 14px;
   height: 2px;
   margin-left: -7px;
   margin-top: -1px;
 }
 
-.accordion .plus:after {
+.accordion .plus::after {
   width: 2px;
   height: 14px;
   margin-left: -1px;
@@ -4482,7 +4500,6 @@ a.header-login {
 }
 
 .accordion .article {
-  display: none;
   margin: 0 40px 40px 40px;
   font-size: 14px;
   line-height: 24px;
@@ -4496,7 +4513,7 @@ a.header-login {
 .accordion .input-check input[type='radio'] + label {
   width: 100%;
   height: 100%;
-  padding: 24px 110px 20px 75px;
+  padding: 27px 110px 23px 75px;
   font-size: 14px;
   font-weight: 300;
   color: #666666;
@@ -4510,11 +4527,18 @@ a.header-login {
   left: 45px;
 }
 
+.accordion input[type='radio']:checked + label {
+  background-color: #f9f8ff;
+}
+
 .accordion .right {
   position: absolute;
-  top: 24px;
+  top: 40px;
   right: 36px;
-  height: 32px;
+}
+
+.accordion .right .button {
+  vertical-align: middle;
 }
 
 .accordion .Rajdhani {
@@ -4535,6 +4559,8 @@ a.header-login {
 }
 
 .accordion .benefit {
+  position: relative;
+  top: 2px;
   margin-right: 20px;
 }
 
@@ -4596,9 +4622,12 @@ a.header-login {
     border-radius: 10px;
   }
   .accordion .select {
-    padding: 12px 45px 12px 15px;
     font-size: 12px;
     line-height: 16px;
+    border-radius: 10px;
+  }
+  .accordion .subject {
+    padding: 12px 45px 12px 15px;
   }
   .accordion .plus {
     right: 15px;
@@ -4631,9 +4660,8 @@ a.header-login {
     left: 20px;
   }
   .accordion .right {
-    top: 10px;
-    right: 13px;
-    height: 24px;
+    top: 9px;
+    right: 18px;
   }
   .accordion .Rajdhani {
     font-size: 14px;
@@ -4647,6 +4675,7 @@ a.header-login {
   .accordion .tip {
     display: block;
     margin-top: -3px;
+    font-size: 10px;
   }
   .accordion .benefit {
     margin-right: 8px;
@@ -4666,9 +4695,16 @@ a.header-login {
 .dialog {
   position: relative;
   max-width: 690px;
-  padding: 0 30px;
-  border: solid 1px #ececec;
+  padding: 40px 30px;
+  background-color: white;
+}
+
+.dialog.border {
   border-top: 3px solid #7e69fe;
+}
+
+.dialog.center {
+  text-align: center;
 }
 
 .dialog-close {
@@ -4690,7 +4726,7 @@ a.header-login {
   width: 22px;
   height: 1px;
   margin-left: -11px;
-  background-color: #7e69fe;
+  background-color: #333333;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -4701,16 +4737,22 @@ a.header-login {
 }
 
 .dialog-title {
-  margin: 28px 0 18px 0;
+  margin: 0 0 18px 0;
+}
+
+.dialog-para {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
 }
 
 .dialog-buttons {
-  margin-bottom: 50px;
+  margin-top: 50px;
   text-align: center;
 }
 
-.dialog-body {
-  height: 415px;
+.dialog-body.step {
+  height: 350px;
 }
 
 .dialog-step {
@@ -4961,6 +5003,62 @@ a.header-login {
   line-height: 110px;
   background-color: #f9f9f9;
   border-right: 1px solid #ececec;
+}
+
+.dialog-cash {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 25px;
+  font-size: 0;
+  border: 1px solid #eeeeee;
+}
+
+.dialog-cash .line {
+  display: inline-block;
+  width: 50%;
+  height: 70px;
+  font-size: 18px;
+  color: #555555;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+.dialog-cash .line:last-child {
+  border-left: solid 1px #eeeeee;
+  background-color: #fbfbfb;
+}
+
+.dialog-cash .icon {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.dialog-cash .icon img {
+  vertical-align: top;
+}
+
+.dialog-cash .Rajdhani {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7e69fe;
+  vertical-align: middle;
+}
+
+.dialog-alert {
+  max-width: 540px;
+  margin: 22px auto 0 auto;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 20px;
+  word-break: keep-all;
 }
 
 .popup {
