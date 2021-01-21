@@ -329,5 +329,44 @@
         <a href="" class="button button-purple">캐시 충전 바로가기</a>
       </div>
     </div>
+
+    <br />
+
+    <!-- 프로필 이미지 등록 -->
+    <div class="dialog center dialog-profile">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title title"><span class="text-purple">프로필</span> 이미지 등록</div>
+
+      <div class="dialog-body">
+        <div class="dialog-images">
+          <ul>
+            <li>
+              <div class="picture">
+                <img src="../../assets/css/img/icon-butsicon-middle-glay.png" alt="" />
+              </div>
+              <a href="" class="delete"><img src="../../assets/css/img/img-input-text-reste.png" alt="" /></a>
+            </li>
+            <li>
+              <div class="picture">
+                <img src="../../assets/css/img/icon-butsicon-middle-glay.png" alt="" />
+              </div>
+              <a href="" class="delete"><img src="../../assets/css/img/img-input-text-reste.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <span class="dialog-lightgrey">회원 사진은 jpg, gif, png 만 가능하며, 등록 시 120px x 120px로 자동 리사이징 됩니다.</span>
+        <div class="dialog-upload">
+          <div class="input-file">
+            <label class="button round border button-purple" for="file-upload">파일 선택</label>
+            <input type="file" id="file-upload" onchange="$('.file-name').val(window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop());" />
+            <input class="file-name" value="선택된 파일 없음" disabled="disabled" />
+          </div>
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button small border button-purple">닫기</a>
+        <a href="" class="button small button-purple">등록</a>
+      </div>
+    </div>
   </body>
 </html>

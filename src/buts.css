@@ -5061,6 +5061,30 @@ a.header-login {
   word-break: keep-all;
 }
 
+.dialog-profile li {
+  position: relative;
+  width: 100px;
+  margin-left: -48px;
+}
+
+.dialog-profile li:first-child {
+  margin-left: 0;
+}
+
+.dialog-profile .picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dialog-profile .delete {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  display: block;
+}
+
 .popup {
   position: fixed;
   top: 0;

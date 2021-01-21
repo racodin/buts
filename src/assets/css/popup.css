@@ -367,6 +367,55 @@
   word-break: keep-all;
 }
 
+.dialog-profile {
+  width: 540px;
+}
+
+.dialog-images {
+  margin: 0 10px 21px 10px;
+  padding-top: 10px;
+}
+
+.dialog-images ul {
+  font-size: 0;
+}
+
+.dialog-images li {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin-left: 48px;
+}
+
+.dialog-images li:first-child {
+  margin-left: 0;
+}
+
+.dialog-images .picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dialog-images .delete {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  display: block;
+}
+
+.dialog-upload {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.dialog-lightgrey {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+}
+
 .popup {
   position: fixed;
   top: 0;

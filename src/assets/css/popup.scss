@@ -342,6 +342,50 @@
   word-break: keep-all;
 }
 
+.dialog-profile {
+  width: 540px;
+}
+
+.dialog-images {
+  margin: 0 10px 21px 10px;
+  padding-top: 10px;
+  ul {
+    font-size: 0;
+  }
+  li {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    margin-left: 48px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .delete {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    display: block;
+  }
+}
+
+.dialog-upload {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.dialog-lightgrey {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+}
+
 .popup {
   position: fixed;
   top: 0;
