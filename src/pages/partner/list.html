@@ -38,247 +38,156 @@
     <script src="http://3.35.248.255/js/placeholders.min.js"></script>
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
     <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
+
+    <!-- 벗츠 리뉴얼 css, js  -->
+    <link rel="stylesheet" href="./partner.css" />
   </head>
-  <body class="responsive is-pc">
-    <div id="wrapper">
-      <!-- Sidebar -->
-      <nav class="navbar navbar-inverse navbar-fixed-top en" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="./">
-            <span>
-              <img src="http://3.35.248.255/img/buts/logo_small.png" title="" />
-            </span>
-          </a>
+  <body>
+    <div class="partner-wrap">
+      <!-- header -->
+      <div class="partner-header">
+        <a class="partner-logo" href="./">
+          <img src="http://3.35.248.255/img/buts/logo_small.png" title="" />
+        </a>
+        <ul class="partner-menu">
+          <li class="v-bar right">
+            <a href="">testadm</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255/adm">관리자</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255">벗츠</a>
+          </li>
+          <li>
+            <a href="http://3.35.248.255/bbs/logout.php">로그아웃</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- nav -->
+      <div class="partner-nav">
+        <ul>
+          <li class="active">
+            <a href="./?ap=list"> 파티관리</a>
+          </li>
+          <li>
+            <a href="./?ap=qalist"> 문의관리</a>
+          </li>
+          <li>
+            <a href="./?ap=saleitem"> 참여정보</a>
+          </li>
+          <li>
+            <a href="./?ap=order_cancel"> 취소요청</a>
+          </li>
+          <li>
+            <a href="./?ap=cancelitem"> 취소내역</a>
+          </li>
+          <li>
+            <a href="./?ap=paylist"> 출금관리</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- body -->
+      <div class="partner-body">
+        <div class="partner-well">
+          <select name="" id="">
+            <option value="">카테고리</option>
+          </select>
+          <input type="text" />
+          <a href="" class="button mini border button-purple">검색</a>
+          <a href="" class="button mini button-purple">파티생성</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav side-nav partner-nav">
-            <li class="active">
-              <a href="./?ap=list"> 파티관리</a>
+        <div class="title"><span class="text-purple">파티/판매</span> 목록</div>
+
+        <div class="table-list scroll">
+          <table style="min-width: 1000px">
+            <!-- <colgroup>
+              <col style="width: 10%" />
+              <col style="width: 57%" />
+              <col style="width: 18%" />
+              <col style="width: 15%" />
+            </colgroup> -->
+            <thead>
+              <tr>
+                <th width="40" scope="col">
+                  <div class="input-check">
+                    <input type="checkbox" id="checkbox-all" />
+                    <label for="checkbox-all"></label>
+                  </div>
+                </th>
+                <th width="10%" scope="col">파티번호</th>
+                <th scope="col">제목</th>
+                <th width="10%" scope="col">인당가격</th>
+                <th width="10%" scope="col">남은모집인원</th>
+                <th width="10%" scope="col">남은기간</th>
+                <th width="10%" scope="col">종료일</th>
+                <th width="10%" scope="col">관리</th>
+                <th width="10%" scope="col">관리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="input-check">
+                    <input type="checkbox" id="checkbox-01" />
+                    <label for="checkbox-01"></label>
+                  </div>
+                </td>
+                <td>
+                  <a href="" class="lightgrey">1609821876</a>
+                </td>
+                <td>
+                  <a href="" class="item-name">
+                    <span class="brand"></span>
+                    <span class="name">유튜브 프리미엄 가족 요금제 참여</span>
+                    <span class="lightgrey">유튜브 가족요금제 인도 계정 참여하실 분</span>
+                  </a>
+                </td>
+                <td><strong>88</strong>원</td>
+                <td><strong>3</strong>명</td>
+                <td><strong>8</strong>일</td>
+                <td><span class="lightgrey">2021-01-16</span></td>
+                <td>
+                  <a href="" class="button round border button-purple">내역수정</a>
+                </td>
+                <td>
+                  <a href="">복사</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="page-number" style="border-top: 0">
+          <ul>
+            <li class="disabled">
+              <a><i class="fa fa-angle-double-left"></i></a>
             </li>
-            <li>
-              <a href="./?ap=qalist"> 문의관리</a>
+            <li class="disabled">
+              <a><i class="fa fa-angle-left"></i></a>
             </li>
-            <li>
-              <a href="./?ap=saleitem"> 참여정보</a>
+            <li class="active"><a>1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-right"></i></a>
             </li>
-            <li>
-              <a href="./?ap=order_cancel"> 취소요청</a>
-            </li>
-            <li>
-              <a href="./?ap=cancelitem"> 취소내역</a>
-            </li>
-            <li>
-              <a href="./?ap=paylist"> 출금관리</a>
+            <li class="disabled">
+              <a><i class="fa fa-angle-double-right"></i></a>
             </li>
           </ul>
         </div>
 
-        <ul class="nav navbar-nav navbar-right partner-right">
-          <li>
-            <a> testadm </a>
-          </li>
-          <li>
-            <a href="http://3.35.248.255/adm">관리자</a>
-          </li>
-          <li>
-            <a href="http://3.35.248.255">벗츠</a>
-          </li>
-          <li>
-            <a href="http://3.35.248.255/bbs/logout.php"> 로그아웃 </a>
-          </li>
-        </ul>
-        <!-- /.navbar-collapse -->
-      </nav>
-
-      <div id="page-wrapper">
-        <script src="./script.js"></script>
-
-        <div class="well">
-          <form class="form" role="form" name="flist">
-            <input type="hidden" name="ap" value="" />
-            <input type="hidden" name="save_stx" value="" />
-            <label for="sca" class="sound_only">분류선택</label>
-            <select name="sca" id="sca" class="form-control">
-              <option value="">카테고리</option>
-              <option value="10">영상</option>
-              <option value="1010">&nbsp;&nbsp;&nbsp;넷플릭스</option>
-              <option value="1020">&nbsp;&nbsp;&nbsp;왓챠</option>
-              <option value="1030">&nbsp;&nbsp;&nbsp;유튜브</option>
-              <option value="40">사용안함</option>
-              <option value="1040">&nbsp;&nbsp;&nbsp;웨이브</option>
-              <option value="1050">&nbsp;&nbsp;&nbsp;티빙</option>
-              <option value="1060">&nbsp;&nbsp;&nbsp;기타(영상)</option>
-              <option value="20">도서/음악</option>
-              <option value="2010">&nbsp;&nbsp;&nbsp;리디북스</option>
-              <option value="2020">&nbsp;&nbsp;&nbsp;밀리의서재</option>
-              <option value="2030">&nbsp;&nbsp;&nbsp;YES24</option>
-              <option value="2040">&nbsp;&nbsp;&nbsp;스포티파이</option>
-              <option value="2050">&nbsp;&nbsp;&nbsp;기타(도서/음악)</option>
-              <option value="30">기타</option>
-              <option value="3010">&nbsp;&nbsp;&nbsp;게임</option>
-              <option value="3030">&nbsp;&nbsp;&nbsp;VPN</option>
-              <option value="3040">&nbsp;&nbsp;&nbsp;유틸</option>
-              <option value="3020">&nbsp;&nbsp;&nbsp;기타</option>
-              <option value="50">포인트</option>
-            </select>
-            <script>
-              document.getElementById('sca').value = '';
-            </script>
-            <label for="stx" class="sound_only">검색어</label>
-            <input type="text" name="stx" value="" id="stx" class="form-control input-sm" placeholder="검색어" />
-            <button type="submit" class="btn btn-outline-purple">검색</button>
-            <a href="./?ap=item" class="btn btn-purple">파티생성</a>
-          </form>
+        <div class="button-align left mg-top-0">
+          <a href="" class="button round border button-purple">선택삭제</a>
+          <a href="" class="button round border button-purple">선택종료</a>
         </div>
-
-        <h3><span class="text-purple">파티/판매</span> 목록</h3>
-
-        <form class="form" role="form" name="fitemlistupdate" method="post" action="./itemlistupdate.php" onsubmit="return fitemlist_submit(this);" autocomplete="off">
-          <input type="hidden" name="ap" value="" />
-          <input type="hidden" name="sca" value="" />
-          <input type="hidden" name="sst" value="" />
-          <input type="hidden" name="sod" value="" />
-          <input type="hidden" name="sfl" value="" />
-          <input type="hidden" name="stx" value="" />
-          <input type="hidden" name="page" value="1" />
-
-          <div class="table-responsive">
-            <table class="table tbl bg-white partner-table">
-              <tbody>
-                <tr class="bg-black">
-                  <th width="40" class="text-center" scope="col">
-                    <div class="input-check">
-                      <input type="checkbox" id="checkbox-all" />
-                      <label for="checkbox-all"></label>
-                    </div>
-                    <!-- <label for="chkall" class="sound_only">전체</label>
-                    <input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all(this.form)" /> -->
-                  </th>
-                  <th width="10%" class="text-center" scope="col"><a href="/shop/partner/index.php?ap=&amp;sca=&amp;sst=it_id&amp;sod=asc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">파티번호</a></th>
-                  <th class="text-center" scope="col"><a href="/shop/partner/index.php?ap=&amp;sca=&amp;sst=it_name&amp;sod=asc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">제목</a></th>
-                  <th width="10%" class="text-center" scope="col"><a href="/shop/partner/index.php?ap=&amp;sca=&amp;sst=it_price&amp;sod=asc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">인당가격</a></th>
-                  <th width="10%" class="text-center" scope="col"><a href="/shop/partner/index.php?ap=&amp;sca=&amp;sst=it_stock_qty&amp;sod=asc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">남은모집인원</a></th>
-                  <th width="10%" class="text-center" scope="col">남은기간</th>
-                  <th width="10%" class="text-center" scope="col">종료일</th>
-                  <th width="10%" class="text-center" scope="col">관리</th>
-                  <th width="10%" class="text-center" scope="col">관리</th>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <div class="input-check">
-                      <input type="checkbox" id="checkbox-01" />
-                      <label for="checkbox-01"></label>
-                    </div>
-                    <!-- <label for="chk_0" class="sound_only">왓챠</label>
-                    <input type="checkbox" name="chk[]" value="0" id="chk_0" />
-                    <input type="hidden" name="it_id[0]" value="1609821876" /> -->
-                  </td>
-                  <td class="text-center">
-                    <a href="http://3.35.248.255/shop/item.php?it_id=1609821876" class="lightgrey">
-                      <nobr>1609821876</nobr>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="http://3.35.248.255/shop/item.php?it_id=1609821876" class="subject"><b>왓챠</b></a>
-                    <div class="lightgrey" style="margin-top: 4px">일반 / 왓챠 / 왓챠 / 영상</div>
-                  </td>
-                  <td class="text-center"><strong>88</strong>원</td>
-                  <td class="text-center"><strong>3</strong>명</td>
-                  <td class="text-center"><strong>8</strong>일</td>
-                  <td class="text-center"><span class="lightgrey">2021-01-16</span></td>
-                  <td class="text-center">
-                    <a href="./?ap=item&amp;w=u&amp;it_id=1609821876&amp;fn=2&amp;ca_id=1020" class="btn btn-sm btn-outline-purple btn-pill">내역수정</a>
-                  </td>
-                  <td class="text-center">
-                    <a href="./?ap=item&amp;w=c&amp;it_id=1609821876&amp;fn=2&amp;ca_id=1020">복사</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div style="margin-bottom: 20px">
-            <div class="form-group pull-left">
-              <input type="submit" name="act_button" value="선택삭제" onclick="document.pressed=this.value" class="btn btn-outline-purple btn-sm btn-pill" />
-              <input type="submit" name="act_button" value="선택마감" onclick="document.pressed=this.value" class="btn btn-outline-purple btn-sm btn-pill" />
-            </div>
-            <div class="pull-right">
-              <ul class="pagination pagination-sm en partner-pagination" style="margin-top: 0; padding-top: 0">
-                <li class="disabled">
-                  <a><i class="fa fa-angle-double-left"></i></a>
-                </li>
-                <li class="disabled">
-                  <a><i class="fa fa-angle-left"></i></a>
-                </li>
-                <li class="active"><a>1</a></li>
-                <li><a href="./?ap=&amp;sca=&amp;save_stx=&amp;stx=&amp;page=2">2</a></li>
-                <li><a href="./?ap=&amp;sca=&amp;save_stx=&amp;stx=&amp;page=2">3</a></li>
-                <li><a href="./?ap=&amp;sca=&amp;save_stx=&amp;stx=&amp;page=2">4</a></li>
-                <li class="disabled">
-                  <a><i class="fa fa-angle-right"></i></a>
-                </li>
-                <li>
-                  <a href="./?ap=&amp;sca=&amp;save_stx=&amp;stx=&amp;page=2"><i class="fa fa-angle-double-right"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </form>
-
-        <script>
-          function fitemlist_submit(f) {
-            if (!is_checked('chk[]')) {
-              alert(document.pressed + ' 하실 항목을 하나 이상 선택하세요.');
-              return false;
-            }
-
-            if (document.pressed == '선택삭제') {
-              if (!confirm('선택한 자료를 정말 삭제하시겠습니까?')) {
-                return false;
-              }
-            }
-
-            if (document.pressed == '선택마감') {
-              if (!confirm('선택한 자료를 정말 마감하시겠습니까?')) {
-                return false;
-              }
-            }
-
-            return true;
-          }
-        </script>
       </div>
-      <!-- /#page-wrapper -->
     </div>
-    <!-- /#wrapper -->
-
-    <!-- JavaScript -->
-    <script type="text/javascript" src="http://3.35.248.255/shop/partner/skin/Basic/assets/js/bootstrap.min.js"></script>
-
-    <!-- RUN TIME : 0.0048370361328125 -->
-    <!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
-    <!--[if lte IE 7]>
-      <script>
-        $(function () {
-          var $sv_use = $('.sv_use');
-          var count = $sv_use.length;
-
-          $sv_use.each(function () {
-            $(this).css('z-index', count);
-            $(this).css('position', 'relative');
-            count = count - 1;
-          });
-        });
-      </script>
-    <![endif]-->
   </body>
 </html>
