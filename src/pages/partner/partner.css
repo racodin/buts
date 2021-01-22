@@ -4435,6 +4435,7 @@ input[type='password']:disabled {
   width: 100%;
   height: 80px;
   background-color: #7e69fe;
+  z-index: 900;
 }
 
 .partner-logo {
@@ -4442,6 +4443,37 @@ input[type='password']:disabled {
   top: 26px;
   left: 60px;
   display: block;
+}
+
+.partner-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 17px 15px;
+  z-index: 1;
+}
+
+.partner-toggle .line {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.partner-toggle .line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+  border-top: 2px solid white;
 }
 
 .partner-menu {
@@ -4479,7 +4511,15 @@ input[type='password']:disabled {
   height: calc(100% - 80px);
   border-right: 1px solid #cec8f1;
   background-color: white;
-  z-index: 1;
+  z-index: 700;
+}
+
+.partner-nav.close {
+  display: none;
+}
+
+.partner-nav.open {
+  display: block;
 }
 
 .partner-nav li a {
@@ -4557,10 +4597,10 @@ input[type='password']:disabled {
     height: 50px;
   }
   .partner-logo {
-    position: absolute;
-    top: 14px;
-    left: 20px;
-    width: 60px;
+    display: none;
+  }
+  .partner-toggle {
+    display: block;
   }
   .partner-menu {
     right: 20px;
@@ -4573,7 +4613,23 @@ input[type='password']:disabled {
     border-left: 1px solid #988af2;
   }
   .partner-nav {
-    left: -220px;
+    top: 50px;
+    height: calc(100% - 50px);
+  }
+  .partner-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  .partner-shade.close {
+    display: none;
+  }
+  .partner-shade.open {
+    display: block;
   }
   .partner-body {
     padding: 15px;
