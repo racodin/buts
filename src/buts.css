@@ -4751,10 +4751,6 @@ a.header-login {
   text-align: center;
 }
 
-.dialog-body.step {
-  height: 350px;
-}
-
 .dialog-step {
   position: relative;
   margin-bottom: 30px;

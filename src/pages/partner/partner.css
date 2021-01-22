@@ -3821,10 +3821,6 @@ input[type='password']:disabled {
   text-align: center;
 }
 
-.dialog-body.step {
-  height: 350px;
-}
-
 .dialog-step {
   position: relative;
   margin-bottom: 30px;
@@ -4131,8 +4127,11 @@ input[type='password']:disabled {
   word-break: keep-all;
 }
 
-.dialog-profile {
-  width: 540px;
+.dialog-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
 }
 
 .dialog-images {
@@ -4160,6 +4159,10 @@ input[type='password']:disabled {
   height: 100px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.dialog-images .picture img {
+  width: 100%;
 }
 
 .dialog-images .delete {
