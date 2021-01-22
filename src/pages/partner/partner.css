@@ -3777,6 +3777,10 @@ input[type='password']:disabled {
   text-align: center;
 }
 
+.dialog .button.small {
+  padding: 0 20px;
+}
+
 .dialog-close {
   position: absolute;
   top: 0;
@@ -3817,7 +3821,7 @@ input[type='password']:disabled {
 }
 
 .dialog-buttons {
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -3839,13 +3843,13 @@ input[type='password']:disabled {
   line-height: 38px;
   border: solid 1px #ececec;
   background-color: #f9f9f9;
+  z-index: 2;
 }
 
 .dialog-step span.active {
   color: white;
   border: solid 1px #7e69fe;
   background-color: #7e69fe;
-  z-index: 1;
 }
 
 .dialog-step span.active::before {
@@ -3874,6 +3878,14 @@ input[type='password']:disabled {
   border-top: 19px solid transparent;
 }
 
+.dialog-step span:first-child {
+  z-index: 3;
+}
+
+.dialog-step span:last-child {
+  z-index: 1;
+}
+
 .dialog-step span:last-child::before, .dialog-step span:last-child::after {
   display: none;
 }
@@ -3895,6 +3907,7 @@ input[type='password']:disabled {
   font-weight: 300;
   color: #888888;
   line-height: 16px;
+  word-break: keep-all;
 }
 
 .dialog-caution {
@@ -3929,7 +3942,7 @@ input[type='password']:disabled {
 }
 
 .dialog-refund-point {
-  width: 628px;
+  width: 100%;
   height: 162px;
   font-size: 36px;
   font-weight: 700;
@@ -3941,7 +3954,7 @@ input[type='password']:disabled {
 
 .dialog-finish {
   position: relative;
-  padding: 50px 0;
+  padding: 50px 20px;
   font-size: 14px;
   font-weight: 300;
   color: #666666;
@@ -3957,8 +3970,7 @@ input[type='password']:disabled {
 
 .dialog-pannel {
   position: relative;
-  height: 90px;
-  padding: 0 15px;
+  padding: 25px 15px;
   font-size: 16px;
   font-weight: 300;
   color: #333333;
@@ -3991,7 +4003,6 @@ input[type='password']:disabled {
 
 .dialog-product {
   position: relative;
-  padding: 25px 0;
   padding-left: 45px;
   line-height: 18px;
 }
@@ -4356,6 +4367,65 @@ input[type='password']:disabled {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .dialog {
+    padding: 20px 15px;
+  }
+  .dialog-check input[type='checkbox'] + label {
+    margin-bottom: 8px;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .dialog-check input[type='checkbox'] + label::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+  .dialog-form li {
+    padding: 2px 0 2px 90px;
+  }
+  .dialog-form .subject {
+    width: 90px;
+    font-size: 12px;
+  }
+  .dialog-select a {
+    width: calc(50% - 4px);
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .dialog-product {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .dialog-product a {
+    font-size: 12px;
+  }
+  .dialog-product .brand {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+  }
+  .dialog-product .comment {
+    font-size: 10px;
+  }
+  .dialog-pannel {
+    height: auto;
+    padding: 15px;
+    line-height: 18px;
+  }
+  .dialog-pannel .right {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 15px;
+    text-align: right;
+    border-top: 1px solid #efefef;
+  }
+  .dialog-pannel .Rajdhani {
+    font-size: 22px;
+  }
+}
+
 .partner-wrap {
   position: relative;
 }
@@ -4365,6 +4435,7 @@ input[type='password']:disabled {
   width: 100%;
   height: 80px;
   background-color: #7e69fe;
+  z-index: 900;
 }
 
 .partner-logo {
@@ -4372,6 +4443,37 @@ input[type='password']:disabled {
   top: 26px;
   left: 60px;
   display: block;
+}
+
+.partner-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 17px 15px;
+  z-index: 1;
+}
+
+.partner-toggle .line {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.partner-toggle .line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+  border-top: 2px solid white;
 }
 
 .partner-menu {
@@ -4409,7 +4511,15 @@ input[type='password']:disabled {
   height: calc(100% - 80px);
   border-right: 1px solid #cec8f1;
   background-color: white;
-  z-index: 1;
+  z-index: 700;
+}
+
+.partner-nav.close {
+  display: none;
+}
+
+.partner-nav.open {
+  display: block;
 }
 
 .partner-nav li a {
@@ -4487,10 +4597,10 @@ input[type='password']:disabled {
     height: 50px;
   }
   .partner-logo {
-    position: absolute;
-    top: 14px;
-    left: 20px;
-    width: 60px;
+    display: none;
+  }
+  .partner-toggle {
+    display: block;
   }
   .partner-menu {
     right: 20px;
@@ -4503,7 +4613,23 @@ input[type='password']:disabled {
     border-left: 1px solid #988af2;
   }
   .partner-nav {
-    left: -220px;
+    top: 50px;
+    height: calc(100% - 50px);
+  }
+  .partner-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  .partner-shade.close {
+    display: none;
+  }
+  .partner-shade.open {
+    display: block;
   }
   .partner-body {
     padding: 15px;
