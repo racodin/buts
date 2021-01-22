@@ -115,7 +115,7 @@
 
 .accordion .right {
   position: absolute;
-  top: 40px;
+  top: 23px;
   right: 36px;
 }
 
@@ -152,7 +152,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../../assets/css/img/payment_tab_bg.jpg") no-repeat 50% 0;
+  background: url("./img/payment_tab_bg.jpg") no-repeat 50% 0;
   background-size: cover;
   border: solid 1px #e3e1ee;
   border-top: 1px solid #7e69fe;

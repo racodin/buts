@@ -342,8 +342,11 @@
   word-break: keep-all;
 }
 
-.dialog-profile {
-  width: 540px;
+.dialog-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
 }
 
 .dialog-images {
@@ -366,6 +369,9 @@
     height: 100px;
     border-radius: 10px;
     overflow: hidden;
+    img {
+      width: 100%;
+    }
   }
   .delete {
     position: absolute;

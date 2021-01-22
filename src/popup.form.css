@@ -120,6 +120,604 @@
   /* Legacy iOS */
 }
 
+.dialog {
+  position: relative;
+  max-width: 690px;
+  padding: 40px 30px;
+  background-color: white;
+}
+
+.dialog.border {
+  border-top: 3px solid #7e69fe;
+}
+
+.dialog.center {
+  text-align: center;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 54px;
+  height: 54px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.dialog-close::before, .dialog-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 22px;
+  height: 1px;
+  margin-left: -11px;
+  background-color: #333333;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.dialog-close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.dialog-title {
+  margin: 0 0 18px 0;
+}
+
+.dialog-para {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.dialog-buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.dialog-body.step {
+  height: 350px;
+}
+
+.dialog-step {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.dialog-step span {
+  position: relative;
+  display: inline-block;
+  width: calc(33.33% + 1px);
+  height: 40px;
+  margin-right: -1px;
+  font-size: 14px;
+  color: #aaaaaa;
+  text-align: center;
+  line-height: 38px;
+  border: solid 1px #ececec;
+  background-color: #f9f9f9;
+}
+
+.dialog-step span.active {
+  color: white;
+  border: solid 1px #7e69fe;
+  background-color: #7e69fe;
+  z-index: 1;
+}
+
+.dialog-step span.active::before {
+  border-left: 12px solid #7e69fe;
+}
+
+.dialog-step span.active::after {
+  border-left: 10px solid #7e69fe;
+}
+
+.dialog-step span::before, .dialog-step span::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -12px;
+  border-left: 12px solid #ececec;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
+}
+
+.dialog-step span::after {
+  top: 0px;
+  right: -10px;
+  border-left: 10px solid #f9f9f9;
+  border-bottom: 19px solid transparent;
+  border-top: 19px solid transparent;
+}
+
+.dialog-step span:last-child::before, .dialog-step span:last-child::after {
+  display: none;
+}
+
+.dialog-check {
+  position: relative;
+  padding: 4px 0;
+}
+
+.dialog-check input[type='checkbox'] + label {
+  font-size: 16px;
+  color: #333333;
+}
+
+.dialog-check p {
+  margin-top: 2px;
+  padding-left: 26px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #888888;
+  line-height: 16px;
+}
+
+.dialog-caution {
+  position: relative;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+  background-color: #f6f6f6;
+}
+
+.dialog-form li {
+  position: relative;
+  padding: 2px 0 2px 120px;
+}
+
+.dialog-form .subject {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 120px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #333333;
+  vertical-align: top;
+}
+
+.dialog-form .input-file {
+  margin: 3px 0;
+}
+
+.dialog-refund-point {
+  width: 628px;
+  height: 162px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 160px;
+  border: solid 1px #ececec;
+  background-color: #ffffff;
+}
+
+.dialog-finish {
+  position: relative;
+  padding: 50px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  text-align: center;
+}
+
+.dialog-finish p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.dialog-pannel {
+  position: relative;
+  height: 90px;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333333;
+  line-height: 88px;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #ececec;
+}
+
+.dialog-pannel .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  color: #999;
+}
+
+.dialog-pannel .v-bar {
+  margin-right: 40px;
+}
+
+.dialog-pannel .v-bar::after {
+  right: -20px;
+}
+
+.dialog-pannel .Rajdhani {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+}
+
+.dialog-product {
+  position: relative;
+  padding: 25px 0;
+  padding-left: 45px;
+  line-height: 18px;
+}
+
+.dialog-product .brand {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.dialog-product .lightgrey {
+  font-size: 12px;
+  font-weight: 300;
+  color: #888888;
+}
+
+.dialog-select {
+  padding: 20px 0 16px 0;
+  font-size: 0;
+}
+
+.dialog-select a {
+  display: inline-block;
+  width: calc(25% - 4px);
+  height: 38px;
+  margin: 0 2px;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 3px;
+  border: solid 1px #ececec;
+  background-color: #ffffff;
+}
+
+.dialog-select a.active {
+  color: #7e69fe;
+  border: solid 1px #7e69fe;
+}
+
+.dialog-reject {
+  position: relative;
+  padding: 20px 0;
+  border-top: 1px solid #333333;
+}
+
+.dialog-reject li {
+  position: relative;
+  height: 110px;
+  margin-top: 10px;
+  padding-left: 160px;
+  border: 1px solid #ececec;
+}
+
+.dialog-reject li:first-child {
+  margin-top: 0;
+}
+
+.dialog-reject .subject {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 159px;
+  height: 108px;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  line-height: 110px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ececec;
+}
+
+.dialog-cash {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 25px;
+  font-size: 0;
+  border: 1px solid #eeeeee;
+}
+
+.dialog-cash .line {
+  display: inline-block;
+  width: 50%;
+  height: 70px;
+  font-size: 18px;
+  color: #555555;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+.dialog-cash .line:last-child {
+  border-left: solid 1px #eeeeee;
+  background-color: #fbfbfb;
+}
+
+.dialog-cash .icon {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.dialog-cash .icon img {
+  vertical-align: top;
+}
+
+.dialog-cash .Rajdhani {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7e69fe;
+  vertical-align: middle;
+}
+
+.dialog-alert {
+  max-width: 540px;
+  margin: 22px auto 0 auto;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 20px;
+  word-break: keep-all;
+}
+
+.dialog-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
+}
+
+.dialog-images {
+  margin: 0 10px 21px 10px;
+  padding-top: 10px;
+}
+
+.dialog-images ul {
+  font-size: 0;
+}
+
+.dialog-images li {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin-left: 48px;
+}
+
+.dialog-images li:first-child {
+  margin-left: 0;
+}
+
+.dialog-images .picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dialog-images .picture img {
+  width: 100%;
+}
+
+.dialog-images .delete {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  display: block;
+}
+
+.dialog-upload {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.dialog-lightgrey {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.popup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 101%;
+  height: 101%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.popup-container::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  background-color: lightblue;
+}
+
+.popup-button {
+  position: relative;
+  margin-top: 30px;
+}
+
+.popup-button.center {
+  text-align: center;
+}
+
+/* magnific popup */
+.popup-magnific {
+  position: relative;
+  background: #fff;
+  padding: 3em;
+  width: auto;
+  margin: 20px auto;
+  max-width: 680px;
+}
+
+.popup-magnific h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.popup-magnific h3.center {
+  text-align: center;
+}
+
+.popup-magnific h4 {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.popup-magnific h4.center {
+  text-align: center;
+}
+
+.popup-table table {
+  width: 100%;
+}
+
+.popup-table th,
+.popup-table td {
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #666;
+  border: 1px solid #dddddd;
+}
+
+.popup-table th {
+  font-size: 15px;
+  font-weight: 400;
+  background-color: #fbfbfb;
+}
+
+.popup-table td {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.popup-policy {
+  position: relative;
+  padding: 8px 28px 28px 28px;
+  border: solid 1px #dddddd;
+}
+
+.popup-policy ul {
+  margin-left: 15px;
+}
+
+.popup-policy li {
+  position: relative;
+  padding: 5px 0;
+  list-style: decimal;
+  font-size: 14px;
+  color: #555555;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+}
+
+.popup-policy .lightgrey {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #999999;
+}
+
+@media screen and (max-width: 960px) {
+  .popup-button {
+    margin-top: 15px;
+  }
+  .popup-magnific {
+    padding: 1.5em;
+  }
+  .popup-magnific h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .popup-magnific h4 {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .popup-table th,
+  .popup-table td {
+    height: 30px;
+    padding: 0 10px;
+  }
+  .popup-table th {
+    font-size: 12px;
+  }
+  .popup-table td {
+    font-size: 11px;
+  }
+  .popup-policy {
+    padding: 4px 18px 18px 18px;
+    border: solid 1px #dddddd;
+  }
+  .popup-policy ul {
+    margin-left: 10px;
+  }
+  .popup-policy li {
+    padding: 3px 0;
+    font-size: 11px;
+    line-height: 14px;
+  }
+  .popup-policy .lightgrey {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+}
+
 body {
   padding: 0;
   font-size: 13px;
@@ -1166,5 +1764,9 @@ input[type='text']:disabled {
 
 .form-table .text-right {
   text-align: right;
+}
+
+.dialog-profile {
+  width: 540px;
 }
 /*# sourceMappingURL=popup.form.css.map */

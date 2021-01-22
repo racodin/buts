@@ -4533,7 +4533,7 @@ a.header-login {
 
 .accordion .right {
   position: absolute;
-  top: 40px;
+  top: 23px;
   right: 36px;
 }
 
@@ -4570,7 +4570,7 @@ a.header-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../../assets/css/img/payment_tab_bg.jpg") no-repeat 50% 0;
+  background: url("./img/payment_tab_bg.jpg") no-repeat 50% 0;
   background-size: cover;
   border: solid 1px #e3e1ee;
   border-top: 1px solid #7e69fe;
@@ -5061,28 +5061,60 @@ a.header-login {
   word-break: keep-all;
 }
 
-.dialog-profile li {
-  position: relative;
-  width: 100px;
-  margin-left: -48px;
+.dialog-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
 }
 
-.dialog-profile li:first-child {
+.dialog-images {
+  margin: 0 10px 21px 10px;
+  padding-top: 10px;
+}
+
+.dialog-images ul {
+  font-size: 0;
+}
+
+.dialog-images li {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin-left: 48px;
+}
+
+.dialog-images li:first-child {
   margin-left: 0;
 }
 
-.dialog-profile .picture {
+.dialog-images .picture {
   width: 100px;
   height: 100px;
   border-radius: 10px;
   overflow: hidden;
 }
 
-.dialog-profile .delete {
+.dialog-images .picture img {
+  width: 100%;
+}
+
+.dialog-images .delete {
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -30px;
   display: block;
+}
+
+.dialog-upload {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.dialog-lightgrey {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
 }
 
 .popup {
