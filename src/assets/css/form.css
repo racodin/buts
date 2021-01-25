@@ -132,6 +132,7 @@
   position: relative;
   width: 120px;
   padding: 14px 0 13px 0;
+  text-indent: -5px;
 }
 
 .form-list.border .contact {
@@ -285,6 +286,14 @@
 
 .form-list #captcha #captcha_key {
   max-width: 160px;
+}
+
+.form-list-qa select {
+  width: 250px;
+}
+
+.form-list-qa input[type='text'] {
+  width: 250px;
 }
 
 .form-login .login-logo {
@@ -580,6 +589,15 @@
 }
 
 @media screen and (max-width: 960px) {
+  #captcha.m_captcha audio {
+    height: 30px;
+  }
+  #captcha.m_captcha #captcha_img {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    margin-right: 0;
+  }
   .form-pd {
     max-width: 280px;
     margin: 0 auto;

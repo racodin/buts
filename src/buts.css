@@ -445,6 +445,10 @@ input[type='password']:disabled {
   display: inline-block !important;
 }
 
+.pc-table {
+  display: table-cell !important;
+}
+
 .mobile-block {
   display: none !important;
 }
@@ -1071,6 +1075,9 @@ input[type='password']:disabled {
     display: none !important;
   }
   .pc-inline {
+    display: none !important;
+  }
+  .pc-table {
     display: none !important;
   }
   .mobile-block {
@@ -1875,6 +1882,19 @@ a.header-login {
 
 .side a:first-child {
   margin: 0;
+}
+
+.at-go {
+  display: none !important;
+}
+
+@media screen and (max-width: 960px) {
+  .side {
+    display: none;
+  }
+  .at-go {
+    display: block !important;
+  }
 }
 
 .footer {
@@ -3244,6 +3264,7 @@ a.header-login {
   position: relative;
   width: 120px;
   padding: 14px 0 13px 0;
+  text-indent: -5px;
 }
 
 .form-list.border .contact {
@@ -3397,6 +3418,14 @@ a.header-login {
 
 .form-list #captcha #captcha_key {
   max-width: 160px;
+}
+
+.form-list-qa select {
+  width: 250px;
+}
+
+.form-list-qa input[type='text'] {
+  width: 250px;
 }
 
 .form-login .login-logo {
@@ -3692,6 +3721,15 @@ a.header-login {
 }
 
 @media screen and (max-width: 960px) {
+  #captcha.m_captcha audio {
+    height: 30px;
+  }
+  #captcha.m_captcha #captcha_img {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    margin-right: 0;
+  }
   .form-pd {
     max-width: 280px;
     margin: 0 auto;
@@ -4538,6 +4576,8 @@ a.header-login {
 }
 
 .accordion .right .button {
+  width: 79px;
+  text-align: right;
   vertical-align: middle;
 }
 
@@ -4561,7 +4601,7 @@ a.header-login {
 .accordion .benefit {
   position: relative;
   top: 2px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 /* charge */
@@ -4661,7 +4701,10 @@ a.header-login {
   }
   .accordion .right {
     top: 9px;
-    right: 18px;
+    right: 15px;
+  }
+  .accordion .right .button {
+    width: 58px;
   }
   .accordion .Rajdhani {
     font-size: 14px;

@@ -104,6 +104,8 @@
     top: 23px;
     right: 36px;
     .button {
+      width: 79px;
+      text-align: right;
       vertical-align: middle;
     }
   }
@@ -125,7 +127,7 @@
   .benefit {
     position: relative;
     top: 2px;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 }
 
@@ -218,7 +220,10 @@
     }
     .right {
       top: 9px;
-      right: 18px;
+      right: 15px;
+      .button {
+        width: 58px;
+      }
     }
     .Rajdhani {
       font-size: 14px;

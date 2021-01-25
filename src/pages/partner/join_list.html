@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Buts</title>
+    <link rel="stylesheet" href="http://3.35.248.255/adm/css/admin.sub.css" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/apms.css?ver=180820" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,200,100" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/shop/partner/skin/Basic/assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/level/basic.css?ver=180820" />
+    <!--[if lte IE 8]>
+      <script src="http://3.35.248.255/js/html5.js"></script>
+    <![endif]-->
+    <script>
+      // 자바스크립트에서 사용하는 전역변수 선언
+      var g5_url = 'http://3.35.248.255';
+      var g5_bbs_url = 'http://3.35.248.255/bbs';
+      var g5_is_member = '1';
+      var g5_is_admin = 'super';
+      var g5_is_mobile = '';
+      var g5_bo_table = '';
+      var g5_sca = '';
+      var g5_pim = '';
+      var g5_editor = '';
+      var g5_responsive = '1';
+      var g5_cookie_domain = '';
+      var g5_admin_url = 'http://3.35.248.255/adm';
+    </script>
+    <script src="http://3.35.248.255/js/jquery-1.11.3.min.js"></script>
+    <script src="http://3.35.248.255/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://3.35.248.255/lang/korean/lang.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/common.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/wrest.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/placeholders.min.js"></script>
+    <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
+
+    <!-- 벗츠 리뉴얼 css, js  -->
+    <link rel="stylesheet" href="./partner.css" />
+    <script src="./partner.js"></script>
+  </head>
+  <body>
+    <div class="partner-wrap">
+      <!-- header -->
+      <div class="partner-header">
+        <a class="partner-logo" href="./">
+          <img src="http://3.35.248.255/img/buts/logo_small.png" title="" />
+        </a>
+        <ul class="partner-menu">
+          <li class="v-bar right">
+            <a href="">testadm</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255/adm">관리자</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255">벗츠</a>
+          </li>
+          <li>
+            <a href="http://3.35.248.255/bbs/logout.php">로그아웃</a>
+          </li>
+        </ul>
+        <a href="" class="partner-toggle"><span class="line"></span></a>
+      </div>
+
+      <!-- nav -->
+      <div class="partner-shade"></div>
+      <div class="partner-nav">
+        <ul>
+          <li class="active">
+            <a href="./?ap=list"> 파티관리</a>
+          </li>
+          <li>
+            <a href="./?ap=qalist"> 문의관리</a>
+          </li>
+          <li>
+            <a href="./?ap=saleitem"> 참여정보</a>
+          </li>
+          <li>
+            <a href="./?ap=order_cancel"> 취소요청</a>
+          </li>
+          <li>
+            <a href="./?ap=cancelitem"> 취소내역</a>
+          </li>
+          <li>
+            <a href="./?ap=paylist"> 출금관리</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- body -->
+      <div class="partner-body">
+        <div class="partner-well">
+          <div class="partner-calendar">
+            <span><i class="fa fa-calendar"></i></span>
+            <input type="text" name="fr_date" value="" id="fr_date" size="8" maxlength="8" readonly="" placeholder="시작일" />
+          </div>
+          <div class="partner-calendar">
+            <span><i class="fa fa-calendar"></i></span>
+            <input type="text" name="to_date" value="" id="to_date" size="8" maxlength="8" readonly="" placeholder="종료일" />
+          </div>
+          <select name="" id="">
+            <option value="">카테고리</option>
+          </select>
+          <input type="text" class="search" />
+          <a href="" class="button mini border button-purple">검색</a>
+          <a href="" class="button mini button-purple">파티생성</a>
+        </div>
+
+        <div class="title"><span class="text-purple">참여/판매</span> 정보</div>
+
+        <div class="table-list scroll">
+          <table style="min-width: 1000px">
+            <!-- <colgroup>
+              <col style="width: 10%" />
+              <col style="width: 57%" />
+              <col style="width: 18%" />
+              <col style="width: 15%" />
+            </colgroup> -->
+            <thead>
+              <tr>
+                <th width="5%" scope="col">no</th>
+                <th width="10%" scope="col">파티번호</th>
+                <th scope="col">제목</th>
+                <th width="10%" scope="col">참여(구매)자</th>
+                <th width="10%" scope="col">상태</th>
+                <th width="10%" scope="col">결제 금액</th>
+                <th width="10%" scope="col">환불 금액</th>
+                <th width="10%" scope="col">수수료(10%)</th>
+                <th width="10%" scope="col">총 판매금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>46</td>
+                <td>
+                  <span class="lightgrey">2020.02.05<br />12,59</span>
+                </td>
+                <td>
+                  <a href="" class="item-name">
+                    <span class="brand"></span>
+                    <span class="name">유튜브 프리미엄 가족 요금제 참여</span>
+                    <span class="lightgrey v-bar right">파티번호 : 158420067</span>
+                    <span class="lightgrey">진행번호 : 20201025-84520356</span>
+                  </a>
+                </td>
+                <td>
+                  <strong>이렇게살대갈래</strong><br />
+                  <a href="" class="bills">내역서</a>
+                </td>
+                <td>사용중</td>
+                <td>2,840</td>
+                <td>0</td>
+                <td>284</td>
+                <td><span class="text-purple">2,840</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="page-number" style="border-top: 0">
+          <ul>
+            <li class="disabled">
+              <a><i class="fa fa-angle-double-left"></i></a>
+            </li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-left"></i></a>
+            </li>
+            <li class="active"><a>1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-double-right"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="button-align left mg-top-0">
+          <a href="" class="button round border button-purple">선택삭제</a>
+          <a href="" class="button round border button-purple">선택종료</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

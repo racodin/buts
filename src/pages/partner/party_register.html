@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Buts</title>
+    <link rel="stylesheet" href="http://3.35.248.255/adm/css/admin.sub.css" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/apms.css?ver=180820" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,200,100" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/shop/partner/skin/Basic/assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/level/basic.css?ver=180820" />
+    <!--[if lte IE 8]>
+      <script src="http://3.35.248.255/js/html5.js"></script>
+    <![endif]-->
+    <script>
+      // 자바스크립트에서 사용하는 전역변수 선언
+      var g5_url = 'http://3.35.248.255';
+      var g5_bbs_url = 'http://3.35.248.255/bbs';
+      var g5_is_member = '1';
+      var g5_is_admin = 'super';
+      var g5_is_mobile = '';
+      var g5_bo_table = '';
+      var g5_sca = '';
+      var g5_pim = '';
+      var g5_editor = '';
+      var g5_responsive = '1';
+      var g5_cookie_domain = '';
+      var g5_admin_url = 'http://3.35.248.255/adm';
+    </script>
+    <script src="http://3.35.248.255/js/jquery-1.11.3.min.js"></script>
+    <script src="http://3.35.248.255/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://3.35.248.255/lang/korean/lang.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/common.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/wrest.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/placeholders.min.js"></script>
+    <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
+
+    <!-- 벗츠 리뉴얼 css, js  -->
+    <link rel="stylesheet" href="./partner.css" />
+    <script src="./partner.js"></script>
+  </head>
+  <body>
+    <div class="partner-wrap">
+      <!-- header -->
+      <div class="partner-header">
+        <a class="partner-logo" href="./">
+          <img src="http://3.35.248.255/img/buts/logo_small.png" title="" />
+        </a>
+        <ul class="partner-menu">
+          <li class="v-bar right">
+            <a href="">testadm</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255/adm">관리자</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255">벗츠</a>
+          </li>
+          <li>
+            <a href="http://3.35.248.255/bbs/logout.php">로그아웃</a>
+          </li>
+        </ul>
+        <a href="" class="partner-toggle"><span class="line"></span></a>
+      </div>
+
+      <!-- nav -->
+      <div class="partner-shade"></div>
+      <div class="partner-nav">
+        <ul>
+          <li class="active">
+            <a href="./?ap=list"> 파티관리</a>
+          </li>
+          <li>
+            <a href="./?ap=qalist"> 문의관리</a>
+          </li>
+          <li>
+            <a href="./?ap=saleitem"> 참여정보</a>
+          </li>
+          <li>
+            <a href="./?ap=order_cancel"> 취소요청</a>
+          </li>
+          <li>
+            <a href="./?ap=cancelitem"> 취소내역</a>
+          </li>
+          <li>
+            <a href="./?ap=paylist"> 출금관리</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- body -->
+      <div class="partner-body">
+        <div class="title"><span class="text-purple">파티/판매</span> 등록</div>
+
+        <div class="form-list">
+          <div class="form-list border partner-fomr-list">
+            <ul>
+              <li>
+                <div class="subject">ㆍ 서비스</div>
+                <select name="" id="" class="width-200">
+                  <option value="">넷플릭스</option>
+                  <option value="">웨이브</option>
+                </select>
+                <select name="" id="" class="width-200">
+                  <option value="">넷플릭스</option>
+                  <option value="">웨이브</option>
+                </select>
+                <a href="" class="button round mini button-purple">벗츠 UP</a>
+                <a href="" class="ttip">
+                  <img src="/src/assets/css/img/tip.png" alt="" />
+                  <span class="ttip-text" style="right: -29px; width: 160px">첫 가입시 3등급이며, 벗츠 사용도 및 거래 점수에 따라 등급이 변할 수 있습니다.</span>
+                </a>
+              </li>
+              <li>
+                <div class="subject">ㆍ 제목</div>
+                <input type="text" class="width-400" placeholder="제목을 입력해 주세요" />
+              </li>
+              <li>
+                <div class="subject">ㆍ 참가인원</div>
+                <select name="" id="" class="width-100">
+                  <option value="">인원수</option>
+                </select>
+                명
+              </li>
+              <li>
+                <div class="subject">ㆍ 진행 형태</div>
+                <span class="input-check">
+                  <input type="radio" name="account-type" id="account-type1" />
+                  <label for="account-type1">직접 입력</label>
+                </span>
+                <span class="input-check">
+                  <input type="radio" name="account-type" id="account-type2" />
+                  <label for="account-type2">회선 참여형 공유</label>
+                </span>
+                <div>
+                  <input type="text" class="width-200" placeholder="아이디(이메일)" />
+                  <input type="password" class="width-200" placeholder="패스워드" />
+                </div>
+              </li>
+              <li>
+                <div class="subject w100">ㆍ 연락처(문의처)</div>
+                <span class="input-check">
+                  <input type="radio" name="contact-type" id="contact-type1" />
+                  <label for="contact-type1">전화번호</label>
+                </span>
+                <span class="input-check">
+                  <input type="radio" name="contact-type" id="contact-type2" />
+                  <label for="contact-type2">카카오톡</label>
+                </span>
+                <div>
+                  <input type="text" class="width-200" placeholder="연락받을 곳을 입력해 주세요." />
+                  <span class="lightgrey">이슈 발생 시 대응 가능한 문의정보를 입력해 주세요.</span>
+                </div>
+              </li>
+              <li>
+                <div class="subject w100">ㆍ 진행 기간</div>
+                <input type="text" class="width-50" placeholder="" />
+                일 동안 진행가능
+                <a href="" class="button round button-purple">종료일 확인</a>
+              </li>
+              <li>
+                <div class="subject w100">ㆍ 참여 금액</div>
+                1인 당 1일
+                <input type="text" class="width-100" placeholder="" />
+                원 * 예상 총 수령 금액
+                <span class="text-purple">0원</span>
+                <a href="" class="button round button-purple">금액 확인하기</a>
+                <span class="lightgrey">(판매수수료가 제외된 금액입니다.)</span>
+              </li>
+              <li>
+                <div class="subject w100">ㆍ 기본 규칙</div>
+                <div class="input-check">
+                  <input type="checkbox" id="rule1" />
+                  <label for="rule1">19세 이상</label>
+                </div>
+                <div class="input-check">
+                  <input type="checkbox" id="rule2" />
+                  <label for="rule2">1인 1회선</label>
+                </div>
+                <div class="input-check">
+                  <input type="checkbox" id="rule3" />
+                  <label for="rule3">1인 1기기 등록 </label>
+                </div>
+              </li>
+              <li>
+                <div class="subject w100">ㆍ 상세 내용 입력</div>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="button-align center">
+          <a href="" class="button border button-purple">목록</a>
+          <a href="" class="button button-purple">등록</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

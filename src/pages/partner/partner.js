@@ -16,16 +16,22 @@ $(function () {
     }
   }
 
+  function resize(){
+    if ($window.outerWidth() <= 943) {
+      $partnerShade.add($partnerNav).removeClass('open').addClass('close');
+    } else {
+      $partnerShade.add($partnerNav).removeClass('close open');
+    }
+  }
+
   $partnerToggle.add($partnerShade).on('click', function (e) {
     e.preventDefault();
     navToggle();
   });
 
   $window.on('resize', function () {
-    if ($window.outerWidth() < 768) {
-      $partnerShade.add($partnerNav).removeClass('open').addClass('close');
-    } else {
-      $partnerShade.add($partnerNav).removeClass('close open');
-    }
+    resize();
   });
+
+  resize();
 });

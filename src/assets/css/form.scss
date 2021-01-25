@@ -120,6 +120,7 @@
       position: relative;
       width: 120px;
       padding: 14px 0 13px 0;
+      text-indent: -5px;
     }
     .contact {
       max-width: 460px;
@@ -246,6 +247,15 @@
   }
   #captcha #captcha_key {
     max-width: 160px;
+  }
+}
+
+.form-list-qa {
+  select {
+    width: 250px;
+  }
+  input[type='text'] {
+    width: 250px;
   }
 }
 
@@ -508,6 +518,20 @@
 }
 
 @media screen and (max-width: 960px) {
+  #captcha {
+    &.m_captcha {
+      audio {
+        height: 30px;
+      }
+      #captcha_img {
+        display: inline-block;
+        height: 30px;
+        width: 100px;
+        margin-right: 0;
+      }
+    }
+  }
+
   .form-pd {
     max-width: 280px;
     margin: 0 auto;

@@ -324,6 +324,10 @@ input[type='password']:disabled {
   display: inline-block !important;
 }
 
+.pc-table {
+  display: table-cell !important;
+}
+
 .mobile-block {
   display: none !important;
 }
@@ -950,6 +954,9 @@ input[type='password']:disabled {
     display: none !important;
   }
   .pc-inline {
+    display: none !important;
+  }
+  .pc-table {
     display: none !important;
   }
   .mobile-block {

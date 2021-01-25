@@ -17,4 +17,17 @@
 .side a:first-child {
   margin: 0;
 }
+
+.at-go {
+  display: none !important;
+}
+
+@media screen and (max-width: 960px) {
+  .side {
+    display: none;
+  }
+  .at-go {
+    display: block !important;
+  }
+}
 /*# sourceMappingURL=side.css.map */
