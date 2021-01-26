@@ -21,7 +21,7 @@
 
 .partner-logo {
   position: absolute;
-  top: 26px;
+  top: 28px;
   left: 60px;
   display: block;
 }
@@ -300,6 +300,18 @@
   .partner-nav {
     top: 50px;
     height: calc(100% - 50px);
+    li {
+      a {
+        padding: 12px 15px;
+        font-size: 13px;
+      }
+      &:hover,
+      &.active {
+        a {
+          background-position: calc(100% - 15px) 50%;
+        }
+      }
+    }
   }
   .partner-shade {
     position: fixed;
@@ -339,8 +351,6 @@
     .search {
       width: calc(100% - 276px);
     }
-  }
-  .table-list {
   }
   .partner-fomr-list.border {
     .button.round {

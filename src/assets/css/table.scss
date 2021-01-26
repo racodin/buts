@@ -250,6 +250,7 @@
   }
   .thumb {
     position: relative;
+    flex: none;
     display: block;
     max-width: 440px;
     margin-right: 38px;
@@ -261,11 +262,10 @@
   .subject {
     position: relative;
     display: block;
-    margin-top: -10px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     font-size: 22px;
     color: #333333;
-    white-space: nowrap;
+    line-height: 24px;
     &:hover {
       color: #7e69fe;
     }
