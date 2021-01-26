@@ -280,6 +280,10 @@ input[type='password'] {
   display: none !important;
 }
 
+.mobile-table {
+  display: none !important;
+}
+
 .wrap {
   position: relative;
   // min-width: 1320px;
@@ -841,6 +845,9 @@ input[type='password'] {
   }
   .mobile-inline {
     display: inline-block !important;
+  }
+  .mobile-table {
+    display: table-cell !important;
   }
   select {
     height: 28px;

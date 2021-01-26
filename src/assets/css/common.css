@@ -336,6 +336,10 @@ input[type='password']:disabled {
   display: none !important;
 }
 
+.mobile-table {
+  display: none !important;
+}
+
 .wrap {
   position: relative;
   overflow: hidden;
@@ -964,6 +968,9 @@ input[type='password']:disabled {
   }
   .mobile-inline {
     display: inline-block !important;
+  }
+  .mobile-table {
+    display: table-cell !important;
   }
   select {
     height: 28px;

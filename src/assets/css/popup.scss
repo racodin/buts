@@ -40,10 +40,6 @@
   }
 }
 
-.dialog-title {
-  margin: 0 0 18px 0;
-}
-
 .dialog-para {
   font-size: 16px;
   font-weight: 300;
@@ -263,7 +259,7 @@
 
 .dialog-reject {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   border-top: 1px solid #333333;
   li {
     position: relative;
@@ -464,6 +460,7 @@
 }
 
 .popup-table {
+  margin-top: 30px;
   table {
     width: 100%;
   }
@@ -560,6 +557,13 @@
   .dialog {
     padding: 20px 15px;
   }
+  .dialog-title {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .dialog-para {
+    font-size: 12px;
+  }
   .dialog-check {
     input[type='checkbox'] + label {
       margin-bottom: 8px;
@@ -618,5 +622,55 @@
     .Rajdhani {
       font-size: 22px;
     }
+  }
+  .dialog-reject {
+    li {
+      height: 62px;
+    }
+    .subject {
+      width: 100px;
+      height: 60px;
+      font-size: 11px;
+      line-height: 60px;
+    }
+  }
+  .dialog-cash {
+    width: 80%;
+    .line {
+      height: 40px;
+      font-size: 13px;
+      line-height: 40px;
+    }
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+    .Rajdhani {
+      font-size: 18px;
+    }
+  }
+  .dialog-alert,
+  .dialog-lightgrey {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .dialog-upload {
+    margin: 10px auto;
+  }
+  .dialog-images {
+    li {
+      width: 60px;
+    }
+    .picture {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .dialog-caution {
+    font-size: 11px;
+  }
+  .popup-table {
+    margin-top: 15px;
   }
 }

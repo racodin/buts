@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Buts</title>
+    <link rel="stylesheet" href="http://3.35.248.255/adm/css/admin.sub.css" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/apms.css?ver=180820" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,200,100" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/shop/partner/skin/Basic/assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="http://3.35.248.255/css/level/basic.css?ver=180820" />
+    <!--[if lte IE 8]>
+      <script src="http://3.35.248.255/js/html5.js"></script>
+    <![endif]-->
+    <script>
+      // 자바스크립트에서 사용하는 전역변수 선언
+      var g5_url = 'http://3.35.248.255';
+      var g5_bbs_url = 'http://3.35.248.255/bbs';
+      var g5_is_member = '1';
+      var g5_is_admin = 'super';
+      var g5_is_mobile = '';
+      var g5_bo_table = '';
+      var g5_sca = '';
+      var g5_pim = '';
+      var g5_editor = '';
+      var g5_responsive = '1';
+      var g5_cookie_domain = '';
+      var g5_admin_url = 'http://3.35.248.255/adm';
+    </script>
+    <script src="http://3.35.248.255/js/jquery-1.11.3.min.js"></script>
+    <script src="http://3.35.248.255/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://3.35.248.255/lang/korean/lang.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/common.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/wrest.js?ver=180820"></script>
+    <script src="http://3.35.248.255/js/placeholders.min.js"></script>
+    <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
+
+    <!-- 벗츠 리뉴얼 css, js  -->
+    <link rel="stylesheet" href="./partner.css" />
+    <script src="./partner.js"></script>
+  </head>
+  <body>
+    <div class="partner-wrap">
+      <!-- header -->
+      <div class="partner-header">
+        <a class="partner-logo" href="./">
+          <img src="http://3.35.248.255/img/buts/logo_small.png" title="" />
+        </a>
+        <ul class="partner-menu">
+          <li class="v-bar right">
+            <a href="">testadm</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255/adm">관리자</a>
+          </li>
+          <li class="v-bar right">
+            <a href="http://3.35.248.255">벗츠</a>
+          </li>
+          <li>
+            <a href="http://3.35.248.255/bbs/logout.php">로그아웃</a>
+          </li>
+        </ul>
+        <a href="" class="partner-toggle"><span class="line"></span></a>
+      </div>
+
+      <!-- nav -->
+      <div class="partner-shade"></div>
+      <div class="partner-nav">
+        <ul>
+          <li class="active">
+            <a href="./?ap=list"> 파티관리</a>
+          </li>
+          <li>
+            <a href="./?ap=qalist"> 문의관리</a>
+          </li>
+          <li>
+            <a href="./?ap=saleitem"> 참여정보</a>
+          </li>
+          <li>
+            <a href="./?ap=order_cancel"> 취소요청</a>
+          </li>
+          <li>
+            <a href="./?ap=cancelitem"> 취소내역</a>
+          </li>
+          <li>
+            <a href="./?ap=paylist"> 출금관리</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- body -->
+      <div class="partner-body">
+        <div class="title"><span class="text-purple">출금</span> 관리</div>
+
+        <div class="form-half left">
+          <div class="table-list" style="border-top: 1px solid #7e69fe">
+            <table>
+              <thead>
+                <tr>
+                  <th width="26%" scope="col">구분</th>
+                  <th width="26%" scope="col">금액(원)</th>
+                  <th scope="col">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="subject">판매총액</span></td>
+                  <td>57,133,239</td>
+                  <td class="text-left"></td>
+                </tr>
+                <tr>
+                  <td><span class="subject">수수료</span></td>
+                  <td>5,713,323</td>
+                  <td class="text-left"><span class="lightgrey">누적적립금에서 판매수수료 10%가 부과됩니다.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="subject">누적적립금액</span></td>
+                  <td>5,713,323</td>
+                  <td class="text-left"><span class="lightgrey">(판매총액) - (수수료)</span></td>
+                </tr>
+                <tr>
+                  <td><span class="subject">지급금액</span></td>
+                  <td>5,713,323</td>
+                  <td class="text-left"><span class="lightgrey">신청금액 기준</span></td>
+                </tr>
+                <tr class="emphasis bg-grey">
+                  <td><span class="subject">출금 가능 금액</span></td>
+                  <td><span class="text-purple">5,713,323</span></td>
+                  <td class="text-left"></td>
+                </tr>
+                <tr>
+                  <td><span class="subject">지급 요청 금액</span></td>
+                  <td><span class="text-purple">5,713,323</span></td>
+                  <td class="text-left"><span class="lightgrey">0 이상의 잔액이 있어야 출금 가능합니다.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="form-half right form-half-withdraw">
+          <div class="table-list" style="border-top: 1px solid #7e69fe">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">정산/입금안내</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="subject">입금 계좌</span>
+                    <input type="text" class="account" placeholder="농협 8732-0204-056137" />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0">
+                    <p class="guide">
+                      <span class="lightgrey">※ 정산유형 : 개인 / 수수료 10%에 대한 세금계산서로 진행</span><br />
+                      <span class="lightgrey">※ 파티장은 판매 수수료 10%를 제한 금액에 대해 입금됩니다.</span>
+                    </p>
+                    <div class="withdraw-price">최대 <strong>51,854,469</strong>원까지 신청할 수 있습니다.</div>
+                    <div class="withdraw-account">
+                      <select name="" id="">
+                        <option value="">통장입금</option>
+                      </select>
+                      <input type="text" placeholder="출금할 금액을 입력해 주세요" />
+                      <span>원</span>
+                      <p class="guide">
+                        <span class="lightgrey">※ 신청금액은 1,000원 단위로 입력 할 수 있습니다. 하루에 한번 만 신청 할 수 있습니다.</span><br />
+                        <span class="lightgrey">※ 출금 신청 시 영업일 기준 <strong>최대 3일</strong>이 소요 될 수 있습니다. (토요일, 일요일, 공휴일 제외)</span>
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <a href="" class="button button-purple button-withdraw">출금 신청</a>
+
+        <div class="table-list scroll padding">
+          <table style="min-width: 1000px">
+            <!-- <colgroup>
+              <col style="width: 10%" />
+              <col style="width: 57%" />
+              <col style="width: 18%" />
+              <col style="width: 15%" />
+            </colgroup> -->
+            <thead>
+              <tr>
+                <!-- <th width="40" scope="col">
+                  <div class="input-check">
+                    <input type="checkbox" id="checkbox-all" />
+                    <label for="checkbox-all"></label>
+                  </div>
+                </th> -->
+                <th width="8%" scope="col">번호</th>
+                <th width="10%" scope="col">상태</th>
+                <th width="8%" scope="col">접수번호</th>
+                <th width="10%" scope="col">신청일</th>
+                <th width="10%" scope="col">출금방법</th>
+                <th width="12%" scope="col">정산유형</th>
+                <th width="10%" scope="col">신청금액</th>
+                <th width="10%" scope="col">실지급액</th>
+                <th scope="col">비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!-- <td></td> -->
+                <td><span class="lightgrey">423</span></td>
+                <td>완료</td>
+                <td><span class="lightgrey">423</span></td>
+                <td><span class="lightgrey">2020.12.12</span></td>
+                <td>통장입금</td>
+                <td>개인(원청징수)</td>
+                <td>50,000</td>
+                <td><span class="text-purple">50,000</span></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="page-number" style="border-top: 0">
+          <ul>
+            <li class="disabled">
+              <a><i class="fa fa-angle-double-left"></i></a>
+            </li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-left"></i></a>
+            </li>
+            <li class="active"><a>1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="disabled">
+              <a><i class="fa fa-angle-double-right"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="button-align left mg-top-0">
+          <a href="" class="button round border button-purple">선택삭제</a>
+          <a href="" class="button round border button-purple">선택종료</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
