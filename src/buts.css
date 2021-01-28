@@ -457,6 +457,10 @@ input[type='password']:disabled {
   display: none !important;
 }
 
+.mobile-table {
+  display: none !important;
+}
+
 .wrap {
   position: relative;
   overflow: hidden;
@@ -1085,6 +1089,9 @@ input[type='password']:disabled {
   }
   .mobile-inline {
     display: inline-block !important;
+  }
+  .mobile-table {
+    display: table-cell !important;
   }
   select {
     height: 28px;
@@ -2275,6 +2282,59 @@ a.header-login {
   overflow: hidden;
 }
 
+.item-row.item-row-my .item-date {
+  margin-top: 22px;
+}
+
+.item-row.item-row-my .item-members {
+  margin-top: 15px;
+}
+
+.item-row .item-state {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 20px;
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  line-height: 19px;
+  border-radius: 5px;
+  background-color: #fb4c16;
+}
+
+.item-row .item-tip {
+  position: relative;
+  height: 34px;
+}
+
+.item-row .item-tip .ttip:hover {
+  text-decoration: none;
+}
+
+.item-row .item-buttons {
+  position: relative;
+  z-index: 3;
+}
+
+.item-row .button {
+  width: calc(50% - 2px);
+}
+
+.item-row .button.button-purple:hover {
+  color: white;
+  background-color: #7e69fe;
+  border: 1px solid #7e69fe;
+}
+
+.item-row .button.button-red:hover {
+  color: white;
+  background-color: #fb4c16;
+  border: 1px solid #fb4c16;
+}
+
 .item-row:not(.disabled):hover {
   border: 1px solid #a89cf4;
 }
@@ -2691,6 +2751,20 @@ a.header-login {
     padding: 11px 10px;
     font-size: 10px;
     border-radius: 10px;
+  }
+  .item-row .item-state {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    height: 16px;
+    padding: 0 4px;
+    font-size: 10px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 5px;
+    background-color: #fb4c16;
   }
   .item-type {
     font-size: 12px;
@@ -3813,6 +3887,7 @@ a.header-login {
   }
   .form-list.border .subject {
     padding: 10px 0;
+    text-indent: -3px;
   }
   .form-list.border .contact {
     padding: 0 14px 10px 14px;
@@ -4843,10 +4918,6 @@ a.header-login {
           transform: rotate(45deg);
 }
 
-.dialog-title {
-  margin: 0 0 18px 0;
-}
-
 .dialog-para {
   font-size: 16px;
   font-weight: 300;
@@ -5084,7 +5155,7 @@ a.header-login {
 
 .dialog-reject {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   border-top: 1px solid #333333;
 }
 
@@ -5305,6 +5376,10 @@ a.header-login {
   text-align: center;
 }
 
+.popup-table {
+  margin-top: 30px;
+}
+
 .popup-table table {
   width: 100%;
 }
@@ -5404,6 +5479,13 @@ a.header-login {
   .dialog {
     padding: 20px 15px;
   }
+  .dialog-title {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .dialog-para {
+    font-size: 12px;
+  }
   .dialog-check input[type='checkbox'] + label {
     margin-bottom: 8px;
     padding-left: 24px;
@@ -5456,6 +5538,52 @@ a.header-login {
   }
   .dialog-pannel .Rajdhani {
     font-size: 22px;
+  }
+  .dialog-reject li {
+    height: 62px;
+  }
+  .dialog-reject .subject {
+    width: 100px;
+    height: 60px;
+    font-size: 11px;
+    line-height: 60px;
+  }
+  .dialog-cash {
+    width: 80%;
+  }
+  .dialog-cash .line {
+    height: 40px;
+    font-size: 13px;
+    line-height: 40px;
+  }
+  .dialog-cash .icon {
+    width: 14px;
+    height: 14px;
+  }
+  .dialog-cash .Rajdhani {
+    font-size: 18px;
+  }
+  .dialog-alert,
+  .dialog-lightgrey {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .dialog-upload {
+    margin: 10px auto;
+  }
+  .dialog-images li {
+    width: 60px;
+  }
+  .dialog-images .picture {
+    width: 60px;
+    height: 60px;
+  }
+  .dialog-caution {
+    font-size: 11px;
+  }
+  .popup-table {
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=buts.css.map */

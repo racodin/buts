@@ -457,6 +457,10 @@ input[type='password']:disabled {
   display: none !important;
 }
 
+.mobile-table {
+  display: none !important;
+}
+
 .wrap {
   position: relative;
   overflow: hidden;
@@ -1085,6 +1089,9 @@ input[type='password']:disabled {
   }
   .mobile-inline {
     display: inline-block !important;
+  }
+  .mobile-table {
+    display: table-cell !important;
   }
   select {
     height: 28px;
@@ -2441,6 +2448,7 @@ input[type='password']:disabled {
   }
   .form-list.border .subject {
     padding: 10px 0;
+    text-indent: -3px;
   }
   .form-list.border .contact {
     padding: 0 14px 10px 14px;
@@ -3015,6 +3023,10 @@ input[type='password']:disabled {
 }
 
 .mobile-inline {
+  display: none !important;
+}
+
+.mobile-table {
   display: none !important;
 }
 
@@ -3646,6 +3658,9 @@ input[type='password']:disabled {
   }
   .mobile-inline {
     display: inline-block !important;
+  }
+  .mobile-table {
+    display: table-cell !important;
   }
   select {
     height: 28px;
