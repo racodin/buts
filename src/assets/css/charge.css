@@ -115,8 +115,10 @@
 
 .accordion .right {
   position: absolute;
-  top: 23px;
+  top: 21px;
   right: 36px;
+  height: 34px;
+  line-height: 34px;
 }
 
 .accordion .right .button {
@@ -244,7 +246,7 @@
     left: 20px;
   }
   .accordion .right {
-    top: 9px;
+    top: 3px;
     right: 15px;
   }
   .accordion .right .button {

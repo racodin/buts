@@ -51,7 +51,7 @@
     }
   }
   strong {
-    font-weight: 500;
+    font-weight: 400;
     color: #333;
   }
   .button {
@@ -69,6 +69,14 @@
       font-weight: 400;
       color: #333333;
     }
+  }
+  .subject2 {
+    position: relative;
+    padding: 22px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    text-align: left;
   }
   .notice {
     padding-left: 44px;
@@ -96,6 +104,12 @@
     color: #333;
     vertical-align: -2px;
     letter-spacing: -1px;
+  }
+  .date {
+    font-size: 12px;
+    font-weight: 300;
+    color: #888888;
+    line-height: 14px;
   }
 }
 
@@ -303,9 +317,15 @@
     }
     .subject {
       padding: 13px 0 12px 0;
+      line-height: 16px;
       a {
         font-size: 12px;
       }
+    }
+    .subject2 {
+      padding: 15px 10px;
+      font-size: 12px;
+      line-height: 16px;
     }
     .notice {
       padding-left: 35px;
@@ -320,6 +340,9 @@
     .Rajdhani {
       font-size: 18px;
       vertical-align: -1px;
+    }
+    .date {
+      font-size: 10px;
     }
   }
   .table-list-payment {

@@ -154,8 +154,18 @@
   .item-tip {
     position: relative;
     height: 34px;
-    .ttip:hover {
-      text-decoration: none;
+    .ttip {
+      width: auto;
+      margin-left: 0;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .ttip-text {
+      top: auto;
+      bottom: 15px;
+      left: -5px;
+      width: 236px;
     }
   }
   .item-buttons {
@@ -558,6 +568,21 @@
     padding: 11px 10px;
     font-size: 10px;
     border-radius: 10px;
+    &.item-row-my {
+      .item-date {
+        margin-top: 10px;
+      }
+      .item-members {
+        margin-top: 10px;
+      }
+    }
+    .item-tip {
+      height: 26px;
+      .ttip-text {
+        width: 150px;
+        font-size: 10px;
+      }
+    }
     .item-state {
       position: absolute;
       top: 12px;

@@ -49,6 +49,77 @@
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body style="background-color: #efefef">
+    <!-- 빠른 메세지 보내기 -->
+    <div class="dialog dialog-quick-msg">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title" style="text-align: center"><span class="text-purple">빠른 메시지</span> 보내기</div>
+      <div class="dialog-body">
+        <div class="dialog-msg">
+          <p>요청 보내기</p>
+          <ul>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check01" />
+                <label for="msg-check01">다중 접속을 피해주시고 1인 1회선(1기기) 사용을 부탁 드립니다.</label>
+              </span>
+            </li>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check02" />
+                <label for="msg-check02">로그인 후 닉네임 설정은 벗츠에서 사용하는 닉네임으로 부탁 드립니다.</label>
+              </span>
+            </li>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check03" />
+                <label for="msg-check03">다른 사용자의 프로필 및 계정 설정을 임의로 변경하는 행위는 주의해 주세요.</label>
+              </span>
+            </li>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check04" />
+                <label for="msg-check04">계정은 본인 이외에 다른 사람에게 양도 및 노출이 불가합니다.</label>
+              </span>
+            </li>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check05" />
+                <label for="msg-check05">사정에 의해 서비스 진행에 어려운 상태입니다. [결제내역]에서 환불을 부탁 드립니다.</label>
+              </span>
+            </li>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check06" />
+                <label for="msg-check06">파티장에게 연락 부탁 드립니다. (카카오톡 : %아이디%, 연락처 : (%연락처%)</label>
+              </span>
+            </li>
+            <li>
+              <span class="input-check">
+                <input type="checkbox" id="msg-check07" />
+                <label for="msg-check07">계정 설정이 변경 되었습니다. 자세한 내용은 [내 파티보기] 에서 확인 가능합니다.</label>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="dialog-caution">
+          [벗츠 파티장 안내] <br />
+          안녕하세요. %파티분류%(no.%파티번호%) 파티장(%닉네임%)입니다.<br />
+          <strong>
+            ▶ 다중 접속을 피해주시고 1인 1회선(1기기) 사용을 부탁 드립니다.<br />
+            ▶ 계정은 본인 이외에 다른 사람에게 양도 및 노출이 불가합니다.
+          </strong>
+          ※ 해당 메시지는 벗츠에서 제공하는 문구로 전달 되었습니다. <br />
+          ※ 자세한 내용은 파티장 문의처 카카오톡 : %카카오톡아이디% / H : %연락처%를 통해 확인 가능합니다.
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button small">취소</a>
+        <a href="" class="button small button-purple">보내기</a>
+      </div>
+    </div>
+
+    <br />
+
     <!-- 환불 신청 STEP 1 -->
     <div class="dialog">
       <a href="" class="dialog-close"></a>

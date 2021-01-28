@@ -371,6 +371,7 @@
 }
 
 .dialog-title {
+  margin-top: 0;
   margin-bottom: 24px;
   font-size: 22px;
   color: #333333;
@@ -424,6 +425,38 @@
   font-size: 13px;
   font-weight: 300;
   color: #666666;
+}
+
+.dialog-msg {
+  position: relative;
+  padding: 25px 30px;
+  border: solid 1px #ececec;
+  border-top: 2px solid #7e69fe;
+}
+
+.dialog-msg P {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #252525;
+}
+
+.dialog-msg li {
+  padding: 3px 0;
+}
+
+.dialog-quick-msg .dialog-caution {
+  margin-top: 5px;
+  padding: 20px 30px;
+  border: solid 1px #ececec;
+  background-color: #f9f9f9;
+  color: #aaa;
+}
+
+.dialog-quick-msg .dialog-caution strong {
+  display: block;
+  margin: 10px 0;
+  color: #252525;
 }
 
 .popup {

@@ -43,6 +43,64 @@
   }
 }
 
+/* my point */
+.mypoint {
+  position: relative;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ececec;
+  .picture {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #efefef;
+  }
+  .name {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #333333;
+    vertical-align: middle;
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 27px 30px;
+  }
+  .icon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+  .text {
+    position: relative;
+    top: -2px;
+    font-size: 18px;
+    color: #555555;
+    vertical-align: middle;
+  }
+  .price {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #7e69fe;
+    vertical-align: middle;
+  }
+  .button {
+    margin-left: 20px;
+    padding: 0 20px;
+    vertical-align: middle;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .inquiry {
     .guide {
@@ -63,6 +121,39 @@
     a {
       padding: 5px 10px;
       font-size: 12px;
+    }
+  }
+  .mypoint {
+    padding: 10px 15px;
+    .picture {
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+    }
+    .name {
+      margin-left: 6px;
+      font-size: 12px;
+    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 12px 15px;
+    }
+    .icon {
+      top: -2px;
+      width: 18px;
+      height: 18px;
+    }
+    .text {
+      font-size: 12px;
+    }
+    .price {
+      margin-left: 6px;
+      font-size: 16px;
+    }
+    .button {
+      margin-left: 6px;
     }
   }
 }
