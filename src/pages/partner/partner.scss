@@ -144,6 +144,18 @@
     line-height: 38px;
     vertical-align: middle;
   }
+  .calendar {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 2px;
+    .icon {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      color: #7e69fe;
+    }
+  }
 }
 
 .partner-calendar {

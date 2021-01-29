@@ -156,7 +156,7 @@ video {
   max-width: 100%;
 }
 
-select {
+select:not(.ui-datepicker-title select) {
   height: 38px;
   padding: 0 10px;
   font-size: 14px;
@@ -434,7 +434,7 @@ input[type='password']:disabled {
 }
 
 .text-red {
-  color: #fb4c16;
+  color: #fb4c16 !important;
 }
 
 .pc-block {
@@ -1364,7 +1364,7 @@ input[type='password']:disabled {
 }
 
 .table-list strong {
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
 }
 
@@ -1385,6 +1385,15 @@ input[type='password']:disabled {
   font-size: 16px;
   font-weight: 400;
   color: #333333;
+}
+
+.table-list .subject2 {
+  position: relative;
+  padding: 22px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  text-align: left;
 }
 
 .table-list .notice {
@@ -1415,6 +1424,13 @@ input[type='password']:disabled {
   color: #333;
   vertical-align: -2px;
   letter-spacing: -1px;
+}
+
+.table-list .date {
+  font-size: 12px;
+  font-weight: 300;
+  color: #888888;
+  line-height: 14px;
 }
 
 .table-list-payment {
@@ -1644,9 +1660,15 @@ input[type='password']:disabled {
   }
   .table-list .subject {
     padding: 13px 0 12px 0;
+    line-height: 16px;
   }
   .table-list .subject a {
     font-size: 12px;
+  }
+  .table-list .subject2 {
+    padding: 15px 10px;
+    font-size: 12px;
+    line-height: 16px;
   }
   .table-list .notice {
     padding-left: 35px;
@@ -1661,6 +1683,9 @@ input[type='password']:disabled {
   .table-list .Rajdhani {
     font-size: 18px;
     vertical-align: -1px;
+  }
+  .table-list .date {
+    font-size: 10px;
   }
   .table-list-payment {
     border-top: 1px solid #ececec;
@@ -2725,7 +2750,7 @@ video {
   max-width: 100%;
 }
 
-select {
+select:not(.ui-datepicker-title select) {
   height: 38px;
   padding: 0 10px;
   font-size: 14px;
@@ -3003,7 +3028,7 @@ input[type='password']:disabled {
 }
 
 .text-red {
-  color: #fb4c16;
+  color: #fb4c16 !important;
 }
 
 .pc-block {
@@ -4244,6 +4269,7 @@ input[type='password']:disabled {
 }
 
 .dialog-title {
+  margin-top: 0;
   margin-bottom: 24px;
   font-size: 22px;
   color: #333333;
@@ -4297,6 +4323,38 @@ input[type='password']:disabled {
   font-size: 13px;
   font-weight: 300;
   color: #666666;
+}
+
+.dialog-msg {
+  position: relative;
+  padding: 25px 30px;
+  border: solid 1px #ececec;
+  border-top: 2px solid #7e69fe;
+}
+
+.dialog-msg P {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #252525;
+}
+
+.dialog-msg li {
+  padding: 3px 0;
+}
+
+.dialog-quick-msg .dialog-caution {
+  margin-top: 5px;
+  padding: 20px 30px;
+  border: solid 1px #ececec;
+  background-color: #f9f9f9;
+  color: #aaa;
+}
+
+.dialog-quick-msg .dialog-caution strong {
+  display: block;
+  margin: 10px 0;
+  color: #252525;
 }
 
 .popup {
@@ -4740,6 +4798,20 @@ input[type='password']:disabled {
   margin: 0 2px;
   line-height: 38px;
   vertical-align: middle;
+}
+
+.partner-well .calendar {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0 2px;
+}
+
+.partner-well .calendar .icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #7e69fe;
 }
 
 .partner-calendar {
