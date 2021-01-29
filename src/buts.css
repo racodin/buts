@@ -434,7 +434,7 @@ input[type='password']:disabled {
 }
 
 .text-red {
-  color: #fb4c16;
+  color: #fb4c16 !important;
 }
 
 .pc-block {
@@ -1830,6 +1830,10 @@ a.header-login {
   .header-profile .name {
     margin-top: 12px;
   }
+  .header-profile .grade .ttip {
+    top: -1px;
+    margin-left: 3px;
+  }
   .header-menu .sub-menu {
     position: absolute;
     top: 40px;
@@ -2102,6 +2106,70 @@ a.header-login {
 }
 
 /* my point */
+.mypoint {
+  position: relative;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ececec;
+}
+
+.mypoint .picture {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #efefef;
+}
+
+.mypoint .name {
+  margin-left: 15px;
+  font-size: 18px;
+  color: #333333;
+  vertical-align: middle;
+}
+
+.mypoint .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 27px 30px;
+}
+
+.mypoint .icon {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.mypoint .text {
+  position: relative;
+  top: -2px;
+  font-size: 18px;
+  color: #555555;
+  vertical-align: middle;
+}
+
+.mypoint .price {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7e69fe;
+  vertical-align: middle;
+}
+
+.mypoint .button {
+  margin-left: 20px;
+  padding: 0 20px;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 960px) {
   .inquiry .guide {
     padding: 4px 0;
@@ -2121,6 +2189,39 @@ a.header-login {
   .faq-tab a {
     padding: 5px 10px;
     font-size: 12px;
+  }
+  .mypoint {
+    padding: 10px 15px;
+  }
+  .mypoint .picture {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  .mypoint .name {
+    margin-left: 6px;
+    font-size: 12px;
+  }
+  .mypoint .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 15px;
+  }
+  .mypoint .icon {
+    top: -2px;
+    width: 18px;
+    height: 18px;
+  }
+  .mypoint .text {
+    font-size: 12px;
+  }
+  .mypoint .price {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+  .mypoint .button {
+    margin-left: 6px;
   }
 }
 
@@ -2311,8 +2412,20 @@ a.header-login {
   height: 34px;
 }
 
+.item-row .item-tip .ttip {
+  width: auto;
+  margin-left: 0;
+}
+
 .item-row .item-tip .ttip:hover {
   text-decoration: none;
+}
+
+.item-row .item-tip .ttip-text {
+  top: auto;
+  bottom: 15px;
+  left: -5px;
+  width: 236px;
 }
 
 .item-row .item-buttons {
@@ -2752,6 +2865,19 @@ a.header-login {
     padding: 11px 10px;
     font-size: 10px;
     border-radius: 10px;
+  }
+  .item-row.item-row-my .item-date {
+    margin-top: 10px;
+  }
+  .item-row.item-row-my .item-members {
+    margin-top: 10px;
+  }
+  .item-row .item-tip {
+    height: 26px;
+  }
+  .item-row .item-tip .ttip-text {
+    width: 150px;
+    font-size: 10px;
   }
   .item-row .item-state {
     position: absolute;
@@ -4191,7 +4317,7 @@ a.header-login {
 }
 
 .table-list strong {
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
 }
 
@@ -4212,6 +4338,15 @@ a.header-login {
   font-size: 16px;
   font-weight: 400;
   color: #333333;
+}
+
+.table-list .subject2 {
+  position: relative;
+  padding: 22px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  text-align: left;
 }
 
 .table-list .notice {
@@ -4242,6 +4377,13 @@ a.header-login {
   color: #333;
   vertical-align: -2px;
   letter-spacing: -1px;
+}
+
+.table-list .date {
+  font-size: 12px;
+  font-weight: 300;
+  color: #888888;
+  line-height: 14px;
 }
 
 .table-list-payment {
@@ -4471,9 +4613,15 @@ a.header-login {
   }
   .table-list .subject {
     padding: 13px 0 12px 0;
+    line-height: 16px;
   }
   .table-list .subject a {
     font-size: 12px;
+  }
+  .table-list .subject2 {
+    padding: 15px 10px;
+    font-size: 12px;
+    line-height: 16px;
   }
   .table-list .notice {
     padding-left: 35px;
@@ -4488,6 +4636,9 @@ a.header-login {
   .table-list .Rajdhani {
     font-size: 18px;
     vertical-align: -1px;
+  }
+  .table-list .date {
+    font-size: 10px;
   }
   .table-list-payment {
     border-top: 1px solid #ececec;
@@ -4707,8 +4858,10 @@ a.header-login {
 
 .accordion .right {
   position: absolute;
-  top: 23px;
+  top: 21px;
   right: 36px;
+  height: 34px;
+  line-height: 34px;
 }
 
 .accordion .right .button {
@@ -4836,7 +4989,7 @@ a.header-login {
     left: 20px;
   }
   .accordion .right {
-    top: 9px;
+    top: 3px;
     right: 15px;
   }
   .accordion .right .button {
@@ -4859,6 +5012,9 @@ a.header-login {
   .accordion .benefit {
     margin-right: 8px;
   }
+  .charge-tab {
+    word-break: keep-all;
+  }
   .charge-tab a {
     height: auto;
     padding: 10px 10px 14px 10px;
@@ -4866,7 +5022,7 @@ a.header-login {
   }
   .charge-tab .lightgrey {
     margin-top: 4px;
-    font-size: 11px;
+    font-size: 9px;
     line-height: 12px;
   }
 }
@@ -5244,6 +5400,7 @@ a.header-login {
 }
 
 .dialog-title {
+  margin-top: 0;
   margin-bottom: 24px;
   font-size: 22px;
   color: #333333;
@@ -5297,6 +5454,38 @@ a.header-login {
   font-size: 13px;
   font-weight: 300;
   color: #666666;
+}
+
+.dialog-msg {
+  position: relative;
+  padding: 25px 30px;
+  border: solid 1px #ececec;
+  border-top: 2px solid #7e69fe;
+}
+
+.dialog-msg P {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #252525;
+}
+
+.dialog-msg li {
+  padding: 3px 0;
+}
+
+.dialog-quick-msg .dialog-caution {
+  margin-top: 5px;
+  padding: 20px 30px;
+  border: solid 1px #ececec;
+  background-color: #f9f9f9;
+  color: #aaa;
+}
+
+.dialog-quick-msg .dialog-caution strong {
+  display: block;
+  margin: 10px 0;
+  color: #252525;
 }
 
 .popup {

@@ -496,6 +496,10 @@ a.header-login {
   .header-profile .name {
     margin-top: 12px;
   }
+  .header-profile .grade .ttip {
+    top: -1px;
+    margin-left: 3px;
+  }
   .header-menu .sub-menu {
     position: absolute;
     top: 40px;

@@ -269,6 +269,9 @@
   .accordion .benefit {
     margin-right: 8px;
   }
+  .charge-tab {
+    word-break: keep-all;
+  }
   .charge-tab a {
     height: auto;
     padding: 10px 10px 14px 10px;
@@ -276,7 +279,7 @@
   }
   .charge-tab .lightgrey {
     margin-top: 4px;
-    font-size: 11px;
+    font-size: 9px;
     line-height: 12px;
   }
 }

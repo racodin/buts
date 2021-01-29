@@ -246,6 +246,7 @@
     }
   }
   .charge-tab {
+    word-break: keep-all;
     a {
       height: auto;
       padding: 10px 10px 14px 10px;
@@ -253,7 +254,7 @@
     }
     .lightgrey {
       margin-top: 4px;
-      font-size: 11px;
+      font-size: 9px;
       line-height: 12px;
     }
   }
