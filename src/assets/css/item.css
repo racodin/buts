@@ -841,6 +841,11 @@
   .item-row .item-tip {
     height: 26px;
   }
+  .item-row .item-tip img {
+    width: 12px;
+    height: 11px;
+    margin-top: -1px;
+  }
   .item-row .item-tip .ttip-text {
     width: 150px;
     font-size: 10px;

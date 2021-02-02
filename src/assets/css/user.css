@@ -150,9 +150,10 @@
     padding: 12px 15px;
   }
   .mypoint .icon {
-    top: -2px;
+    top: -4px;
     width: 18px;
     height: 18px;
+    margin-right: 0;
   }
   .mypoint .text {
     font-size: 12px;

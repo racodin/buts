@@ -758,6 +758,11 @@
     }
     .item-tip {
       height: 26px;
+      img {
+        width: 12px;
+        height: 11px;
+        margin-top: -1px;
+      }
       .ttip-text {
         width: 150px;
         font-size: 10px;
