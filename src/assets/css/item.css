@@ -540,6 +540,10 @@
   text-align: center;
 }
 
+.item-view-user li:hover .item-view-menu {
+  display: block;
+}
+
 .item-view-user .picture {
   position: relative;
   display: block;
@@ -558,6 +562,32 @@
   font-size: 13px;
   font-weight: 300;
   color: #999;
+}
+
+.item-view-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 120px;
+  padding: 10px 0;
+  margin: -20px 0 0 0px;
+  background-color: white;
+  border: solid 1px #cdccd6;
+  z-index: 1;
+}
+
+.item-view-menu a {
+  position: relative;
+  display: block;
+  padding: 3px 20px;
+  font-size: 14px;
+  text-align: left;
+  color: #555555;
+}
+
+.item-view-menu a:hover {
+  color: #7e69fe;
 }
 
 .item-view-caution {
@@ -829,6 +859,15 @@
   }
   .item-view-check {
     padding: 12px;
+  }
+  .item-view-menu {
+    width: 80px;
+    margin: 10px 0 0 -40px;
+    padding: 6px 0;
+  }
+  .item-view-menu a {
+    padding: 3px 10px;
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=item.css.map */

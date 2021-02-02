@@ -476,6 +476,11 @@
     width: 212px;
     padding: 30px 0;
     text-align: center;
+    &:hover {
+      .item-view-menu {
+        display: block;
+      }
+    }
   }
   .picture {
     position: relative;
@@ -493,6 +498,30 @@
     font-size: 13px;
     font-weight: 300;
     color: #999;
+  }
+}
+
+.item-view-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 120px;
+  padding: 10px 0;
+  margin: -20px 0 0 0px;
+  background-color: white;
+  border: solid 1px #cdccd6;
+  z-index: 1;
+  a {
+    position: relative;
+    display: block;
+    padding: 3px 20px;
+    font-size: 14px;
+    text-align: left;
+    color: #555555;
+    &:hover {
+      color: #7e69fe;
+    }
   }
 }
 
@@ -761,5 +790,14 @@
   }
   .item-view-check {
     padding: 12px;
+  }
+  .item-view-menu {
+    width: 80px;
+    margin: 10px 0 0 -40px;
+    padding: 6px 0;
+    a {
+      padding: 3px 10px;
+      font-size: 11px;
+    }
   }
 }
