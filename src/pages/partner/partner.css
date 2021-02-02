@@ -156,7 +156,7 @@ video {
   max-width: 100%;
 }
 
-select:not(.ui-datepicker-title select) {
+select {
   height: 38px;
   padding: 0 10px;
   font-size: 14px;
@@ -2750,7 +2750,7 @@ video {
   max-width: 100%;
 }
 
-select:not(.ui-datepicker-title select) {
+select {
   height: 38px;
   padding: 0 10px;
   font-size: 14px;
@@ -4540,7 +4540,6 @@ input[type='password']:disabled {
   }
   .dialog-title {
     margin-bottom: 15px;
-    font-size: 14px;
   }
   .dialog-para {
     font-size: 12px;
@@ -4803,8 +4802,11 @@ input[type='password']:disabled {
 .partner-well .calendar {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 120px;
   margin: 0 2px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .partner-well .calendar .icon {
@@ -4929,7 +4931,19 @@ input[type='password']:disabled {
   color: #888888;
 }
 
-.table-list .withdraw-price {
+.table-list .reply {
+  padding-left: 70px;
+  text-align: left;
+}
+
+.table-list .reply p {
+  margin: 0;
+  padding: 20px 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ececec;
+}
+
+.withdraw-price {
   height: 52px;
   margin-top: 8px;
   color: white;
@@ -4937,23 +4951,23 @@ input[type='password']:disabled {
   background-color: #7e69fe;
 }
 
-.table-list .withdraw-price strong {
+.withdraw-price strong {
   color: #ffff00;
   font-weight: 300;
 }
 
-.table-list .withdraw-account {
+.withdraw-account {
   padding: 15px 15px 0px 15px;
   border: solid 1px #cec8f1;
   border-top: 0;
   background-color: #f9f9f9;
 }
 
-.table-list .withdraw-account select {
+.withdraw-account select {
   width: 160px;
 }
 
-.table-list .withdraw-account input[type='text'] {
+.withdraw-account input[type='text'] {
   width: calc(100% - 190px);
   text-align: right;
 }
@@ -5034,6 +5048,11 @@ input[type='password']:disabled {
   max-width: 46px;
 }
 
+select[class*='ui-datepicker'] {
+  height: auto;
+  padding: 0;
+}
+
 @media (max-width: 1280px) {
   .partner-body {
     padding: 80px 20px 20px 240px;
@@ -5049,6 +5068,14 @@ input[type='password']:disabled {
   }
   .partner-well .search {
     width: calc(100% - 416px);
+  }
+  .partner-well .calendar {
+    width: calc(50% - 4px);
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .partner-well .calendar:first-child {
+    margin-right: 4px;
   }
   .partner-calendar {
     width: calc(50% - 3px);
@@ -5080,6 +5107,7 @@ input[type='password']:disabled {
   .partner-nav {
     top: 50px;
     height: calc(100% - 50px);
+    border-right: 0;
   }
   .partner-nav li a {
     padding: 12px 15px;
@@ -5112,7 +5140,7 @@ input[type='password']:disabled {
   .partner-well {
     margin: 0 0 0 -15px;
     width: calc(100% + 30px);
-    padding: 10px 15px;
+    padding: 10px;
     border: 0;
     border-bottom: 1px solid #cec8f1;
   }
@@ -5127,11 +5155,18 @@ input[type='password']:disabled {
   .partner-well .search {
     width: calc(100% - 276px);
   }
+  .partner-well .calendar .icon {
+    top: 4px;
+  }
   .partner-fomr-list.border .button.round {
     height: 20px;
     padding: 0 7px;
     font-size: 10px;
     line-height: 20px;
+  }
+  .partner-fomr-list.border .input-check {
+    margin: 4px 0;
+    margin-right: 10px;
   }
   .button-withdraw {
     height: 40px;
@@ -5140,6 +5175,13 @@ input[type='password']:disabled {
   }
   .form-half-withdraw {
     margin-top: 20px;
+  }
+  .withdraw-price {
+    height: 40px;
+    line-height: 40px;
+  }
+  .table-list .guide {
+    line-height: 16px;
   }
 }
 /*# sourceMappingURL=partner.css.map */

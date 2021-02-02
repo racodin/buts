@@ -49,6 +49,54 @@
     <script src="../../assets/js/buts.js"></script>
   </head>
   <body style="background-color: #efefef">
+    <!-- 파트너 신청 -->
+    <div class="dialog" style="border-top: 2px solid #7e69fe">
+      <a href="" class="dialog-close"></a>
+      <div class="dialog-title"><span class="text-purple">파트너</span> 신청</div>
+      <div class="dialog-body" style="padding-top: 30px; border-top: 1px solid #333">
+        <ul class="dialog-form">
+          <li>
+            <span class="subject">ㆍ 모집유형</span>
+            <select style="width: 100%; max-width: 200px">
+              <option value="">선택</option>
+            </select>
+          </li>
+          <li>
+            <span class="subject">ㆍ 이름</span>
+            <input type="text" placeholder="이름" style="width: 100%; max-width: 200px" />
+          </li>
+          <li>
+            <span class="subject">ㆍ 연락처</span>
+            <input type="text" placeholder="연락처를 입력해 주세요." style="width: 100%; max-width: 200px" />
+          </li>
+          <li>
+            <span class="subject">ㆍ 출금계좌 입력</span>
+            <select style="width: 100%; max-width: 200px">
+              <option value="">선택</option>
+            </select>
+            <input type="text" placeholder="이름" style="width: 100%; max-width: 200px" />
+          </li>
+        </ul>
+        <div class="dialog-caution">
+          <ul style="padding-left: 10px; list-style: '- '">
+            <li>파티원 모집 시 10%의 판매 수수료가 발생되며, 출금시 차감되어 출금됩니다.<br />(수수료 10%에 대해서는 세금계산서가 발행 됩니다.)</li>
+            <li>출금 신청 시 입력 된 계좌로 출금되며, ‘벗츠’에서 인증 된 실명과 다를 경우 출금이 지연 될 수 있습니다.</li>
+            <li>벗츠는 통신판매중개자이며, 통신판매 당사자가 아닙니다. 파티(상품)관리 권한 및 관리 책임은 판매자에게 있습니다.</li>
+            <li>판매자 귀책사유로 분쟁이 발생된 경우 해결해야 할 책임이 있으며, 분쟁이 지속 되는 경우 벗츠정책에 따라 진행됩니다.</li>
+          </ul>
+        </div>
+        <div class="input-check" style="margin-top: 5px">
+          <input type="checkbox" id="partner-agree" />
+          <label for="partner-agree">서비스 제공자의 가입약관과 상기 정보제공에 동의합니다.</label>
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <a href="" class="button small button-purple">파트너 가입</a>
+      </div>
+    </div>
+
+    <br />
+
     <!-- 빠른 메세지 보내기 -->
     <div class="dialog dialog-quick-msg">
       <a href="" class="dialog-close"></a>

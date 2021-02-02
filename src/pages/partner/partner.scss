@@ -147,8 +147,9 @@
   .calendar {
     position: relative;
     display: inline-block;
-    width: 100%;
+    width: 120px;
     margin: 0 2px;
+    flex: none;
     .icon {
       position: absolute;
       top: 8px;
@@ -260,29 +261,41 @@
     text-align: left;
     color: #888888;
   }
-  .withdraw-price {
-    height: 52px;
-    margin-top: 8px;
-    color: white;
-    line-height: 52px;
-    background-color: #7e69fe;
-    strong {
-      color: #ffff00;
-      font-weight: 300;
+  .reply {
+    padding-left: 70px;
+    text-align: left;
+    p {
+      margin: 0;
+      padding: 20px 10px;
+      font-size: 16px;
+      border-bottom: 1px solid #ececec;
     }
   }
-  .withdraw-account {
-    padding: 15px 15px 0px 15px;
-    border: solid 1px #cec8f1;
-    border-top: 0;
-    background-color: #f9f9f9;
-    select {
-      width: 160px;
-    }
-    input[type='text'] {
-      width: calc(100% - 190px);
-      text-align: right;
-    }
+}
+
+.withdraw-price {
+  height: 52px;
+  margin-top: 8px;
+  color: white;
+  line-height: 52px;
+  background-color: #7e69fe;
+  strong {
+    color: #ffff00;
+    font-weight: 300;
+  }
+}
+
+.withdraw-account {
+  padding: 15px 15px 0px 15px;
+  border: solid 1px #cec8f1;
+  border-top: 0;
+  background-color: #f9f9f9;
+  select {
+    width: 160px;
+  }
+  input[type='text'] {
+    width: calc(100% - 190px);
+    text-align: right;
   }
 }
 
@@ -351,6 +364,11 @@
   }
 }
 
+select[class*='ui-datepicker'] {
+  height: auto;
+  padding: 0;
+}
+
 @media (max-width: 1280px) {
   .partner-body {
     padding: 80px 20px 20px 240px;
@@ -364,6 +382,14 @@
     }
     .search {
       width: calc(100% - 416px);
+    }
+    .calendar {
+      width: calc(50% - 4px);
+      margin: 0;
+      margin-bottom: 4px;
+      &:first-child {
+        margin-right: 4px;
+      }
     }
   }
   .partner-calendar {
@@ -401,6 +427,7 @@
   .partner-nav {
     top: 50px;
     height: calc(100% - 50px);
+    border-right: 0;
     li {
       a {
         padding: 12px 15px;
@@ -438,7 +465,7 @@
   .partner-well {
     margin: 0 0 0 -15px;
     width: calc(100% + 30px);
-    padding: 10px 15px;
+    padding: 10px;
     border: 0;
     border-bottom: 1px solid #cec8f1;
     select {
@@ -452,6 +479,11 @@
     .search {
       width: calc(100% - 276px);
     }
+    .calendar {
+      .icon {
+        top: 4px;
+      }
+    }
   }
   .partner-fomr-list.border {
     .button.round {
@@ -459,6 +491,10 @@
       padding: 0 7px;
       font-size: 10px;
       line-height: 20px;
+    }
+    .input-check {
+      margin: 4px 0;
+      margin-right: 10px;
     }
   }
   .button-withdraw {
@@ -468,5 +504,14 @@
   }
   .form-half-withdraw {
     margin-top: 20px;
+  }
+  .withdraw-price {
+    height: 40px;
+    line-height: 40px;
+  }
+  .table-list {
+    .guide {
+      line-height: 16px;
+    }
   }
 }
