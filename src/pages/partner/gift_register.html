@@ -89,11 +89,14 @@
             <a href="./?ap=paylist"> 출금관리</a>
           </li>
         </ul>
+        <div class="partner-nav-modify">
+          <a href="" class="button round button-purple">파트너 정보변경</a>
+        </div>
       </div>
 
       <!-- body -->
       <div class="partner-body">
-        <div class="title"><span class="text-purple">파티/판매</span> 등록</div>
+        <div class="title"><span class="text-purple">기프트/이용권</span> 등록</div>
 
         <div class="form-list">
           <div class="form-list border partner-fomr-list">
@@ -101,17 +104,15 @@
               <li>
                 <div class="subject">ㆍ 서비스</div>
                 <select name="" id="" class="width-200">
-                  <option value="">넷플릭스</option>
-                  <option value="">웨이브</option>
+                  <option value="">이용권</option>
                 </select>
                 <select name="" id="" class="width-200">
-                  <option value="">넷플릭스</option>
-                  <option value="">웨이브</option>
+                  <option value="">서비스 선택</option>
                 </select>
                 <a href="" class="button round mini button-purple">벗츠 UP</a>
                 <a href="" class="ttip">
                   <img src="/src/assets/css/img/tip.png" alt="" />
-                  <span class="ttip-text" style="right: -29px; width: 160px">첫 가입시 3등급이며, 벗츠 사용도 및 거래 점수에 따라 등급이 변할 수 있습니다.</span>
+                  <span class="ttip-text" style="right: -29px; width: 160px">??</span>
                 </a>
               </li>
               <li>
@@ -119,31 +120,62 @@
                 <input type="text" class="width-400" placeholder="제목을 입력해 주세요" />
               </li>
               <li>
-                <div class="subject">ㆍ 참가인원</div>
+                <div class="subject">ㆍ 수량</div>
                 <select name="" id="" class="width-100">
-                  <option value="">인원수</option>
+                  <option value="">수량</option>
                 </select>
-                명
+                <span class="lightgrey">최대 20개 까지 등록이 가능합니다. </span>
+              </li>
+              <li>
+                <div class="subject">ㆍ 리스트 이미지</div>
+                <div class="pd-tb">
+                  <span class="input-file">
+                    <label class="button round border button-purple" for="file-upload1">파일 선택</label>
+                    <input type="file" id="file-upload1" onchange="$('.file-name1').val(window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop());" />
+                    <input class="file-name file-name1" value="선택된 파일 없음" disabled="disabled" />
+                  </span>
+                  <div class="lightgrey">이미지는 120px X 120px 사이즈에 최적화 / gif, jpg, png 파일만 가능하며 용량 5MB 이하만 등록됩니다.</div>
+                </div>
+              </li>
+              <li>
+                <div class="subject">ㆍ 상세 이미지</div>
+                <div class="pd-tb">
+                  <span class="input-file">
+                    <label class="button round border button-purple" for="file-upload2">파일 선택</label>
+                    <input type="file" id="file-upload2" onchange="$('.file-name2').val(window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop());" />
+                    <input class="file-name file-name2" value="선택된 파일 없음" disabled="disabled" />
+                  </span>
+                  <div class="lightgrey">이미지는 480px X 480px 사이즈에 최적화 / gif, jpg, png 파일만 가능하며 용량 5MB 이하만 등록됩니다.</div>
+                </div>
               </li>
               <li>
                 <div class="subject">
-                  ㆍ 진행 형태
+                  ㆍ 전달 방법
                   <a href="" class="ttip">
                     <img src="/src/assets/css/img/tip.png" alt="" />
-                    <span class="ttip-text" style="right: -70px; width: 160px">????</span>
+                    <span class="ttip-text" style="right: -70px; width: 160px">???</span>
                   </a>
                 </div>
                 <span class="input-check">
-                  <input type="radio" name="account-type" id="account-type1" />
-                  <label for="account-type1">직접 입력</label>
+                  <input type="radio" name="radio-type" id="radio-type1" />
+                  <label for="radio-type1">이용권(쿠폰) 번호</label>
                 </span>
                 <span class="input-check">
-                  <input type="radio" name="account-type" id="account-type2" />
-                  <label for="account-type2">회선 참여형 공유</label>
+                  <input type="radio" name="radio-type" id="radio-type2" />
+                  <label for="radio-type2">이메일 전달</label>
                 </span>
-                <div>
-                  <input type="text" class="width-200" placeholder="아이디(이메일)" />
-                  <input type="password" class="width-200" placeholder="패스워드" />
+                <span class="input-check">
+                  <input type="radio" name="radio-type" id="radio-type3" />
+                  <label for="radio-type3">SMS 전달</label>
+                </span>
+                <span class="input-check">
+                  <input type="radio" name="radio-type" id="radio-type4" />
+                  <label for="radio-type4">기타</label>
+                </span>
+                <div class="width-400">
+                  <input type="text" placeholder="사용가능한 이용권(쿠폰) 코드를 입력해 주세요" />
+                  <input type="text" placeholder="사용가능한 이용권(쿠폰) 코드를 입력해 주세요" />
+                  <input type="text" placeholder="사용가능한 이용권(쿠폰) 코드를 입력해 주세요" />
                 </div>
               </li>
               <li>
@@ -162,43 +194,39 @@
                 </div>
               </li>
               <li>
-                <div class="subject w100">ㆍ 진행 기간</div>
-                <input type="text" class="width-50" placeholder="" />
-                일 동안 진행가능
-                <a href="" class="button round button-purple">종료일 확인</a>
-                <div>
-                  <span class="input-check" style="margin-right: 0">
-                    <input type="checkbox" id="expiration" />
-                    <label for="expiration">사용만료 후 연장 가능</label>
-                  </span>
-                  <a href="" class="ttip">
-                    <img src="/src/assets/css/img/tip.png" alt="" />
-                    <span class="ttip-text" style="right: -144px; width: 320px"> 진행 중인 파티가 끝나기전 파티원들이 참여 할 수 있는 예약 파티방을 추가로 개설 할 수 있으며, 기존 파티원에게 우선 공개 및 결제를 진행 할 수 있습니다. 실제로 시작되는 날짜로 비용은 계산되며, 예약방 모집이 모두 안된 경우 공개 모집으로 전환 됩니다. 예약 신청 및 진행은 [내 파티보기] 페이지에서 확인 가능합니다. </span>
-                  </a>
-                </div>
+                <div class="subject w100">ㆍ 이용 기간</div>
+                <span class="calendar">
+                  <span class="icon"><i class="fa fa-calendar"></i></span>
+                  <input type="text" name="fr_date" value="" id="fr_date" size="8" maxlength="8" readonly placeholder="시작일" />
+                </span>
+                ~
+                <span class="calendar">
+                  <span class="icon"><i class="fa fa-calendar"></i></span>
+                  <input type="text" name="to_date" value="" id="to_date" size="8" maxlength="8" readonly placeholder="종료일" />
+                </span>
               </li>
               <li>
-                <div class="subject w100">ㆍ 참여 금액</div>
-                1인 당 1일
+                <div class="subject w100">ㆍ 구매 금액</div>
+                수량 1개 당
                 <input type="text" class="width-100" placeholder="" />
-                원 * 예상 총 수령 금액
+                원
+                <a href="" class="button round border button-purple">예상 총 수령 금액</a>
                 <span class="text-purple">0원</span>
-                <a href="" class="button round button-purple">금액 확인하기</a>
-                <span class="lightgrey">(판매수수료가 제외된 금액입니다.)</span>
+                <span class="lightgrey">판매수수료가 제외된 금액입니다.</span>
               </li>
               <li>
                 <div class="subject w100">ㆍ 기본 규칙</div>
                 <div class="input-check">
                   <input type="checkbox" id="rule1" />
-                  <label for="rule1">19세 이상</label>
+                  <label for="rule1">디지털 코드 특성상 단순 변심에 의한 환불은 불가합니다</label>
                 </div>
                 <div class="input-check">
                   <input type="checkbox" id="rule2" />
-                  <label for="rule2">1인 1회선</label>
+                  <label for="rule2">24시간 이내 등록 (미등록 시 환불 불가)</label>
                 </div>
                 <div class="input-check">
                   <input type="checkbox" id="rule3" />
-                  <label for="rule3">1인 1기기 등록 </label>
+                  <label for="rule3">7일 이내 등록 (미등록 시 환불 불가)</label>
                 </div>
               </li>
               <li>

@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility;
   background-attachment: fixed;
+  word-break: keep-all;
 }
 
 ul {
@@ -628,14 +629,13 @@ input[type='password'] {
     padding: 8px 10px;
     font-size: 12px;
     font-weight: 300;
-    color: #7e69fe;
+    color: #8a84ae;
     word-break: keep-all;
     line-height: 16px;
     border: 1px solid #d5d0f5;
     background-color: #f4f3fc;
     border-radius: 2px;
   }
-
   &:hover {
     .ttip-text {
       display: block;
@@ -796,6 +796,17 @@ input[type='password'] {
   p {
     font-size: 16px;
     color: #aaa;
+  }
+}
+
+.list-style {
+  &.dot {
+    margin-left: 13px;
+    list-style: 'ㆍ ';
+  }
+  &.dash {
+    margin-left: 10px;
+    list-style: '- ';
   }
 }
 
@@ -1060,6 +1071,15 @@ input[type='password'] {
       font-size: 11px;
     }
   }
+  .list-style {
+    &.dot {
+      margin-left: 10px;
+    }
+    &.dash {
+      margin-left: 7px;
+    }
+  }
+
   .sns-share-icon {
     margin: 30px 0 15px 0;
     img {

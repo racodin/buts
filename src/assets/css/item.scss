@@ -37,18 +37,6 @@
     .item-list {
       white-space: nowrap;
     }
-    .item-date {
-      position: absolute;
-      top: 30px;
-      right: 26px;
-      font-size: 12px;
-      color: #999999;
-    }
-    .item-price {
-      .Rajdhani {
-        font-size: 30px;
-      }
-    }
   }
 }
 
@@ -130,9 +118,6 @@
   background-color: white;
   overflow: hidden;
   &.item-row-my {
-    .item-date {
-      margin-top: 22px;
-    }
     .item-members {
       margin-top: 15px;
     }
@@ -168,9 +153,32 @@
       width: 236px;
     }
   }
+  .item-price {
+    bottom: 10px;
+    right: 24px;
+    &.large {
+      font-size: 14px;
+    }
+    .Rajdhani {
+      font-size: 20px;
+      font-weight: 700;
+      color: #252525;
+      vertical-align: -2px;
+    }
+  }
   .item-buttons {
     position: relative;
     z-index: 3;
+  }
+  .item-date {
+    margin-top: 8px;
+    &.fixed {
+      position: absolute;
+      top: 22px;
+      right: 26px;
+      font-size: 12px;
+      color: #999999;
+    }
   }
   .button {
     width: calc(50% - 2px);
@@ -193,6 +201,21 @@
     border: 1px solid #a89cf4;
     .item-type {
       color: #684adf;
+    }
+    .add {
+      border: 1px solid #7e69fe;
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #7e69fe;
+      }
+      &::before,
+      &:after {
+        background-color: white;
+      }
     }
   }
   &.disabled {
@@ -223,22 +246,20 @@
 }
 
 .item-title {
-  white-space: nowrap;
+  height: 36px;
+  line-height: 18px;
   overflow: hidden;
 }
 
 .item-members {
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin: 14px 0;
   font-size: 0;
   white-space: nowrap;
 }
 
 .item-member {
-  // position: relative;
   display: inline-block;
-  // width: calc(16.6% - 6px);
   width: 32px;
   height: 32px;
   margin-left: 8px;
@@ -262,10 +283,49 @@
       height: 100%;
       font-size: 14px;
       font-weight: 600;
+      line-height: 32px;
+      vertical-align: 1px;
+      background-color: white;
+    }
+  }
+  &.add {
+    position: relative;
+    max-width: 32px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ececec;
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      font-weight: 600;
       color: #7e69fe;
       line-height: 32px;
       vertical-align: 1px;
       background-color: white;
+    }
+    &::before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      background-color: #7e69fe;
+      z-index: 1;
+    }
+    &::before {
+      width: 10px;
+      height: 2px;
+      margin: -1px 0 0 -5px;
+    }
+    &::after {
+      width: 2px;
+      height: 10px;
+      margin: -5px 0 0 -1px;
     }
   }
 }
@@ -299,6 +359,13 @@
   position: absolute;
   bottom: 12px;
   right: 26px;
+  color: #999;
+  &.large {
+    font-size: 16px;
+    .Rajdhani {
+      font-size: 30px;
+    }
+  }
   .Rajdhani {
     font-size: 20px;
     font-weight: 700;
@@ -319,7 +386,7 @@
   position: relative;
   width: 62px;
   height: 62px;
-  margin-top: 32px;
+  margin-top: 14px;
   border-radius: 9px;
   background-color: #eaeaea;
   border: 1px solid #eaeaea;
@@ -371,6 +438,7 @@
     padding: 0 12px;
     font-size: 13px;
     line-height: 22px;
+    vertical-align: middle;
   }
   .text {
     font-size: 18px;
@@ -392,36 +460,49 @@
 
 .item-view-row {
   position: relative;
-  height: 60px;
+  padding: 18px 0;
   font-size: 15px;
   color: #333333;
-  line-height: 58px;
+  // display: flex;
+  // align-items: center;
+  // line-height: 58px;
   letter-spacing: 0;
-  white-space: nowrap;
   border-bottom: 1px solid #efefef;
+  // &.auto {
+  //   height: auto;
+  //   padding: 20px 0;
+  //   font-size: 15px;
+  //   font-weight: 300;
+  //   color: #333333;
+  //   line-height: 22px;
+  // }
+  a.text-purple:hover {
+    text-decoration: underline;
+  }
   .right {
     position: absolute;
     top: 0;
     right: 0;
+    padding: 18px 0;
   }
   .text-purple {
     color: #7e69fe;
-    &:hover {
-      text-decoration: underline;
-    }
   }
   .lightgrey {
     font-weight: 300;
     color: #888888;
   }
   .Rajdhani {
+    position: relative;
+    top: 2px;
     font-weight: 700;
+    line-height: 0;
   }
   .picture {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 10px;
+    margin: -6px 10px -5px 0;
     vertical-align: middle;
     img {
       vertical-align: top;
@@ -432,11 +513,10 @@
   }
   .icon-sns {
     position: relative;
-    top: -1px;
     display: inline-block;
     width: 24px;
     height: 24px;
-    margin: 0 8px;
+    margin: -3px 8px -1px 8px;
     vertical-align: middle;
     img {
       vertical-align: top;
@@ -455,13 +535,27 @@
   }
 }
 
+.item-use-code {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 140px);
+  padding-left: 10px;
+  vertical-align: top;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
 .item-view-grade {
   font-size: 13px;
+  .Rajdhani {
+    top: 0px;
+  }
 }
 
 .item-view-idpw {
-  top: -2px;
-  margin-left: 20px;
+  margin: -6px 0 -5px 20px;
   padding: 0 12px !important;
   vertical-align: middle;
 }
@@ -553,6 +647,7 @@
   }
   .text {
     font-size: 16px;
+    font-weight: 300;
     color: #333;
     li {
       margin: 2px 0;
@@ -567,6 +662,62 @@
   border: solid 1px #eeeeee;
   background-color: #fcfcfc;
   border-top: 0;
+}
+
+.item-gift-left {
+  position: relative;
+  display: inline-block;
+  width: 38%;
+  max-width: 480px;
+  vertical-align: top;
+}
+
+.item-gift-images {
+  margin-bottom: 20px;
+  background-color: #efefef;
+}
+
+.item-gift-right {
+  position: relative;
+  display: inline-block;
+  width: calc(62% - 60px);
+  margin-left: 57px;
+  margin-bottom: 80px;
+  border-top: 2px solid #7e69fe;
+}
+
+.item-view-button {
+  margin-top: 40px;
+  .button {
+    width: calc(50% - 2px);
+  }
+}
+
+.item-view-agree {
+  padding: 28px 0;
+}
+
+.item-view-total {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 20px;
+  color: #333333;
+  border: solid 1px #cec8f1;
+  background-color: #f9f9f9;
+  .right {
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 300;
+    color: #999999;
+  }
+  .Rajdhani {
+    position: relative;
+    top: 2px;
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 1220px) {
@@ -626,25 +777,41 @@
       border-radius: 5px;
       background-color: #fb4c16;
     }
+    .item-date {
+      &.fixed {
+        top: 5px;
+        right: 10px;
+        font-size: 10px;
+      }
+    }
+    .item-price {
+      &.large {
+        bottom: 4px;
+        right: 10px;
+        font-size: 11px;
+      }
+      .Rajdhani {
+        font-size: 18px !important;
+      }
+    }
   }
   .item-type {
     font-size: 12px;
   }
+  .item-title {
+    height: 28px;
+    margin-top: 4px;
+    line-height: 14px;
+  }
   .item-thumb {
     width: 40px;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 0px;
     border-radius: 5px;
   }
-  .item-price {
-    bottom: 6px;
-    right: 10px;
-    .Rajdhani {
-      font-size: 18px !important;
-    }
-  }
   .item-members {
-    margin: 12px 0;
+    max-width: 180px;
+    margin: 7px 0;
   }
   .item-member {
     width: calc(16.6% - 4px);
@@ -666,12 +833,6 @@
   .item-finish {
     font-size: 10px;
   }
-  .item-info {
-    .item-price {
-      bottom: -6px;
-      right: 0;
-    }
-  }
   .item-slide {
     &.party {
       margin-bottom: 30px;
@@ -682,12 +843,15 @@
           height: 132px;
         }
       }
-    }
-    &.gift {
-      .item-date {
-        top: 11px;
-        right: 10px;
-        font-size: 10px;
+      .item-info {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        .item-price {
+          right: 10px;
+        }
       }
     }
   }
@@ -721,9 +885,8 @@
     }
   }
   .item-view-row {
-    height: 44px;
+    padding: 10px 0;
     font-size: 11px;
-    line-height: 42px;
     .picture {
       width: 22px;
       height: 22px;
@@ -740,17 +903,22 @@
     .price {
       font-size: 14px;
     }
+    .right {
+      padding: 10px 0;
+    }
   }
   .item-view-grade {
     font-size: 11px;
   }
   .item-view-idpw {
     margin-left: 10px;
+    line-height: 24px;
   }
   .item-view-user {
     padding: 25px 0;
     li {
       width: 25%;
+      padding: 15px 0;
     }
     .picture {
       width: 50px;
@@ -798,6 +966,41 @@
     a {
       padding: 3px 10px;
       font-size: 11px;
+    }
+  }
+  .item-gift-left {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    margin-bottom: 50px;
+  }
+  .item-gift-right {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .item-view-agree {
+    padding: 14px 0;
+  }
+  .item-view-total {
+    height: 50px;
+    padding: 0 15px;
+    font-size: 13px;
+    .right {
+      font-size: 12px;
+    }
+    .Rajdhani {
+      top: 2px;
+      font-size: 22px;
+    }
+  }
+  .item-view-button {
+    margin-top: 20px;
+    text-align: center;
+    .button {
+      width: auto;
     }
   }
 }

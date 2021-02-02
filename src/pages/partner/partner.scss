@@ -114,6 +114,15 @@
   }
 }
 
+.partner-nav-modify {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .partner-body {
   padding: 80px 60px 60px 280px;
   .title {
@@ -125,7 +134,7 @@
   position: relative;
   display: flex;
   margin-top: 60px;
-  padding: 19px 34px;
+  padding: 19px 25px;
   background-color: #f5f5f5;
   border: 1px solid #cec8f1;
   select {
@@ -144,33 +153,24 @@
     line-height: 38px;
     vertical-align: middle;
   }
-  .calendar {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    margin: 0 2px;
-    flex: none;
-    .icon {
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      color: #7e69fe;
-    }
-  }
 }
 
-.partner-calendar {
+.calendar {
+  position: relative;
   display: inline-block;
-  flex: none;
   width: 120px;
   margin: 0 2px;
-  input[type='text'] {
-    width: 100%;
+  flex: none;
+  .icon {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #7e69fe;
   }
 }
 
 .table-list {
-  border-top: 2px solid #333333;
+  border-top: 1px solid #333333;
   border-bottom: 1px solid #ececec;
   &.padding {
     td {
@@ -273,6 +273,26 @@
   }
 }
 
+.table-list.tax {
+  border-bottom: 0;
+  th,
+  td {
+    padding: 24px 15px;
+    border: 1px solid #ececec;
+  }
+  th {
+    &::after {
+      display: none;
+    }
+  }
+  .total {
+    td {
+      padding: 16px 15px;
+      background-color: #fffded;
+    }
+  }
+}
+
 .withdraw-price {
   height: 52px;
   margin-top: 8px;
@@ -369,6 +389,25 @@ select[class*='ui-datepicker'] {
   padding: 0;
 }
 
+.form-list.border {
+  li {
+    border-top: 0;
+    border-bottom: 1px solid #ececec;
+  }
+  .pd-tb {
+    padding: 6px 0;
+  }
+  .input-file {
+    margin-bottom: 4px;
+    .button {
+      margin-left: 0;
+    }
+  }
+  textarea {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 1280px) {
   .partner-body {
     padding: 80px 20px 20px 240px;
@@ -383,19 +422,14 @@ select[class*='ui-datepicker'] {
     .search {
       width: calc(100% - 416px);
     }
-    .calendar {
-      width: calc(50% - 4px);
-      margin: 0;
-      margin-bottom: 4px;
-      &:first-child {
-        margin-right: 4px;
-      }
-    }
   }
-  .partner-calendar {
-    width: calc(50% - 3px);
-    margin-left: 0px;
+  .calendar {
+    width: calc(50% - 4px);
+    margin: 0;
     margin-bottom: 4px;
+    &:first-child {
+      margin-right: 4px;
+    }
   }
 }
 
@@ -479,10 +513,10 @@ select[class*='ui-datepicker'] {
     .search {
       width: calc(100% - 276px);
     }
-    .calendar {
-      .icon {
-        top: 4px;
-      }
+  }
+  .calendar {
+    .icon {
+      top: 2px;
     }
   }
   .partner-fomr-list.border {
@@ -504,6 +538,11 @@ select[class*='ui-datepicker'] {
   }
   .form-half-withdraw {
     margin-top: 20px;
+  }
+  .form-list {
+    .lightgrey {
+      display: block;
+    }
   }
   .withdraw-price {
     height: 40px;

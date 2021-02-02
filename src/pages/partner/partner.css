@@ -131,6 +131,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility;
   background-attachment: fixed;
+  word-break: keep-all;
 }
 
 ul {
@@ -855,7 +856,7 @@ input[type='password']:disabled {
   padding: 8px 10px;
   font-size: 12px;
   font-weight: 300;
-  color: #7e69fe;
+  color: #8a84ae;
   word-break: keep-all;
   line-height: 16px;
   border: 1px solid #d5d0f5;
@@ -1040,6 +1041,16 @@ input[type='password']:disabled {
 .empty p {
   font-size: 16px;
   color: #aaa;
+}
+
+.list-style.dot {
+  margin-left: 13px;
+  list-style: 'ㆍ ';
+}
+
+.list-style.dash {
+  margin-left: 10px;
+  list-style: '- ';
 }
 
 .sns-share-icon {
@@ -1293,6 +1304,12 @@ input[type='password']:disabled {
   }
   .empty p {
     font-size: 11px;
+  }
+  .list-style.dot {
+    margin-left: 10px;
+  }
+  .list-style.dash {
+    margin-left: 7px;
   }
   .sns-share-icon {
     margin: 30px 0 15px 0;
@@ -2725,6 +2742,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility;
   background-attachment: fixed;
+  word-break: keep-all;
 }
 
 ul {
@@ -3449,7 +3467,7 @@ input[type='password']:disabled {
   padding: 8px 10px;
   font-size: 12px;
   font-weight: 300;
-  color: #7e69fe;
+  color: #8a84ae;
   word-break: keep-all;
   line-height: 16px;
   border: 1px solid #d5d0f5;
@@ -3634,6 +3652,16 @@ input[type='password']:disabled {
 .empty p {
   font-size: 16px;
   color: #aaa;
+}
+
+.list-style.dot {
+  margin-left: 13px;
+  list-style: 'ㆍ ';
+}
+
+.list-style.dash {
+  margin-left: 10px;
+  list-style: '- ';
 }
 
 .sns-share-icon {
@@ -3887,6 +3915,12 @@ input[type='password']:disabled {
   }
   .empty p {
     font-size: 11px;
+  }
+  .list-style.dot {
+    margin-left: 10px;
+  }
+  .list-style.dash {
+    margin-left: 7px;
   }
   .sns-share-icon {
     margin: 30px 0 15px 0;
@@ -4757,6 +4791,15 @@ input[type='password']:disabled {
   background-color: #f9f9f9 !important;
 }
 
+.partner-nav-modify {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .partner-body {
   padding: 80px 60px 60px 280px;
 }
@@ -4771,7 +4814,7 @@ input[type='password']:disabled {
   display: -ms-flexbox;
   display: flex;
   margin-top: 60px;
-  padding: 19px 34px;
+  padding: 19px 25px;
   background-color: #f5f5f5;
   border: 1px solid #cec8f1;
 }
@@ -4799,7 +4842,7 @@ input[type='password']:disabled {
   vertical-align: middle;
 }
 
-.partner-well .calendar {
+.calendar {
   position: relative;
   display: inline-block;
   width: 120px;
@@ -4809,28 +4852,15 @@ input[type='password']:disabled {
           flex: none;
 }
 
-.partner-well .calendar .icon {
+.calendar .icon {
   position: absolute;
   top: 8px;
   right: 10px;
   color: #7e69fe;
 }
 
-.partner-calendar {
-  display: inline-block;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 120px;
-  margin: 0 2px;
-}
-
-.partner-calendar input[type='text'] {
-  width: 100%;
-}
-
 .table-list {
-  border-top: 2px solid #333333;
+  border-top: 1px solid #333333;
   border-bottom: 1px solid #ececec;
 }
 
@@ -4943,6 +4973,25 @@ input[type='password']:disabled {
   border-bottom: 1px solid #ececec;
 }
 
+.table-list.tax {
+  border-bottom: 0;
+}
+
+.table-list.tax th,
+.table-list.tax td {
+  padding: 24px 15px;
+  border: 1px solid #ececec;
+}
+
+.table-list.tax th::after {
+  display: none;
+}
+
+.table-list.tax .total td {
+  padding: 16px 15px;
+  background-color: #fffded;
+}
+
 .withdraw-price {
   height: 52px;
   margin-top: 8px;
@@ -5053,6 +5102,27 @@ select[class*='ui-datepicker'] {
   padding: 0;
 }
 
+.form-list.border li {
+  border-top: 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.form-list.border .pd-tb {
+  padding: 6px 0;
+}
+
+.form-list.border .input-file {
+  margin-bottom: 4px;
+}
+
+.form-list.border .input-file .button {
+  margin-left: 0;
+}
+
+.form-list.border textarea {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1280px) {
   .partner-body {
     padding: 80px 20px 20px 240px;
@@ -5069,18 +5139,13 @@ select[class*='ui-datepicker'] {
   .partner-well .search {
     width: calc(100% - 416px);
   }
-  .partner-well .calendar {
+  .calendar {
     width: calc(50% - 4px);
     margin: 0;
     margin-bottom: 4px;
   }
-  .partner-well .calendar:first-child {
+  .calendar:first-child {
     margin-right: 4px;
-  }
-  .partner-calendar {
-    width: calc(50% - 3px);
-    margin-left: 0px;
-    margin-bottom: 4px;
   }
 }
 
@@ -5155,8 +5220,8 @@ select[class*='ui-datepicker'] {
   .partner-well .search {
     width: calc(100% - 276px);
   }
-  .partner-well .calendar .icon {
-    top: 4px;
+  .calendar .icon {
+    top: 2px;
   }
   .partner-fomr-list.border .button.round {
     height: 20px;
@@ -5175,6 +5240,9 @@ select[class*='ui-datepicker'] {
   }
   .form-half-withdraw {
     margin-top: 20px;
+  }
+  .form-list .lightgrey {
+    display: block;
   }
   .withdraw-price {
     height: 40px;

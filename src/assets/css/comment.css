@@ -175,6 +175,9 @@
 }
 
 @media screen and (max-width: 960px) {
+  .comment-wrap.mg-top {
+    margin-top: 20px;
+  }
   .comment-box.mg-top {
     margin-top: 30px;
   }

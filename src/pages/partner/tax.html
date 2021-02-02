@@ -37,7 +37,6 @@
     <script src="http://3.35.248.255/js/wrest.js?ver=180820"></script>
     <script src="http://3.35.248.255/js/placeholders.min.js"></script>
     <script src="http://3.35.248.255/js/apms.js?ver=180820"></script>
-    <link rel="stylesheet" href="http://3.35.248.255/js/font-awesome/css/font-awesome.min.css" />
 
     <!-- 벗츠 리뉴얼 css, js  -->
     <link rel="stylesheet" href="./partner.css" />
@@ -97,107 +96,75 @@
 
       <!-- body -->
       <div class="partner-body">
-        <div class="partner-well">
-          <select name="" id="">
-            <option value="">카테고리</option>
-          </select>
-          <input type="text" class="search" />
-          <a href="" class="button mini border button-purple">검색</a>
-          <a href="" class="button mini button-purple">파티생성</a>
-        </div>
+        <div class="title"><span class="text-purple">2020</span>년 <span class="text-purple">12</span>월 세금 계산서 발행 금액 <span class="text-purple">88,000</span>원 <span style="font-weight: 300; color: #999999">(VAT포함)</span></div>
 
-        <div class="partner-well">
-          <span class="calendar">
-            <span class="icon"><i class="fa fa-calendar"></i></span>
-            <input type="text" name="fr_date" value="" id="fr_date" size="8" maxlength="8" readonly placeholder="시작일" />
-          </span>
-
-          <span class="calendar">
-            <span class="icon"><i class="fa fa-calendar"></i></span>
-            <input type="text" name="to_date" value="" id="to_date" size="8" maxlength="8" readonly placeholder="종료일" />
-          </span>
-
-          <select name="" id="">
-            <option value="">카테고리</option>
-          </select>
-          <input type="text" class="search" />
-          <a href="" class="button mini border button-purple">검색</a>
-          <a href="" class="button mini button-purple">파티생성</a>
-        </div>
-
-        <div class="partner-well">
-          <select name="" id="">
-            <option value="">카테고리</option>
-          </select>
-          <input type="text" class="search" />
-          <a href="" class="button mini border button-purple">검색</a>
-          <a href="" class="button mini button-purple">파티생성</a>
-        </div>
-
-        <div class="title"><span class="text-purple">문의 댓글</span> 관리</div>
-
-        <div class="table-list scroll">
-          <table style="min-width: 1000px">
+        <div class="table-list scroll tax">
+          <table style="min-width: 1200px">
             <thead>
               <tr>
-                <th scope="col">제목</th>
-                <th width="10%" scope="col">문의자</th>
-                <th width="10%" scope="col">작성일</th>
-                <th width="10%" scope="col">관리</th>
+                <th width="8%" rowspan="2">주문번호</th>
+                <th width="9%" rowspan="2">상품명</th>
+                <th width="8%" rowspan="2">거래 시작일</th>
+                <th width="8%" rowspan="2">구매 확정일</th>
+                <th width="8%" rowspan="2">판매금액<br />(매출금액)</th>
+                <th width="27%" colspan="3">벗츠 수수료</th>
+                <th width="8%" rowspan="2">수익금<br />정산금액</th>
+                <th width="8%" rowspan="2">구매자 포인트<br />사용금액</th>
+                <th width="8%" rowspan="2">구매자 세금계산서<br />신청금액</th>
+                <th width="8%" rowspan="2">구매자 세금계산서<br />신청건</th>
+              </tr>
+              <tr>
+                <th width="9%">벗츠 수수료</th>
+                <th width="9%">VAT</th>
+                <th width="9%">합계</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <a href="" class="item-name">
-                    <span class="brand"></span>
-                    <span class="name">유튜브 프리미엄 가족 요금제 참여</span>
-                    <span class="lightgrey">유튜브 가족요금제 인도 계정 참여하실 분</span>
-                  </a>
+                  <span class="lightgrey">20201025<br />84520356</span>
                 </td>
-                <td>일단참자</td>
-                <td><span class="date">2020.11.11</span></td>
-                <td>답변 완료</td>
+                <td>유튜브 프리미엄 가족 요금제 참여</td>
+                <td>2020.12.12</td>
+                <td>2020.12.12</td>
+                <td><span class="text-purple">2,840</span></td>
+                <td>2,840</td>
+                <td>2,840</td>
+                <td>2,840</td>
+                <td>2,840</td>
+                <td>500</td>
+                <td>300</td>
+                <td>-</td>
               </tr>
               <tr>
-                <td class="reply" colspan="4">
-                  <p>아이디 비번은? ㅠ</p>
-                  <div style="padding: 10px">
-                    <a href="" class="button border round button-purple">답변 하기</a>
-                  </div>
-                  <span class="item-name">
-                    <span class="brand"></span>
-                    <span class="name">유튜브 프리미엄 가족 요금제 참여</span>
-                  </span>
-                  <span class="item-name" style="padding-top: 0">
-                    <a href="" class="button border round button-purple">답변 수정</a>
-                  </span>
+                <td>
+                  <span class="lightgrey">20201025<br />84520356</span>
                 </td>
+                <td>유튜브 프리미엄 가족 요금제 참여</td>
+                <td>2020.12.12</td>
+                <td>2020.12.12</td>
+                <td><span class="text-purple">2,840</span></td>
+                <td>2,840</td>
+                <td>2,840</td>
+                <td>2,840</td>
+                <td>2,840</td>
+                <td>500</td>
+                <td>300</td>
+                <td>-</td>
+              </tr>
+              <tr class="total">
+                <td colspan="4">월 합계</td>
+                <td>4,000,000</td>
+                <td>400,000</td>
+                <td>400,000</td>
+                <td>3,200,000</td>
+                <td>3,200,000</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
               </tr>
             </tbody>
           </table>
-        </div>
-
-        <div class="page-number" style="border-top: 0">
-          <ul>
-            <li class="disabled">
-              <a><i class="fa fa-angle-double-left"></i></a>
-            </li>
-            <li class="disabled">
-              <a><i class="fa fa-angle-left"></i></a>
-            </li>
-            <li class="active"><a>1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">5</a></li>
-            <li class="disabled">
-              <a><i class="fa fa-angle-right"></i></a>
-            </li>
-            <li class="disabled">
-              <a><i class="fa fa-angle-double-right"></i></a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
