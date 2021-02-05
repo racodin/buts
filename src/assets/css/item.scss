@@ -259,6 +259,7 @@
 }
 
 .item-member {
+  position: relative;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -269,24 +270,22 @@
   &:first-child {
     margin-left: 0;
   }
-  &.plus {
-    position: relative;
+  .plus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     max-width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
+    font-weight: 600;
     text-align: center;
+    border-radius: 8px;
     border: 1px solid #ececec;
-    .Rajdhani {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 32px;
-      vertical-align: 1px;
-      background-color: white;
-    }
+    background-color: white;
   }
   &.add {
     position: relative;
@@ -429,6 +428,7 @@
     margin-top: -35px;
     background-color: #efefef;
     border-radius: 10px;
+    overflow: hidden;
   }
   .enabled {
     position: relative;
@@ -633,6 +633,7 @@
     }
     span {
       display: inline-block;
+      min-width: 70px;
       margin-right: 8px;
       margin-bottom: 8px;
       height: 36px;
@@ -641,6 +642,7 @@
       color: #666666;
       text-align: center;
       line-height: 34px;
+      vertical-align: top;
       border-radius: 18px;
       background-color: #f0f0f0;
     }
@@ -815,24 +817,19 @@
     border-radius: 5px;
   }
   .item-members {
-    max-width: 180px;
     margin: 7px 0;
   }
   .item-member {
-    width: calc(16.6% - 4px);
+    width: calc(16.6% - 3px);
     height: auto;
-    margin-left: 4px;
+    margin-left: 3px;
+    border-radius: 4px;
     &:first-child {
       margin-left: 0;
     }
-    &.plus {
-      font-size: 13px;
-      .Rajdhani {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-      }
+    .plus {
+      font-size: 11px;
+      border-radius: 4px;
     }
   }
   .item-finish {
@@ -948,6 +945,7 @@
         margin-bottom: 2px;
       }
       span {
+        min-width: 40px;
         margin-right: 2px;
         margin-bottom: 2px;
         height: 22px;

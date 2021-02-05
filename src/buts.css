@@ -1176,6 +1176,7 @@ input[type='password']:disabled {
     margin: 25px 0 10px 0;
   }
   .text-para {
+    padding: 0 40px;
     font-size: 11px;
     line-height: 18px;
   }
@@ -2229,6 +2230,7 @@ a.header-login {
     top: -4px;
     width: 18px;
     height: 18px;
+    margin-right: 0;
   }
   .mypoint .text {
     font-size: 12px;
@@ -3085,6 +3087,11 @@ a.header-login {
   .item-row .item-tip {
     height: 26px;
   }
+  .item-row .item-tip img {
+    width: 12px;
+    height: 11px;
+    margin-top: -1px;
+  }
   .item-row .item-tip .ttip-text {
     width: 150px;
     font-size: 10px;
@@ -3262,6 +3269,7 @@ a.header-login {
   }
   .item-view-caution .tag {
     margin-bottom: 5px;
+    vertical-align: top;
   }
   .item-view-caution .tag img {
     width: 22px;

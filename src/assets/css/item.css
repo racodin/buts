@@ -296,6 +296,7 @@
 }
 
 .item-member {
+  position: relative;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -309,24 +310,27 @@
   margin-left: 0;
 }
 
-.item-member.plus {
-  position: relative;
-  max-width: 32px;
-  font-size: 14px;
-  text-align: center;
-  border: 1px solid #ececec;
-}
-
-.item-member.plus .Rajdhani {
+.item-member .plus {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  max-width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   font-weight: 600;
-  line-height: 32px;
-  vertical-align: 1px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ececec;
   background-color: white;
 }
 
@@ -487,6 +491,7 @@
   margin-top: -35px;
   background-color: #efefef;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .item-view-title .enabled {
@@ -708,6 +713,7 @@
 
 .item-view-caution .tag span {
   display: inline-block;
+  min-width: 70px;
   margin-right: 8px;
   margin-bottom: 8px;
   height: 36px;
@@ -716,6 +722,7 @@
   color: #666666;
   text-align: center;
   line-height: 34px;
+  vertical-align: top;
   border-radius: 18px;
   background-color: #f0f0f0;
 }
@@ -892,31 +899,20 @@
     border-radius: 5px;
   }
   .item-members {
-    max-width: 180px;
     margin: 7px 0;
   }
   .item-member {
-    width: calc(16.6% - 4px);
+    width: calc(16.6% - 3px);
     height: auto;
-    margin-left: 4px;
+    margin-left: 3px;
+    border-radius: 4px;
   }
   .item-member:first-child {
     margin-left: 0;
   }
-  .item-member.plus {
-    font-size: 13px;
-  }
-  .item-member.plus .Rajdhani {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 12px;
+  .item-member .plus {
+    font-size: 11px;
+    border-radius: 4px;
   }
   .item-finish {
     font-size: 10px;
@@ -1031,6 +1027,7 @@
     margin-bottom: 2px;
   }
   .item-view-caution .tag span {
+    min-width: 40px;
     margin-right: 2px;
     margin-bottom: 2px;
     height: 22px;

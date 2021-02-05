@@ -855,6 +855,7 @@ input[type='password']:disabled {
   margin-top: -16px;
   background-color: #efefef;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .item-name .name {

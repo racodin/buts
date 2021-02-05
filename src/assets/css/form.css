@@ -97,6 +97,10 @@
   border-top: 1px solid #ececec;
 }
 
+.form-list.border li:first-child {
+  border-top: 0;
+}
+
 .form-list.border select {
   position: relative;
   width: 350px;
