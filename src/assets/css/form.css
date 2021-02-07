@@ -46,6 +46,10 @@
   background-color: #f9f9f9;
 }
 
+.form-round.h210 {
+  height: 210px;
+}
+
 .form-half {
   display: inline-block;
   width: calc(50% - 22px);
@@ -286,6 +290,10 @@
 
 .form-list .account input {
   width: 100px;
+}
+
+.form-list .button {
+  vertical-align: middle;
 }
 
 .form-list #captcha #captcha_key {

@@ -40,6 +40,9 @@
     overflow-y: auto;
     background-color: #f9f9f9;
   }
+  &.h210 {
+    height: 210px;
+  }
 }
 
 .form-half {
@@ -247,6 +250,9 @@
     input {
       width: 100px;
     }
+  }
+  .button {
+    vertical-align: middle;
   }
   #captcha #captcha_key {
     max-width: 160px;

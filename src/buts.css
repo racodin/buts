@@ -976,6 +976,7 @@ input[type='password']:disabled {
   margin-top: -16px;
   background-color: #efefef;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .item-name .name {
@@ -1913,6 +1914,7 @@ a.header-login {
 
 .at-go {
   display: none !important;
+  z-index: 100;
 }
 
 @media screen and (max-width: 960px) {
@@ -2045,6 +2047,7 @@ a.header-login {
   position: relative;
   width: calc(100% + 26px);
   margin-left: -13px;
+  margin-top: -13px;
   font-size: 0;
 }
 
@@ -2065,6 +2068,7 @@ a.header-login {
   .recommand-list {
     width: calc(100% + 10px);
     margin-left: -5px;
+    margin-top: -5px;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -2542,6 +2546,7 @@ a.header-login {
 }
 
 .item-member {
+  position: relative;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -2555,24 +2560,27 @@ a.header-login {
   margin-left: 0;
 }
 
-.item-member.plus {
-  position: relative;
-  max-width: 32px;
-  font-size: 14px;
-  text-align: center;
-  border: 1px solid #ececec;
-}
-
-.item-member.plus .Rajdhani {
+.item-member .plus {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  max-width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   font-weight: 600;
-  line-height: 32px;
-  vertical-align: 1px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ececec;
   background-color: white;
 }
 
@@ -2733,6 +2741,7 @@ a.header-login {
   margin-top: -35px;
   background-color: #efefef;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .item-view-title .enabled {
@@ -2883,6 +2892,7 @@ a.header-login {
   width: 212px;
   padding: 30px 0;
   text-align: center;
+  vertical-align: top;
 }
 
 .item-view-user li:hover .item-view-menu {
@@ -2954,6 +2964,7 @@ a.header-login {
 
 .item-view-caution .tag span {
   display: inline-block;
+  min-width: 70px;
   margin-right: 8px;
   margin-bottom: 8px;
   height: 36px;
@@ -2962,6 +2973,7 @@ a.header-login {
   color: #666666;
   text-align: center;
   line-height: 34px;
+  vertical-align: top;
   border-radius: 18px;
   background-color: #f0f0f0;
 }
@@ -3138,31 +3150,20 @@ a.header-login {
     border-radius: 5px;
   }
   .item-members {
-    max-width: 180px;
     margin: 7px 0;
   }
   .item-member {
-    width: calc(16.6% - 4px);
+    width: calc(16.6% - 3px);
     height: auto;
-    margin-left: 4px;
+    margin-left: 3px;
+    border-radius: 4px;
   }
   .item-member:first-child {
     margin-left: 0;
   }
-  .item-member.plus {
-    font-size: 13px;
-  }
-  .item-member.plus .Rajdhani {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 12px;
+  .item-member .plus {
+    font-size: 11px;
+    border-radius: 4px;
   }
   .item-finish {
     font-size: 10px;
@@ -3250,7 +3251,7 @@ a.header-login {
     padding: 25px 0;
   }
   .item-view-user li {
-    width: 25%;
+    width: 33.33%;
     padding: 15px 0;
   }
   .item-view-user .picture {
@@ -3269,7 +3270,6 @@ a.header-login {
   }
   .item-view-caution .tag {
     margin-bottom: 5px;
-    vertical-align: top;
   }
   .item-view-caution .tag img {
     width: 22px;
@@ -3278,6 +3278,7 @@ a.header-login {
     margin-bottom: 2px;
   }
   .item-view-caution .tag span {
+    min-width: 40px;
     margin-right: 2px;
     margin-bottom: 2px;
     height: 22px;
@@ -3659,6 +3660,10 @@ a.header-login {
   background-color: #f9f9f9;
 }
 
+.form-round.h210 {
+  height: 210px;
+}
+
 .form-half {
   display: inline-block;
   width: calc(50% - 22px);
@@ -3708,6 +3713,10 @@ a.header-login {
   min-height: auto;
   padding: 0;
   border-top: 1px solid #ececec;
+}
+
+.form-list.border li:first-child {
+  border-top: 0;
 }
 
 .form-list.border select {
@@ -3895,6 +3904,10 @@ a.header-login {
 
 .form-list .account input {
   width: 100px;
+}
+
+.form-list .button {
+  vertical-align: middle;
 }
 
 .form-list #captcha #captcha_key {
@@ -5602,8 +5615,10 @@ a.header-login {
   position: relative;
   height: 110px;
   margin-top: 10px;
-  padding-left: 160px;
+  padding: 15px 10px 15px 180px;
   border: 1px solid #ececec;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .dialog-reject li:first-child {
@@ -6012,6 +6027,7 @@ a.header-login {
   }
   .dialog-reject li {
     height: 62px;
+    padding: 10px 10px 10px 110px;
   }
   .dialog-reject .subject {
     width: 100px;

@@ -976,6 +976,7 @@ input[type='password']:disabled {
   margin-top: -16px;
   background-color: #efefef;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .item-name .name {
@@ -1854,6 +1855,10 @@ input[type='password']:disabled {
   background-color: #f9f9f9;
 }
 
+.form-round.h210 {
+  height: 210px;
+}
+
 .form-half {
   display: inline-block;
   width: calc(50% - 22px);
@@ -1903,6 +1908,10 @@ input[type='password']:disabled {
   min-height: auto;
   padding: 0;
   border-top: 1px solid #ececec;
+}
+
+.form-list.border li:first-child {
+  border-top: 0;
 }
 
 .form-list.border select {
@@ -2090,6 +2099,10 @@ input[type='password']:disabled {
 
 .form-list .account input {
   width: 100px;
+}
+
+.form-list .button {
+  vertical-align: middle;
 }
 
 .form-list #captcha #captcha_key {
@@ -3588,6 +3601,7 @@ input[type='password']:disabled {
   margin-top: -16px;
   background-color: #efefef;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .item-name .name {
